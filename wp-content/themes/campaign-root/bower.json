@@ -1,0 +1,6 @@
+{
+  "name": "gds-campaign-root",
+  "dependencies": {
+    "jquery": "~1.x.x"
+  }
+}
