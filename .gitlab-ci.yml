@@ -1,0 +1,66 @@
+.php55: &php55
+  image: thedxw/php-testing:5.5
+
+.php70: &php70
+  image: thedxw/php-testing:7.0
+
+.phpunit: &phpunit
+  before_script:
+    - cd ${DIR}
+    - composer install
+  script:
+    - vendor/bin/phpunit
+
+.phpcsfixer: &phpcsfixer
+  <<: *php70
+  before_script:
+    - cd ${DIR}
+  script:
+    - php-cs-fixer fix --dry-run -v --diff
+
+.standardjs: &standardjs
+  image: node:latest
+  before_script:
+    - cd ${DIR}
+    - npm install -g standard
+  script:
+    - standard ${PATHS}
+
+##############################################################################
+### phpunit 5.5
+##############################################################################
+
+php55_themes_campaign-root:
+  <<: *phpunit
+  <<: *php55
+  variables:
+    DIR: wp-content/themes/campaign-root
+
+##############################################################################
+### phpunit 7.0
+##############################################################################
+
+php70_themes_campaign-root:
+  <<: *phpunit
+  <<: *php70
+  variables:
+    DIR: wp-content/themes/campaign-root
+
+##############################################################################
+### php-cs-fixer
+##############################################################################
+
+phplint_themes_campaign-root:
+  <<: *phpcsfixer
+  variables:
+    DIR: wp-content/themes/campaign-root
+
+##############################################################################
+### standardJS
+##############################################################################
+
+standardjs_themes_campaign-root:
+  <<: *standardjs
+  variables:
+    DIR: wp-content/themes/campaign-root
+    PATHS: assets/js/*.js
