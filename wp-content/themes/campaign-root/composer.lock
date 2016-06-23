@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0fd6104e1d528843b25e602b55dc2b56",
-    "content-hash": "792e7fcec7c6323735d57a0123fcb183",
+    "hash": "52bc7527da87a10b0021d684e6e451dc",
+    "content-hash": "c70640228f93be6d3cbbcb10dc94e498",
     "packages": [
         {
             "name": "aura/autoload",
@@ -199,6 +199,45 @@
             "description": "Unit-tested framework-agnostic pagination that works with Bootstrap and Foundation",
             "homepage": "https://github.com/dxw/pagination",
             "time": "2016-01-07 18:44:38"
+        },
+        {
+            "name": "nikita2206/result",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikita2206/result.git",
+                "reference": "2c800f54ddd05d04a4f41121fa58bdb59d1d2447"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikita2206/result/zipball/2c800f54ddd05d04a4f41121fa58bdb59d1d2447",
+                "reference": "2c800f54ddd05d04a4f41121fa58bdb59d1d2447",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Result\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Nefedov",
+                    "email": "inefedor@gmail.com"
+                }
+            ],
+            "description": "Result data type (just like in Rust)",
+            "time": "2015-10-12 20:14:07"
         }
     ],
     "packages-dev": [
