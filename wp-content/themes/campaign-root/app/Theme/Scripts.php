@@ -48,7 +48,13 @@ class Scripts implements \Dxw\Iguana\Registerable
         // Pretty much everything else should be compiled by Grunt.
         wp_enqueue_script('main',      $this->getAssetPath('main.min.js'), array('jquery', 'modernizr'), '', true);
 
+        wp_enqueue_style('govuk-template',      $this->getAssetPath('govuk-template.min.css'));
+
+        wp_enqueue_style('govuk-template-fonts',      $this->getAssetPath('fonts.css'));
+
         wp_enqueue_style('main',      $this->getAssetPath('main.min.css'));
+
+
     }
 
     public function wpPrintScripts()
@@ -59,12 +65,9 @@ class Scripts implements \Dxw\Iguana\Registerable
         <!-- Prefetch external asset dns -->
         <link rel="dns-prefetch" href="#">
 
-        <!-- Prefetch internal image assets -->
-        <link rel="prefetch" href="#">
+        <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPath('img/apple-touch-icon-152x152.png') ?>">
 
-        <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPath('img/apple-touch-icon-precomposed.png') ?>">
-
-        <link rel="icon" type="image/png" href="<?php $this->assetPath('img/shortcut-icon.png') ?>">
+        <link rel="icon" type="image/png" href="<?php $this->assetPath('img/apple-touch-icon-152x152.png') ?>">
         <?php
 
     }
