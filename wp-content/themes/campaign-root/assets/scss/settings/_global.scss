@@ -1,0 +1,53 @@
+// Paths
+$imagePath: "/images";
+$fontPath: "/fonts";
+
+// Site Width
+$site-max-width: 1020px;
+$site-gutters: 30px;
+
+// Breakpoints
+$big-screen: 1020px;
+$medium-screen: 900px;
+$small-screen: 780px;
+$tiny-screen: 480px;
+
+// Margins & Padding
+$margin: 30px;
+$padding: 30px;
+
+// Colours
+
+// Brand
+$brand-primary: #2e358b;
+$brand-secondary: #6f72af;
+$brand-tertiary: #d53880;
+
+// Errors
+$highlight: #ffbf47;
+$error: #df3034;
+
+// Base Site
+$base-font-colour: #222;
+$body-bg: #fff;
+$light-grey: #f8f8f8;
+$medium-grey: #c8c8c8;
+$dark-grey: #6f777b;
+$black: #0b0c0c;
+$link-colour: $brand-primary;
+$link-hover-colour: $brand-tertiary;
+
+// Buttons
+$button: $brand-primary;
+$button-inactive: scale-color($brand-primary, $lightness: 50%);
+$button-hover: $brand-tertiary;
+
+// Tables
+$table-borders: $medium-grey;
+
+// Borders
+$border-colour: $dark-grey;
+$border-radius: 0px;
+$input-border: $dark-grey;
+$input-border-focus: $highlight;
+

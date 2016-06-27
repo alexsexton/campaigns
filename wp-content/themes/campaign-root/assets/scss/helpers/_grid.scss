@@ -1,0 +1,52 @@
+// Grid Mixins
+
+$grid-wrapper: $site-max-width;
+$grid-gutter: $margin;
+
+// Row
+@mixin row($inside: false) {
+  @if($inside == true) {
+    margin-left: -$grid-gutter/2;
+    margin-right: -$grid-gutter/2;
+  }
+  @else {
+    width: 100%;
+    max-width: $grid-wrapper;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Column
+@mixin col($width: 1, $padding: true) {
+  float: left;
+  width: percentage($width);
+  @if($padding == true) {
+    padding-left: $grid-gutter/2;
+    padding-right: $grid-gutter/2;
+  }
+}
+
+/* Simple two col layout
+*
+* .row {
+*   @include row;
+*
+*   .col-left {
+*     @include col(1/2);
+*   }
+*
+*   .col-right {
+*     @include col(1/2);
+*   }
+*
+* }
+*
+*/
