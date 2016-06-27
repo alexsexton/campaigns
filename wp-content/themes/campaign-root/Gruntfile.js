@@ -29,7 +29,9 @@ module.exports = function (grunt) {
           sourcemap: 'auto'
         },
         files: {
-          'static/main.min.css': 'assets/scss/main.scss'
+          'static/main.min.css': 'assets/scss/main.scss',
+          'static/govuk-template.min.css': 'assets/govuk/govuk-template.css',
+          'static/fonts.css': 'assets/govuk/fonts.css'
         }
       }
     },
