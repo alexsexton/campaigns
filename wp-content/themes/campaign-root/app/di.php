@@ -28,3 +28,4 @@ $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Pagination::class, new \Dxw\G
 // Post types and additional fields
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\PostTypes::class, new \Dxw\GdsCampaignRoot\Posts\PostTypes());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\CustomFields::class, new \Dxw\GdsCampaignRoot\Posts\CustomFields());
+$registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Pages::class, new \Dxw\GdsCampaignRoot\Theme\Pages());
