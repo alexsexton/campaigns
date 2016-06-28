@@ -4,21 +4,13 @@ namespace Dxw\GdsCampaignRoot\Theme;
 
 class Pages implements \Dxw\Iguana\Registerable
 {
-    public function register()
-    {
 
-        function add_taxonomies_to_pages() {
+    public function add_taxonomies_to_pages() {
             register_taxonomy_for_object_type( 'post_tag', 'page' );
             register_taxonomy_for_object_type( 'category', 'page' );
-        }
+    }
 
-        add_action( 'init', 'add_taxonomies_to_pages' );
-
-        if ( ! is_admin() ) {
-            add_action( 'pre_get_posts', 'category_and_tag_archives' );
-        }
-
-        function category_and_tag_archives( $wp_query ) {
+    public function category_and_tag_archives( $wp_query ) {
 
         $my_post_array = array('post','page');
 
@@ -29,6 +21,15 @@ class Pages implements \Dxw\Iguana\Registerable
             if ( $wp_query->get( 'tag' ) ) {
                 $wp_query->set( 'post_type', $my_post_array );
             }
+        }
+
+    public function register()
+    {
+
+        add_action( 'init', [$this, 'add_taxonomies_to_pages'] );
+
+        if ( ! is_admin() ) {
+            add_action( 'pre_get_posts', [$this, 'category_and_tag_archives'] );
         }
     }
 }
