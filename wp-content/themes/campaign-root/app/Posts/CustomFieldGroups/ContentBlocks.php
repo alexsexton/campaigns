@@ -51,9 +51,9 @@ register_field_group(array(
                         ),
                         array(
                             'key' => 'field_572c6181a933b',
-                            'label' => 'Content',
-                            'name' => 'content',
-                            'type' => 'wysiwyg',
+                            'label' => 'Caption',
+                            'name' => 'caption',
+                            'type' => 'textarea',
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
@@ -63,9 +63,88 @@ register_field_group(array(
                                 'id' => ''
                             ),
                             'default_value' => '',
-                            'tabs' => 'all',
-                            'toolbar' => 'basic',
-                            'media_upload' => 0
+                            'placeholder' => '',
+                            'maxlength' => '',
+                            'rows' => '',
+                            'new_lines' => 'br',
+                            'readonly' => 0,
+                            'disabled' => 0
+                        ),
+                        array(
+                            'key' => 'field_5741697a2fcb4',
+                            'label' => 'Text Colour',
+                            'name' => 'text_colour',
+                            'type' => 'select',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => ''
+                            ),
+                            'choices' => array(
+                                'dark' => 'Dark',
+                                'light' => 'Light',
+                            ),
+                            'default_value' => array(
+                                0 => 'dark'
+                            ),
+                            'allow_null' => 0,
+                            'multiple' => 0,
+                            'ui' => 0,
+                            'ajax' => 0,
+                            'placeholder' => '',
+                            'disabled' => 0,
+                            'readonly' => 0
+                        ),
+                        array(
+                            'key' => 'field_571464645edf3',
+                            'label' => 'Image',
+                            'name' => 'image',
+                            'type' => 'file',
+                            'instructions' => 'Adds a full width hero image, falls back to a solid background colour if no image is selected',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => ''
+                            ),
+                            'return_format' => 'array',
+                            'library' => 'all',
+                            'min_size' => '',
+                            'max_size' => '',
+                            'mime_types' => ''
+                        ),
+                        array(
+                            'key' => 'field_5744637a2fdf4',
+                            'label' => 'Background',
+                            'name' => 'background',
+                            'type' => 'select',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => ''
+                            ),
+                            'choices' => array(
+                                'brand-primary' => 'Brand Primary',
+                                'brand-secondary' => 'Brand Secondary',
+                                'brand-tertiary' => 'Brand Tertiary'
+                            ),
+                            'default_value' => array(
+                                0 => 'brand-primary'
+                            ),
+                            'allow_null' => 0,
+                            'multiple' => 0,
+                            'ui' => 0,
+                            'ajax' => 0,
+                            'placeholder' => '',
+                            'disabled' => 0,
+                            'readonly' => 0
                         )
                     ),
                     'min' => '',
@@ -515,7 +594,8 @@ register_field_group(array(
         0 => 'custom_fields',
         1 => 'discussion',
         2 => 'comments',
-        3 => 'send-trackbacks'
+        3 => 'send-trackbacks',
+        4 => 'the_content'
     ),
     'active' => 1,
     'description' => ''
