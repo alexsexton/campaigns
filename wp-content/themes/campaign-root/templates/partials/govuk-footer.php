@@ -13,7 +13,7 @@
       </div>
 
       <div class="copyright">
-        <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy; Crown copyright</a>
+        <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy;<?php echo date('Y'); ?> Crown copyright</a>
       </div>
     </div>
 

@@ -1,4 +1,4 @@
-<footer class="footer" role="contentinfo">
+<footer class="site-footer" id="site-footer" role="contentinfo">
 
     <div class="row">
         <?php dynamic_sidebar('sidebar-footer'); ?>
@@ -10,10 +10,6 @@
             }
         ?>
         </nav>
-
-        <div class="copyright">
-            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-        </div>
 
     </div>
 

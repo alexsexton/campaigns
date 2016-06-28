@@ -1,4 +1,4 @@
-<header class="banner" role="banner">
+<header role="banner" id="site-header" class="site-header">
     <div class="row">
         <div class="logo">
             <a href="/"><h1><?php bloginfo('name'); ?></h1></a>
