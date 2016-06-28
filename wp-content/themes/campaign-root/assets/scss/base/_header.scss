@@ -1,23 +1,25 @@
+// Site Header
 
-// Header
-
-.header {
+.site-header {
   padding: $padding 0;
-  background: $light-grey;
+  background: $brand-primary;
+  color: $white;
 
   .logo {
     width: 150px;
     height: 150px;
-    clear: both;
-    margin: auto;
+
+    a {
+      color: $white;
+    }
 
     img {
-    width: 100%;
+      width: 100%;
     }
   }
 
   .search .button {
-    padding: 7px $padding
+    padding: 8px $padding
   }
 
 }

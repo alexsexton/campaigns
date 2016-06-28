@@ -1,7 +1,10 @@
-@import "settings/colours";
+@import "colours/pallet";
+@import "colours/organisation";
+
 @import "settings/global";
 
 @import "helpers/mixins";
+@import "helpers/buttons";
 @import "helpers/grid";
 
 @import "base/reset";

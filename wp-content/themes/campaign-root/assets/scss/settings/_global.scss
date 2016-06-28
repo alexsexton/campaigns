@@ -3,11 +3,11 @@ $imagePath: "/images";
 $fontPath: "/fonts";
 
 // Site Width
-$site-max-width: 1020px;
+$site-max-width: 960px;
 $site-gutters: 30px;
 
 // Breakpoints
-$big-screen: 1020px;
+$big-screen: $site-max-width;
 $medium-screen: 900px;
 $small-screen: 780px;
 $tiny-screen: 480px;
@@ -16,24 +16,22 @@ $tiny-screen: 480px;
 $margin: 30px;
 $padding: 30px;
 
-// Colours
+// Colours - see settings/_colours.scss for a complete list
 
 // Brand
-$brand-primary: #2e358b;
-$brand-secondary: #6f72af;
-$brand-tertiary: #d53880;
+$brand-primary: $govuk-blue;
+$brand-secondary: $purple;
+$brand-tertiary: $grass-green;
 
 // Errors
-$highlight: #ffbf47;
-$error: #df3034;
+$highlight: $mellow-red;
+$error: $yellow;
 
 // Base Site
-$base-font-colour: #222;
-$body-bg: #fff;
-$light-grey: #f8f8f8;
-$medium-grey: #c8c8c8;
-$dark-grey: #6f777b;
-$black: #0b0c0c;
+$base-font-colour: $black;
+$body-background-colour: $white;
+
+// Links
 $link-colour: $brand-primary;
 $link-hover-colour: $brand-tertiary;
 
@@ -41,13 +39,14 @@ $link-hover-colour: $brand-tertiary;
 $button: $brand-primary;
 $button-inactive: scale-color($brand-primary, $lightness: 50%);
 $button-hover: $brand-tertiary;
+$button-text: $white;
+$button-text-hover: $white;
 
 // Tables
-$table-borders: $medium-grey;
+$table-borders: $grey-2;
 
 // Borders
-$border-colour: $dark-grey;
+$border-colour: $grey-1;
 $border-radius: 0px;
-$input-border: $dark-grey;
+$input-border: $grey-1;
 $input-border-focus: $highlight;
-
