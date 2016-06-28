@@ -50,7 +50,7 @@ class Scripts implements \Dxw\Iguana\Registerable
 
         wp_enqueue_style('govuk-template',      $this->getAssetPath('govuk-template.min.css'));
 
-        wp_enqueue_style('govuk-template-fonts',      $this->getAssetPath('fonts.css'));
+        wp_enqueue_style('govuk-template-fonts',      $this->getAssetPath('fonts.min.css'));
 
         wp_enqueue_style('main',      $this->getAssetPath('main.min.css'));
 
@@ -62,12 +62,17 @@ class Scripts implements \Dxw\Iguana\Registerable
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Prefetch external asset dns -->
+        <!-- Prefetch dns of external services e.g //analytics.google.com -->
         <link rel="dns-prefetch" href="#">
 
+        <link rel="shortcut icon" href="<?php $this->assetPAth('img/favicon.ico')?>" type="image/x-icon">
+        <link rel="mask-icon" href="<?php $this->assetPAth('img/gov.uk_logotype_crown.svg')?>" color="#0b0c0c">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php $this->assetPAth('img/apple-touch-icon-152x152.png')?>">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php $this->assetPAth('img/apple-touch-icon-120x120.png') ?>">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php $this->assetPAth('img/apple-touch-icon-76x76.png') ?>">
+        <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPAth('img/apple-touch-icon-60x60.png') ?>">
         <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPath('img/apple-touch-icon-152x152.png') ?>">
 
-        <link rel="icon" type="image/png" href="<?php $this->assetPath('img/apple-touch-icon-152x152.png') ?>">
         <?php
 
     }
