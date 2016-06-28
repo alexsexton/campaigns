@@ -1,0 +1,203 @@
+<section class="content-blocks">
+
+  <?php // start content block loop
+  if( have_rows('content_blocks') ):
+  while ( have_rows('content_blocks') ) : the_row(); ?>
+
+    <?php
+    //
+    // Content Block ### Hero
+    //
+    if( get_row_layout() == 'hero') : ?>
+
+      <?php if( get_sub_field('title')) : ?>
+        <div class="hero">
+          <div class="row">
+            <header class="title">
+              <h1><?php the_sub_field('title'); ?></h1>
+            </header>
+            <div class="content rich-text">
+              <?php the_sub_field('content'); ?>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+
+    <?php endif; ?>
+
+    <?php
+    //
+    // Content Block ### Title
+    //
+    if( get_row_layout() == 'title') : ?>
+
+      <?php if( get_sub_field('title')) : ?>
+        <header class="title row">
+          <h1><?php the_sub_field('title'); ?></h1>
+        </header>
+      <?php endif; ?>
+
+    <?php endif; ?>
+
+
+    <?php
+    //
+    // Content Block ### Subtitle
+    //
+    if( get_row_layout() == 'subtitle') : ?>
+
+      <?php if( get_sub_field('subtitle')) : ?>
+        <header class="subtitle row">
+          <h2><?php the_sub_field('subtitle'); ?></h2>
+        </header>
+      <?php endif; ?>
+
+    <?php endif; ?>
+
+    <?php
+    //
+    // Content Block ### Promo Box
+    //
+    if( get_row_layout() == 'promo_box') : ?>
+      <?php $background = get_sub_field('background'); ?>
+      <div class="promos <?php echo $background; ?>">
+
+          <div class="promo-image">
+            <?php if( get_sub_field('image')) : ?>
+              <?php $promo_image = get_sub_field('image'); ?>
+              <img src="<?php echo $left_image['url']; ?>" alt="<?php echo $left_image['alt']; ?>">
+            <?php endif; ?>
+          </div>
+
+          <article class="promo">
+            <div class="rich-text">
+            <?php if( get_sub_field('title')) : ?>
+              <h2><?php the_sub_field('title'); ?></h2>
+            <?php endif; ?>
+            <?php if( get_sub_field('content')) : ?>
+              <?php the_sub_field('content'); ?>
+            <?php endif; ?>
+            </div>
+          </article>
+
+      </div>
+
+    <?php endif; ?>
+
+
+    <?php
+    //
+    // Content Block ### Content Only
+    //
+    if( get_row_layout() == 'content') : ?>
+
+      <?php if( get_sub_field('content')) : ?>
+        <div class="content row">
+          <div class="rich-text">
+            <?php the_sub_field('content'); ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
+    <?php endif; ?>
+
+    <?php
+    //
+    // Content Block ### Left-Aligned Image and Caption
+    //
+    if( get_row_layout() == 'left_aligned_image') : ?>
+      <div class="row">
+        <div class="left-image-caption">
+
+          <?php $left_aligned_image = get_sub_field('image'); ?>
+
+          <figure>
+              <img src="<?php echo $left_aligned_image['url']; ?>" alt="<?php echo $left_aligned_image['alt']; ?>">
+            <?php if( $left_aligned_image['caption'] ) : ?>
+            <figcaption>
+              <?php if( $left_aligned_image['title'] ) : ?>
+                <h3><?php echo $left_aligned_image['title']; ?></h3>
+              <?php endif; ?>
+              <?php echo $left_aligned_image['caption']; ?>
+            </figcaption>
+            <?php endif; ?>
+          </figure>
+
+        </div>
+      </div>
+
+    <?php endif; ?>
+
+    <?php
+    //
+    // Content Block ### Right-Aligned Image and Caption
+    //
+    if( get_row_layout() == 'right_aligned_image') : ?>
+      <div class="row">
+        <div class="right-image-caption">
+
+          <?php $right_aligned_image = get_sub_field('image'); ?>
+
+          <figure>
+            <?php if( $right_aligned_image['caption'] ) : ?>
+            <figcaption>
+              <?php if( $right_aligned_image['title'] ) : ?>
+                <h3><?php echo $right_aligned_image['title']; ?></h3>
+              <?php endif; ?>
+              <?php echo $right_aligned_image['caption']; ?>
+            </figcaption>
+            <?php endif; ?>
+              <img src="<?php echo $right_aligned_image['url']; ?>" alt="<?php echo $right_aligned_image['alt']; ?>">
+          </figure>
+
+        </div>
+      </div>
+
+    <?php endif; ?>
+
+
+    <?php
+    //
+    // Content Block ### Full-Width Image
+    //
+    if( get_row_layout() == 'full_width_image') : ?>
+    <div class="full-width-image row">
+
+      <?php $full_width_image = get_sub_field('image'); ?>
+        <figure>
+          <?php if ($full_width_image['title']) {
+          echo '<h3>' . $full_width_image['title'] . '</h3>';
+          } ?>
+          <img src="<?php echo $full_width_image['url']; ?>" alt="<?php echo $full_width_image['alt']; ?>">
+          <?php if ($full_width_image['caption']) {
+          echo '<figcaption>' . $full_width_image['caption'] . '</figcaption>';
+          } ?>
+        </figure>
+
+    </div>
+    <?php endif; ?>
+
+    <?php
+    //
+    // Content Block ### Info Graphic
+    //
+    if( get_row_layout() == 'info_graphic') : ?>
+    <div class="info-graphic row">
+
+      <?php $info_graphic_image = get_sub_field('image'); ?>
+        <figure>
+          <img src="<?php echo $info_graphic_image['url']; ?>" alt="<?php echo $info_graphic_image['alt']; ?>">
+          <?php if (get_sub_field('caption')) {
+          echo '<figcaption><p>' . sub_field('caption') . '</p></figcaption>';
+          } ?>
+        </figure>
+
+    </div>
+    <?php endif; ?>
+
+  <?php // end content block loop
+    endwhile;
+    endif;
+  ?>
+
+</section>
