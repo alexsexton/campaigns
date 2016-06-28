@@ -6,11 +6,9 @@ $sub-nav-link: #2a6e65;
 $sub-nav-background: #a3e8dd;
 
 .nav-container {
-    clear: both;
-    padding-top: $padding;
-    @media screen and (max-width: $small-screen) {
-      padding: 0;
-    }
+
+float: left;
+
 }
 
 .menu-main-container {

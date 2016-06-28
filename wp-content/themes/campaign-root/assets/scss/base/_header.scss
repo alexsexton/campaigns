@@ -7,7 +7,7 @@
 
   .logo {
     width: 150px;
-    height: 150px;
+    float: left;
 
     a {
       color: $white;
@@ -16,6 +16,10 @@
     img {
       width: 100%;
     }
+  }
+
+  .description {
+    float: left;
   }
 
   .search .button {
