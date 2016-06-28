@@ -13,7 +13,7 @@
 
     <?php get_template_part('partials/header'); ?>
 
-    <main class="main row" role="main">
+    <main class="main" role="main">
         <?php h()->w_requested_template(); ?>
     </main>
 
