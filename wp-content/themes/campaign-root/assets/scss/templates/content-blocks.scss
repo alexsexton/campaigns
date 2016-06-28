@@ -1,0 +1,45 @@
+// Content Blocks
+// Each one of these should map to the html authored in templates/partials/content-blocks.php
+
+
+.hero {
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        width: $site-max-width;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        margin-top: -#{$base-font-size*2.5};
+        margin-left: -#{$site-max-width/2};
+
+        &.light {
+            h1 {
+                color: $white;
+            }
+            .content {
+                color: $white
+            }
+        }
+        &.dark {
+            h1 {
+                color: $black;
+            }
+            .content {
+                color: $black;
+            }
+        }
+    }
+
+    .content {
+        max-width: 40em;
+    }
+
+    img {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+}
