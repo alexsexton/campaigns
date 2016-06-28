@@ -10,19 +10,29 @@
     //
     if( get_row_layout() == 'hero') : ?>
 
-      <?php if( get_sub_field('title')) : ?>
-        <div class="hero">
-          <div class="row">
-            <header class="title">
-              <h1><?php the_sub_field('title'); ?></h1>
-            </header>
+      <?php
+        $hero_background = get_sub_field('background');
+        $hero_text_colour = get_sub_field('text_colour');
+
+        if( get_sub_field('image')) {
+          $hero_image = get_sub_field('image');
+        };
+      ?>
+
+        <div class="hero <?php echo $hero_background;?>">
+
+          <div class="overlay <?php echo $hero_text_colour;?>">
+            <h1><?php the_sub_field('title'); ?></h1>
             <div class="content rich-text">
-              <?php the_sub_field('content'); ?>
+              <?php the_sub_field('caption'); ?>
             </div>
           </div>
-        </div>
-      <?php endif; ?>
 
+            <?php if( get_sub_field('image')) : ?>
+              <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
+            <?php endif; ?>
+
+        </div>
     <?php endif; ?>
 
     <?php
@@ -65,7 +75,7 @@
           <div class="promo-image">
             <?php if( get_sub_field('image')) : ?>
               <?php $promo_image = get_sub_field('image'); ?>
-              <img src="<?php echo $left_image['url']; ?>" alt="<?php echo $left_image['alt']; ?>">
+              <img src="<?php echo $promo_image['url']; ?>" alt="<?php echo $promo_image['alt']; ?>">
             <?php endif; ?>
           </div>
 
