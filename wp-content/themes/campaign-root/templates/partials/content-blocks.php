@@ -24,7 +24,7 @@
           <div class="overlay <?php echo $hero_text_colour;?>">
             <h1><?php the_sub_field('title'); ?></h1>
             <div class="content rich-text">
-              <?php the_sub_field('caption'); ?>
+              <p><?php the_sub_field('caption'); ?></p>
             </div>
           </div>
 
@@ -42,8 +42,10 @@
     if( get_row_layout() == 'title') : ?>
 
       <?php if( get_sub_field('title')) : ?>
-        <header class="title row">
-          <h1><?php the_sub_field('title'); ?></h1>
+        <header class="title">
+            <div class="row">
+                <h1><?php the_sub_field('title'); ?></h1>
+            </div>
         </header>
       <?php endif; ?>
 
@@ -57,8 +59,10 @@
     if( get_row_layout() == 'subtitle') : ?>
 
       <?php if( get_sub_field('subtitle')) : ?>
-        <header class="subtitle row">
-          <h2><?php the_sub_field('subtitle'); ?></h2>
+        <header class="subtitle">
+            <div class="row">
+                <h2><?php the_sub_field('subtitle'); ?></h2>
+            </div>
         </header>
       <?php endif; ?>
 
@@ -70,7 +74,7 @@
     //
     if( get_row_layout() == 'promo_box') : ?>
       <?php $background = get_sub_field('background'); ?>
-      <div class="promos <?php echo $background; ?>">
+      <div class="promo-box <?php echo $background; ?>">
 
           <div class="promo-image">
             <?php if( get_sub_field('image')) : ?>
@@ -102,7 +106,7 @@
     if( get_row_layout() == 'content') : ?>
 
       <?php if( get_sub_field('content')) : ?>
-        <div class="content row">
+        <div class="content-only row">
           <div class="rich-text">
             <?php the_sub_field('content'); ?>
           </div>
@@ -116,8 +120,7 @@
     // Content Block ### Left-Aligned Image and Caption
     //
     if( get_row_layout() == 'left_aligned_image') : ?>
-      <div class="row">
-        <div class="left-image-caption">
+        <div class="left-image-caption row">
 
           <?php $left_aligned_image = get_sub_field('image'); ?>
 
@@ -133,7 +136,6 @@
             <?php endif; ?>
           </figure>
 
-        </div>
       </div>
 
     <?php endif; ?>
@@ -143,8 +145,7 @@
     // Content Block ### Right-Aligned Image and Caption
     //
     if( get_row_layout() == 'right_aligned_image') : ?>
-      <div class="row">
-        <div class="right-image-caption">
+        <div class="right-image-caption row">
 
           <?php $right_aligned_image = get_sub_field('image'); ?>
 
@@ -160,7 +161,6 @@
               <img src="<?php echo $right_aligned_image['url']; ?>" alt="<?php echo $right_aligned_image['alt']; ?>">
           </figure>
 
-        </div>
       </div>
 
     <?php endif; ?>
