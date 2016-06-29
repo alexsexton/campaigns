@@ -1,21 +1,33 @@
 // Site
 
 .row {
-  width: $site-max-width;
+  max-width: $site-max-width;
   margin: auto;
   padding: 0 $padding/2;
 }
 
-
 // Button Links
 a.button:link {
-  color: $button-text; }
+  color: $button-text;
+}
 
 a.button:visited {
-  color: $button-text; }
+  color: $button-text;
+}
 
 a.button:hover {
-  color: $button-text-hover; }
+  color: $button-text-hover;
+}
 
 a.button:active {
-  color: $button-text-hover; }
+  color: $button-text-hover;
+}
+
+// MQs
+@media screen and (max-width: $big-screen) {}
+
+@media screen and (max-width: $medium-screen) {}
+
+@media screen and (max-width: $small-screen) {}
+
+@media screen and (max-width: $tiny-screen) {}
