@@ -3,7 +3,7 @@
         <div class="logo">
             <a href="/"><h1><?php bloginfo('name'); ?></h1></a>
         </div>
-        <?php if (bloginfo('description')): ?>
+        <?php if (get_bloginfo('description')) : ?>
             <div class="description">
                 <p><?php bloginfo('description'); ?></p>
             </div>
