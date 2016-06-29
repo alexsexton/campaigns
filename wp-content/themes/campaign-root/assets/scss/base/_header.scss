@@ -1,13 +1,28 @@
 // Site Header
 
+@media screen and (max-width: $small-screen) {
+
+    .global-header {
+        position: relative;
+    }
+
+    #global-header .header-wrapper .header-global .header-logo {
+        width: 50%;
+    }
+}
+
 .site-header {
   padding: $padding 0;
   background: $brand-primary;
   color: $white;
 
   .logo {
-    width: 150px;
+    width: 300px;
     float: left;
+    @media screen and (max-width: $small-screen) {
+        width: 50%;
+        float: none;
+    }
 
     a {
       color: $white;
@@ -20,6 +35,10 @@
 
   .description {
     float: left;
+    @media screen and (max-width: $small-screen) {
+        width: 100%;
+        float: none;
+    }
   }
 
   .search .button {
@@ -27,4 +46,3 @@
   }
 
 }
-
