@@ -214,106 +214,6 @@ register_field_group(array(
                     'min' => '',
                     'max' => ''
                 ),
-                // Promo Box
-                array(
-                    'key' => '572b15e47bc15',
-                    'name' => 'promo_box',
-                    'label' => 'Promo Box',
-                    'display' => 'row',
-                    'sub_fields' => array(
-                        array(
-                            'key' => 'field_571a45de7bc13',
-                            'label' => 'Title',
-                            'name' => 'title',
-                            'type' => 'text',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => ''
-                            ),
-                            'default_value' => '',
-                            'placeholder' => '',
-                            'prepend' => '',
-                            'append' => '',
-                            'maxlength' => '',
-                            'readonly' => 0,
-                            'disabled' => 0
-                        ),
-                        array(
-                            'key' => 'field_572a6181a933b',
-                            'label' => 'Content',
-                            'name' => 'content',
-                            'type' => 'wysiwyg',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => ''
-                            ),
-                            'default_value' => '',
-                            'tabs' => 'all',
-                            'toolbar' => 'basic',
-                            'media_upload' => 0
-                        ),
-                        array(
-                            'key' => 'field_574460645fdf3',
-                            'label' => 'Image',
-                            'name' => 'image',
-                            'type' => 'file',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => ''
-                            ),
-                            'return_format' => 'array',
-                            'library' => 'all',
-                            'min_size' => '',
-                            'max_size' => '',
-                            'mime_types' => ''
-                        ),
-                        array(
-                            'key' => 'field_5744607c5fdf4',
-                            'label' => 'Background',
-                            'name' => 'background',
-                            'type' => 'select',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => ''
-                            ),
-                            'choices' => array(
-                                'brand-primary' => 'Brand Primary',
-                                'brand-secondary' => 'Brand Secondary',
-                                'brand-tertiary' => 'Brand Tertiary',
-                                'brand-quaternary' => 'Brand Quaternary',
-                                'brand-quinary' => 'Brand Quinary'
-                            ),
-                            'default_value' => array(
-                                0 => 'brand-primary'
-                            ),
-                            'allow_null' => 0,
-                            'multiple' => 0,
-                            'ui' => 0,
-                            'ajax' => 0,
-                            'placeholder' => '',
-                            'disabled' => 0,
-                            'readonly' => 0
-                        )
-                    ),
-                    'min' => '',
-                    'max' => ''
-                ),
                 // Content
                 array(
                     'key' => '572c6183a937a',
@@ -572,7 +472,161 @@ register_field_group(array(
                     ),
                     'min' => '',
                     'max' => ''
-                )
+                ),
+                // Promo repeater
+                array (
+                    'key' => 'field_5773c0d2bbc3c',
+                    'label' => 'Promo Boxes',
+                    'name' => 'promo_boxes',
+                    'type' => 'repeater',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array (
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'collapsed' => '',
+                    'min' => '',
+                    'max' => '',
+                    'layout' => 'row',
+                    'button_label' => 'Add Row',
+                    'sub_fields' => array (
+                        array (
+                            'key' => 'field_5773c0ecbbc3d',
+                            'label' => 'Promo Block',
+                            'name' => 'promo_block',
+                            'type' => 'flexible_content',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array (
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'button_label' => 'Add Promo',
+                            'min' => 3,
+                            'max' => '',
+                            'layouts' => array (
+                                array (
+                                    'key' => '5773c0f362bdc',
+                                    'name' => 'promo',
+                                    'label' => 'Promo',
+                                    'display' => 'block',
+                                    'sub_fields' => array (
+                                        array (
+                                            'key' => 'field_5773c108bbc3e',
+                                            'label' => 'Title',
+                                            'name' => 'title',
+                                            'type' => 'text',
+                                            'instructions' => '',
+                                            'required' => 0,
+                                            'conditional_logic' => 0,
+                                            'wrapper' => array (
+                                                'width' => '',
+                                                'class' => '',
+                                                'id' => '',
+                                            ),
+                                            'default_value' => '',
+                                            'placeholder' => '',
+                                            'prepend' => '',
+                                            'append' => '',
+                                            'maxlength' => '',
+                                            'readonly' => 0,
+                                            'disabled' => 0,
+                                        ),
+                                        array (
+                                            'key' => 'field_5773c10ebbc3f',
+                                            'label' => 'Content',
+                                            'name' => 'content',
+                                            'type' => 'textarea',
+                                            'instructions' => '',
+                                            'required' => 0,
+                                            'conditional_logic' => 0,
+                                            'wrapper' => array (
+                                                'width' => '',
+                                                'class' => '',
+                                                'id' => '',
+                                            ),
+                                            'default_value' => '',
+                                            'placeholder' => '',
+                                            'maxlength' => '',
+                                            'rows' => '',
+                                            'new_lines' => 'wpautop',
+                                            'readonly' => 0,
+                                            'disabled' => 0,
+                                        ),
+                                        array (
+                                            'key' => 'field_5773c116bbc40',
+                                            'label' => 'Image',
+                                            'name' => 'image',
+                                            'type' => 'image',
+                                            'instructions' => '',
+                                            'required' => 0,
+                                            'conditional_logic' => 0,
+                                            'wrapper' => array (
+                                                'width' => '',
+                                                'class' => '',
+                                                'id' => '',
+                                            ),
+                                            'return_format' => 'array',
+                                            'preview_size' => 'full',
+                                            'library' => 'all',
+                                            'min_width' => '',
+                                            'min_height' => '',
+                                            'min_size' => '',
+                                            'max_width' => '',
+                                            'max_height' => '',
+                                            'max_size' => '',
+                                            'mime_types' => '',
+                                        ),
+                                        array (
+                                            'key' => 'field_5773c12abbc41',
+                                            'label' => 'URL',
+                                            'name' => 'url',
+                                            'type' => 'url',
+                                            'instructions' => '',
+                                            'required' => 0,
+                                            'conditional_logic' => 0,
+                                            'wrapper' => array (
+                                                'width' => '',
+                                                'class' => '',
+                                                'id' => '',
+                                            ),
+                                            'default_value' => '',
+                                            'placeholder' => '',
+                                        ),
+                                        array (
+                                            'key' => 'field_5773c148bbc42',
+                                            'label' => 'Call to Action',
+                                            'name' => 'call_to_action',
+                                            'type' => 'text',
+                                            'instructions' => '',
+                                            'required' => 0,
+                                            'conditional_logic' => 0,
+                                            'wrapper' => array (
+                                                'width' => '',
+                                                'class' => '',
+                                                'id' => '',
+                                            ),
+                                            'default_value' => '',
+                                            'placeholder' => '',
+                                            'prepend' => '',
+                                            'append' => '',
+                                            'maxlength' => '',
+                                            'readonly' => 0,
+                                            'disabled' => 0,
+                                        ),
+                                    ),
+                                    'min' => '',
+                                    'max' => '',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
             )
         )
     ),
@@ -581,7 +635,7 @@ register_field_group(array(
             array(
                 'param' => 'page_template',
                 'operator' => '==',
-                'value' => 'page-default.php'
+                'value' => 'default'
             )
         )
     ),
