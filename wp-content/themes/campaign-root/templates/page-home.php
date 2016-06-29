@@ -1,5 +1,5 @@
 <?php
-    // Template name: Default
+    // Template name: Home
     the_post();
 ?>
 
