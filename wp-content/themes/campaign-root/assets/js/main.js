@@ -3,8 +3,8 @@
 'use strict'
 
 require('./common')
-var enquire = require('./plugins/enquire')
-require('./plugins/jquery-accessibleMegaMenu')
+var enquire = require('../../bower_components/enquire/dist/enquire.js')
+require('../../bower_components/jquery-accessibleMegaMenu/js/jquery-accessibleMegaMenu.js')
 
 jQuery(function ($) {
   // Mega menu
