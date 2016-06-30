@@ -2,9 +2,11 @@
 
 namespace Dxw\GdsCampaignRoot\Posts\CustomFieldGroups;
 
-class Options implements \Dxw\Iguana\Registerable {
+class Options implements \Dxw\Iguana\Registerable
+{
 
-    public function register() {
+    public function register()
+    {
 
         if (function_exists('acf_add_options_sub_page')) {
             acf_add_options_sub_page('Homepage');
