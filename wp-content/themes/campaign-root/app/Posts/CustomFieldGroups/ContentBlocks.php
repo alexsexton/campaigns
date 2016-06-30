@@ -4,10 +4,8 @@ namespace Dxw\GdsCampaignRoot\Posts\CustomFieldGroups;
 
 class ContentBlocks implements \Dxw\Iguana\Registerable
 {
-
     public function register()
     {
-
         register_field_group(array(
             'key' => 'group_56e9937e4dc99',
             'title' => 'Content',
@@ -770,6 +768,5 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
             'active' => 1,
             'description' => ''
         ));
-
     }
 }
