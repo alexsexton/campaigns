@@ -60,7 +60,7 @@ class Scripts implements \Dxw\Iguana\Registerable
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Prefetch dns of external services e.g //analytics.google.com -->
+        <!-- Prefetch external asset dns -->
         <link rel="dns-prefetch" href="#">
 
         <link rel="shortcut icon" href="<?php $this->assetPAth('img/favicon.ico')?>" type="image/x-icon">
@@ -70,7 +70,6 @@ class Scripts implements \Dxw\Iguana\Registerable
         <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php $this->assetPAth('img/apple-touch-icon-76x76.png') ?>">
         <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPAth('img/apple-touch-icon-60x60.png') ?>">
         <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPath('img/apple-touch-icon-152x152.png') ?>">
-
         <?php
 
     }

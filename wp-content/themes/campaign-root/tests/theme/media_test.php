@@ -33,6 +33,11 @@ class Theme_Media_Test extends PHPUnit_Framework_TestCase
             'times' => 1,
         ]);
 
+        \WP_Mock::wpFunction('add_theme_support', [
+            'args' => ['post-thumbnails'],
+            'times' => 1,
+        ]);
+
         $media->register();
     }
 }
