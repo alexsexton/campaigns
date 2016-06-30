@@ -5,7 +5,8 @@ namespace Dxw\GdsCampaignRoot\Theme;
 class Menus implements \Dxw\Iguana\Registerable
 {
 
-    public function custom_wp_nav_menu($var) {
+    public function custom_wp_nav_menu($var)
+    {
         return is_array($var) ? array_intersect($var, array(
             //List of allowed menu classes
             'current_page_item',
@@ -23,7 +24,8 @@ class Menus implements \Dxw\Iguana\Registerable
     }
 
     //Replaces "current-menu-item" with "active"
-    public function current_to_active($text){
+    public function current_to_active($text)
+    {
         $replace = array(
             //List of menu item classes that should be changed to "active"
             'current_page_item' => 'active',
@@ -37,7 +39,8 @@ class Menus implements \Dxw\Iguana\Registerable
         return $text;
     }
 
-    public function strip_empty_classes($menu) {
+    public function strip_empty_classes($menu)
+    {
         return $menu;
     }
 
@@ -48,7 +51,7 @@ class Menus implements \Dxw\Iguana\Registerable
         add_filter('nav_menu_css_class', [$this, 'custom_wp_nav_menu']);
         add_filter('nav_menu_item_id', [$this, 'custom_wp_nav_menu']);
         add_filter('page_css_class', [$this, 'custom_wp_nav_menu']);
-        add_filter ('wp_nav_menu', [$this, 'current_to_active']);
-        add_filter ('wp_nav_menu', [$this, 'strip_empty_classes']);
+        add_filter('wp_nav_menu', [$this, 'current_to_active']);
+        add_filter('wp_nav_menu', [$this, 'strip_empty_classes']);
     }
 }

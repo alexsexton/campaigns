@@ -53,8 +53,6 @@ class Scripts implements \Dxw\Iguana\Registerable
         wp_enqueue_style('govuk-template-fonts',      $this->getAssetPath('fonts.min.css'));
 
         wp_enqueue_style('main',      $this->getAssetPath('main.min.css'));
-
-
     }
 
     public function wpPrintScripts()

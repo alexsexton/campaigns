@@ -422,7 +422,7 @@ register_field_group(array(
                             'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
-                                'id' => ''
+                                'id' => '',
                             ),
                             'default_value' => '',
                             'placeholder' => '',
@@ -430,7 +430,7 @@ register_field_group(array(
                             'rows' => '',
                             'new_lines' => 'wpautop',
                             'readonly' => 0,
-                            'disabled' => 0
+                            'disabled' => 0,
                         ),
                         array(
                             'key' => 'field_57724adb49901',
@@ -443,7 +443,7 @@ register_field_group(array(
                             'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
-                                'id' => ''
+                                'id' => '',
                             ),
                             'default_value' => '',
                             'placeholder' => '',
@@ -451,7 +451,7 @@ register_field_group(array(
                             'append' => '',
                             'maxlength' => '',
                             'readonly' => 0,
-                            'disabled' => 0
+                            'disabled' => 0,
                         ),
                         array(
                             'key' => 'field_57724a9ffb429',
@@ -464,17 +464,125 @@ register_field_group(array(
                             'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
-                                'id' => ''
+                                'id' => '',
                             ),
                             'default_value' => '',
-                            'placeholder' => ''
-                        )
+                            'placeholder' => '',
+                        ),
+                        array(
+                            'key' => 'field_577503aab2790',
+                            'label' => 'GA Event tracking',
+                            'name' => 'ga_event_tracking',
+                            'type' => 'checkbox',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'choices' => array(
+                                'event_tracking' => 'Add Event',
+                            ),
+                            'default_value' => array(
+                            ),
+                            'layout' => 'vertical',
+                            'toggle' => 0,
+                        ),
+                        array(
+                            'key' => 'field_577504d141a44',
+                            'label' => 'Event Category',
+                            'name' => 'event_category',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 1,
+                            'conditional_logic' => array(
+                                array(
+                                    array(
+                                        'field' => 'field_577503aab2790',
+                                        'operator' => '==',
+                                        'value' => 'event_tracking',
+                                    ),
+                                ),
+                            ),
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'maxlength' => '',
+                            'readonly' => 0,
+                            'disabled' => 0,
+                        ),
+                        array(
+                            'key' => 'field_5775055c65eb5',
+                            'label' => 'Event Action',
+                            'name' => 'event_action',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 1,
+                            'conditional_logic' => array(
+                                array(
+                                    array(
+                                        'field' => 'field_577503aab2790',
+                                        'operator' => '==',
+                                        'value' => 'event_tracking',
+                                    ),
+                                ),
+                            ),
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'maxlength' => '',
+                            'readonly' => 0,
+                            'disabled' => 0,
+                        ),
+                        array(
+                            'key' => 'field_5775057265eb6',
+                            'label' => 'Event Label',
+                            'name' => 'event_label',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => '',
+                            'conditional_logic' => array(
+                                array(
+                                    array(
+                                        'field' => 'field_577503aab2790',
+                                        'operator' => '==',
+                                        'value' => 'event_tracking',
+                                    ),
+                                ),
+                            ),
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'maxlength' => '',
+                            'readonly' => 0,
+                            'disabled' => 0,
+                        ),
                     ),
                     'min' => '',
-                    'max' => ''
+                    'max' => '',
                 ),
                 // Promo repeater
-                array (
+                array(
                     'key' => 'field_5773c0d2bbc3c',
                     'label' => 'Promo Boxes',
                     'name' => 'promo_boxes',
@@ -482,7 +590,7 @@ register_field_group(array(
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -492,8 +600,8 @@ register_field_group(array(
                     'max' => '',
                     'layout' => 'row',
                     'button_label' => 'Add Row',
-                    'sub_fields' => array (
-                        array (
+                    'sub_fields' => array(
+                        array(
                             'key' => 'field_5773c0ecbbc3d',
                             'label' => 'Promo Block',
                             'name' => 'promo_block',
@@ -501,7 +609,7 @@ register_field_group(array(
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -509,14 +617,14 @@ register_field_group(array(
                             'button_label' => 'Add Promo',
                             'min' => 3,
                             'max' => '',
-                            'layouts' => array (
-                                array (
+                            'layouts' => array(
+                                array(
                                     'key' => '5773c0f362bdc',
                                     'name' => 'promo',
                                     'label' => 'Promo',
                                     'display' => 'block',
-                                    'sub_fields' => array (
-                                        array (
+                                    'sub_fields' => array(
+                                        array(
                                             'key' => 'field_5773c108bbc3e',
                                             'label' => 'Title',
                                             'name' => 'title',
@@ -524,7 +632,7 @@ register_field_group(array(
                                             'instructions' => '',
                                             'required' => 0,
                                             'conditional_logic' => 0,
-                                            'wrapper' => array (
+                                            'wrapper' => array(
                                                 'width' => '',
                                                 'class' => '',
                                                 'id' => '',
@@ -537,7 +645,7 @@ register_field_group(array(
                                             'readonly' => 0,
                                             'disabled' => 0,
                                         ),
-                                        array (
+                                        array(
                                             'key' => 'field_5773c10ebbc3f',
                                             'label' => 'Content',
                                             'name' => 'content',
@@ -545,7 +653,7 @@ register_field_group(array(
                                             'instructions' => '',
                                             'required' => 0,
                                             'conditional_logic' => 0,
-                                            'wrapper' => array (
+                                            'wrapper' => array(
                                                 'width' => '',
                                                 'class' => '',
                                                 'id' => '',
@@ -558,7 +666,7 @@ register_field_group(array(
                                             'readonly' => 0,
                                             'disabled' => 0,
                                         ),
-                                        array (
+                                        array(
                                             'key' => 'field_5773c116bbc40',
                                             'label' => 'Image',
                                             'name' => 'image',
@@ -566,7 +674,7 @@ register_field_group(array(
                                             'instructions' => '',
                                             'required' => 0,
                                             'conditional_logic' => 0,
-                                            'wrapper' => array (
+                                            'wrapper' => array(
                                                 'width' => '',
                                                 'class' => '',
                                                 'id' => '',
@@ -582,7 +690,7 @@ register_field_group(array(
                                             'max_size' => '',
                                             'mime_types' => '',
                                         ),
-                                        array (
+                                        array(
                                             'key' => 'field_5773c12abbc41',
                                             'label' => 'URL',
                                             'name' => 'url',
@@ -590,7 +698,7 @@ register_field_group(array(
                                             'instructions' => '',
                                             'required' => 0,
                                             'conditional_logic' => 0,
-                                            'wrapper' => array (
+                                            'wrapper' => array(
                                                 'width' => '',
                                                 'class' => '',
                                                 'id' => '',
@@ -598,7 +706,7 @@ register_field_group(array(
                                             'default_value' => '',
                                             'placeholder' => '',
                                         ),
-                                        array (
+                                        array(
                                             'key' => 'field_5773c148bbc42',
                                             'label' => 'Call to Action',
                                             'name' => 'call_to_action',
@@ -606,7 +714,7 @@ register_field_group(array(
                                             'instructions' => '',
                                             'required' => 0,
                                             'conditional_logic' => 0,
-                                            'wrapper' => array (
+                                            'wrapper' => array(
                                                 'width' => '',
                                                 'class' => '',
                                                 'id' => '',
@@ -654,6 +762,3 @@ register_field_group(array(
     'active' => 1,
     'description' => ''
 ));
-
-
-?>
