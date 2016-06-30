@@ -1,0 +1,52 @@
+// Paths
+$imagePath: "/images";
+$fontPath: "/fonts";
+
+// Site Width
+$site-max-width: 960px;
+$site-gutters: 30px;
+
+// Breakpoints
+$big-screen: $site-max-width;
+$medium-screen: 900px;
+$small-screen: 780px;
+$tiny-screen: 480px;
+
+// Margins & Padding
+$margin: 30px;
+$padding: 30px;
+
+// Colours - see settings/_colours.scss for a complete list
+
+// Brand
+$brand-primary: $govuk-blue;
+$brand-secondary: $purple;
+$brand-tertiary: $grass-green;
+
+// Errors
+$highlight: $mellow-red;
+$error: $yellow;
+
+// Base Site
+$base-font-colour: $black;
+$body-background-colour: $white;
+
+// Links
+$link-colour: $brand-primary;
+$link-hover-colour: $brand-tertiary;
+
+// Buttons
+$button: $brand-primary;
+$button-inactive: scale-color($brand-primary, $lightness: 50%);
+$button-hover: $brand-tertiary;
+$button-text: $white;
+$button-text-hover: $white;
+
+// Tables
+$table-borders: $grey-2;
+
+// Borders
+$border-colour: $grey-1;
+$border-radius: 0px;
+$input-border: $grey-1;
+$input-border-focus: $highlight;

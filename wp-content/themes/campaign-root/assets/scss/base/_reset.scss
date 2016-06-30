@@ -1,0 +1,28 @@
+// Additional reset rules - govuk_template has it's own so we should inherit from there.
+
+ul, ol, p, blockquote {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.group:before,
+.group:after,
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.group:after,
+.row:after {
+    clear: both;
+}
+
+// For IE 6/7 only Include this rule to trigger hasLayout and contain floats.
+.group, .row {
+    *zoom: 1;
+}

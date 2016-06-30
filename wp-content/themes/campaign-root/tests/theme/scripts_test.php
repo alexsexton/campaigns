@@ -97,6 +97,16 @@ class Theme_Scripts_Test extends PHPUnit_Framework_TestCase
         ]);
 
         \WP_Mock::wpFunction('wp_enqueue_style', [
+            'args' => ['govuk-template', 'http://a.invalid/static/govuk-template.min.css'],
+            'times' => 1,
+        ]);
+
+        \WP_Mock::wpFunction('wp_enqueue_style', [
+            'args' => ['govuk-template-fonts', 'http://a.invalid/static/fonts.min.css'],
+            'times' => 1,
+        ]);
+
+        \WP_Mock::wpFunction('wp_enqueue_style', [
             'args' => ['main', 'http://a.invalid/static/main.min.css'],
             'times' => 1,
         ]);
@@ -119,12 +129,13 @@ class Theme_Scripts_Test extends PHPUnit_Framework_TestCase
             '        <!-- Prefetch external asset dns -->',
             '        <link rel="dns-prefetch" href="#">',
             '',
-            '        <!-- Prefetch internal image assets -->',
-            '        <link rel="prefetch" href="#">',
-            '',
-            '        <link rel="apple-touch-icon-precomposed" href="_http://a.invalid/static/img/apple-touch-icon-precomposed.png_">',
-            '',
-            '        <link rel="icon" type="image/png" href="_http://a.invalid/static/img/shortcut-icon.png_">',
+            '        <link rel="shortcut icon" href="_http://a.invalid/static/img/favicon.ico_" type="image/x-icon">',
+            '        <link rel="mask-icon" href="_http://a.invalid/static/img/gov.uk_logotype_crown.svg_" color="#0b0c0c">',
+            '        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="_http://a.invalid/static/img/apple-touch-icon-152x152.png_">',
+            '        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="_http://a.invalid/static/img/apple-touch-icon-120x120.png_">',
+            '        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="_http://a.invalid/static/img/apple-touch-icon-76x76.png_">',
+            '        <link rel="apple-touch-icon-precomposed" href="_http://a.invalid/static/img/apple-touch-icon-60x60.png_">',
+            '        <link rel="apple-touch-icon-precomposed" href="_http://a.invalid/static/img/apple-touch-icon-152x152.png_">',
             '        ',
         ]));
 

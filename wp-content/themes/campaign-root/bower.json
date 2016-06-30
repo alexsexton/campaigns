@@ -1,6 +1,8 @@
 {
   "name": "gds-campaign-root",
   "dependencies": {
-    "jquery": "~1.x.x"
+    "jquery": "~1.x.x",
+    "jquery-accessibleMegaMenu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu.git",
+    "enquire": "~2.1.2"
   }
 }
