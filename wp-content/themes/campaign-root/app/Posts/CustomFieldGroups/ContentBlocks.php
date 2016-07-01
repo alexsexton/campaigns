@@ -261,7 +261,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => '',
+                                    'instructions' => 'The image title and caption is pulled automatically. Click the pencil icon on the image to edit.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -296,7 +296,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => '',
+                                    'instructions' => 'The image title and caption is pulled automatically. Click the pencil icon on the image to edit.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -444,7 +444,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'name' => 'button_text',
                                     'type' => 'text',
                                     'instructions' => '',
-                                    'required' => '',
+                                    'required' => '1',
                                     'conditional_logic' => '',
                                     'wrapper' => array(
                                         'width' => '',
@@ -489,7 +489,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'choices' => array(
-                                        'event_tracking' => 'Add Event',
+                                        'event_tracking' => 'Add Event Tracking',
                                     ),
                                     'default_value' => array(
                                     ),
@@ -628,12 +628,12 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                             'key' => '5773c0f362bdc',
                                             'name' => 'promo',
                                             'label' => 'Promo',
-                                            'display' => 'block',
+                                            'display' => 'table',
                                             'sub_fields' => array(
                                                 array(
                                                     'key' => 'field_5773c108bbc3e',
                                                     'label' => 'Title',
-                                                    'name' => 'title',
+                                                    'name' => 'promo_title',
                                                     'type' => 'text',
                                                     'instructions' => '',
                                                     'required' => 0,
@@ -654,7 +654,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                 array(
                                                     'key' => 'field_5773c10ebbc3f',
                                                     'label' => 'Content',
-                                                    'name' => 'content',
+                                                    'name' => 'promo_content',
                                                     'type' => 'textarea',
                                                     'instructions' => '',
                                                     'required' => 0,
@@ -675,7 +675,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                 array(
                                                     'key' => 'field_5773c116bbc40',
                                                     'label' => 'Image',
-                                                    'name' => 'image',
+                                                    'name' => 'promo_image',
                                                     'type' => 'image',
                                                     'instructions' => '',
                                                     'required' => 0,
@@ -699,7 +699,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                 array(
                                                     'key' => 'field_5773c12abbc41',
                                                     'label' => 'URL',
-                                                    'name' => 'url',
+                                                    'name' => 'promo_url',
                                                     'type' => 'url',
                                                     'instructions' => '',
                                                     'required' => 0,
@@ -714,8 +714,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                 ),
                                                 array(
                                                     'key' => 'field_5773c148bbc42',
-                                                    'label' => 'Call to Action',
-                                                    'name' => 'call_to_action',
+                                                    'label' => 'Button Text',
+                                                    'name' => 'promo_button_text',
                                                     'type' => 'text',
                                                     'instructions' => '',
                                                     'required' => 0,

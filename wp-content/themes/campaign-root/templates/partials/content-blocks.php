@@ -72,29 +72,66 @@
     //
     // Content Block ### Promo Box
     //
-    if( get_row_layout() == 'promo_box') : ?>
-      <?php $background = get_sub_field('background'); ?>
-      <div class="promo-box <?php echo $background; ?>">
+    if( get_row_layout() == 'promo_boxes') : ?>
 
-          <div class="promo-image">
-            <?php if( get_sub_field('image')) : ?>
-              <?php $promo_image = get_sub_field('image'); ?>
-              <img src="<?php echo $promo_image['url']; ?>" alt="<?php echo $promo_image['alt']; ?>">
-            <?php endif; ?>
-          </div>
+    <div class="promo-block row">
 
-          <article class="promo">
-            <div class="rich-text">
-            <?php if( get_sub_field('title')) : ?>
-              <h2><?php the_sub_field('title'); ?></h2>
-            <?php endif; ?>
-            <?php if( get_sub_field('content')) : ?>
-              <?php the_sub_field('content'); ?>
-            <?php endif; ?>
+        <div class="promo-boxes">
+
+        <?php // start promo boxes loop
+        if( have_rows('promo_block') ):
+        while ( have_rows('promo_block') ) : the_row(); ?>
+
+            <?php if( get_row_layout() == 'promo') : ?>
+
+            <?php
+            // Some logic to add a relevant class name to the object
+            if (get_sub_field('promo_title') && get_sub_field('promo_content') && get_sub_field('promo_image')) {
+                $promo_class = ' title-content-image';
+            } elseif (get_sub_field('promo_title') && get_sub_field('promo_content')) {
+                $promo_class = ' title-content';
+            } else {
+                $promo_class = ' title-only';
+            }
+            ?>
+
+            <div class="promo-box<?php echo $promo_class; ?>">
+                <div class="promo-box-inner">
+
+                    <?php if( get_sub_field('promo_image')) : ?>
+                    <div class="promo-image">
+                        <?php $promo_image = get_sub_field('promo_image'); ?>
+                        <img src="<?php echo $promo_image['url']; ?>" alt="<?php echo $promo_image['alt']; ?>">
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if( get_sub_field('promo_title')) : ?>
+                        <h2><?php the_sub_field('promo_title'); ?></h2>
+                    <?php endif; ?>
+
+                    <div class="rich-text">
+                        <?php if( get_sub_field('promo_content')) : ?>
+                            <?php the_sub_field('promo_content'); ?>
+                        <?php endif; ?>
+                    </div>
+
+                    <?php if( get_sub_field('promo_url')) : ?>
+                        <div class="buttons">
+                            <a href="<?php the_sub_field('promo_url'); ?>" class="button"><?php the_sub_field('promo_button_text'); ?></a>
+                        </div>
+                    <?php endif; ?>
+
+                </div>
             </div>
-          </article>
+            <?php endif; ?>
 
-      </div>
+        <?php // end promo boxes loop
+          endwhile;
+          endif; ?>
+
+        </div>
+
+    </div>
 
     <?php endif; ?>
 
@@ -113,6 +150,25 @@
         </div>
       <?php endif; ?>
 
+    <?php endif; ?>
+
+
+    <?php
+    //
+    // Content Block ### Call to Action
+    //
+    if( get_row_layout() == 'call_to_action') : ?>
+    <div class="row">
+        <div class="call-to-action">
+
+            <?php if( get_sub_field('title')) : ?><h2><?php the_sub_field('title'); ?></h2><?php endif; ?>
+
+            <div class="buttons">
+                <a href="<?php the_sub_field('button_url'); ?>" class="button" <?php if( get_sub_field('ga_event_tracking') == true): ?> onclick="ga('send', 'event', '<?php the_sub_field('event_category'); ?>', '<?php the_sub_field('event_action'); ?>', '<?php the_sub_field('event_label'); ?>');"<?php endif; ?>><?php the_sub_field('button_text'); ?></a>
+            </div>
+
+        </div>
+    </div>
     <?php endif; ?>
 
     <?php
@@ -150,6 +206,7 @@
           <?php $right_aligned_image = get_sub_field('image'); ?>
 
           <figure>
+              <img src="<?php echo $right_aligned_image['url']; ?>" alt="<?php echo $right_aligned_image['alt']; ?>">
             <?php if( $right_aligned_image['caption'] ) : ?>
             <figcaption>
               <?php if( $right_aligned_image['title'] ) : ?>
@@ -158,7 +215,6 @@
               <?php echo $right_aligned_image['caption']; ?>
             </figcaption>
             <?php endif; ?>
-              <img src="<?php echo $right_aligned_image['url']; ?>" alt="<?php echo $right_aligned_image['alt']; ?>">
           </figure>
 
       </div>
