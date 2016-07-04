@@ -14,6 +14,15 @@ class Scripts implements \Dxw\Iguana\Registerable
     {
         add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
         add_action('wp_print_scripts', [$this, 'wpPrintScripts']);
+        add_action('admin_head', [$this, 'acfMarkdown']);
+    }
+
+    // Adds a border to acf-markdown fields in the editor is there a better way to do this?
+    public function acfMarkdown() {
+        echo '
+        <style>
+            .acf-field-markdown-editor iframe { border: 1px solid #ddd; }
+        </style>';
     }
 
     public function getAssetPath($path)
