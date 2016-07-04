@@ -1,6 +1,9 @@
 // Content Blocks
 // Each one of these should map to the HTML authored in templates/partials/content-blocks.php
 
+.content-block {
+    
+}
 
 .hero {
     position: relative;
@@ -88,10 +91,22 @@
         &.title-content-image {
             img {
                 max-width: 100%;
+                display: block;
+            }
+        }
+
+        &.title-image {
+            img {
+                max-width: 100%;
+                display: block;
             }
         }
 
         &.title-content {
+            img {
+                max-width: 100%;
+                display: block;
+            }
 
             .promo-box-inner {
                 padding: $padding/2 0;
@@ -100,6 +115,10 @@
         }
 
         &.title-only {
+            img {
+                max-width: 100%;
+                display: block;
+            }
             .promo-box-inner {
                 padding: $padding/2 0;
                 border: 1px solid $black;
@@ -150,5 +169,19 @@
     figcaption {
         @include col(2/4);
         float: left;
+    }
+}
+
+.full-width-image {
+    img {
+        max-width: 100%;
+        display: block;
+    }
+}
+
+.info-graphic {
+    img {
+        max-width: 100%;
+        display: block;
     }
 }
