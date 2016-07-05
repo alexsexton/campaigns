@@ -18,11 +18,9 @@ class Scripts implements \Dxw\Iguana\Registerable
     }
 
     // Adds a border to acf-markdown fields in the editor is there a better way to do this?
-    public function acfMarkdown() {
-        echo '
-        <style>
-            .acf-field-markdown-editor iframe { border: 1px solid #ddd; }
-        </style>';
+    public function acfMarkdown()
+    {
+        echo '<style>.acf-field-markdown-editor iframe { border: 1px solid #ddd; } </style>';
     }
 
     public function getAssetPath($path)
