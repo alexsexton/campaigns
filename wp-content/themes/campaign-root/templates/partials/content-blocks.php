@@ -14,8 +14,8 @@
         $hero_background = get_sub_field('background_colour');
         $hero_text_colour = get_sub_field('text_colour');
 
-        if( get_sub_field('image')) {
-          $hero_image = get_sub_field('image');
+        if( get_sub_field('background_image')) {
+          $hero_image = get_sub_field('background_image');
         };
       ?>
 
@@ -26,9 +26,17 @@
             <div class="content rich-text">
               <p><?php the_sub_field('caption'); ?></p>
             </div>
+
+            <?php if( get_sub_field('button_url') && get_sub_field('button_text')) : ?>
+            <div class="buttons">
+                <a href="<?php the_sub_field('button_url'); ?>" class="button" <?php if( get_sub_field('ga_event_tracking') == true): ?> onclick="ga('send', 'event', '<?php the_sub_field('event_category'); ?>', '<?php the_sub_field('event_action'); ?>', '<?php the_sub_field('event_label'); ?>');"<?php endif; ?>><?php the_sub_field('button_text'); ?></a>
+            </div>
+            <?php endif; ?>
+
           </div>
 
-            <?php if( get_sub_field('image')) : ?>
+
+            <?php if($hero_image) : ?>
               <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
             <?php endif; ?>
 
@@ -42,7 +50,11 @@
     if( get_row_layout() == 'title') : ?>
 
       <?php if( get_sub_field('title')) : ?>
-        <header class="title content-block">
+            <?php if( get_sub_field('background_colour')) : ?>
+                <header class="title content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+            <?php else : ?>
+                <header class="title content-block">
+            <?php endif; ?>
             <div class="row">
                 <h1><?php the_sub_field('title'); ?></h1>
             </div>
@@ -59,7 +71,11 @@
     if( get_row_layout() == 'subtitle') : ?>
 
       <?php if( get_sub_field('subtitle')) : ?>
-        <header class="subtitle content-block">
+          <?php if( get_sub_field('background_colour')) : ?>
+              <header class="subtitle content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+          <?php else : ?>
+              <header class="subtitle content-block">
+          <?php endif; ?>
             <div class="row">
                 <h2><?php the_sub_field('subtitle'); ?></h2>
             </div>
@@ -149,11 +165,18 @@
     if( get_row_layout() == 'content') : ?>
 
       <?php if( get_sub_field('content')) : ?>
+
+        <?php $content_text_colour = get_sub_field('text_colour'); ?>
+
+        <?php if( get_sub_field('background_colour')) : ?>
+        <div class="content-only content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+        <?php else : ?>
         <div class="content-only content-block">
+        <?php endif; ?>
             <div class="row">
-                <div class="rich-text">
+                <article class="rich-text  <?php echo $content_text_colour;?>">
                     <?php the_sub_field('content'); ?>
-                </div>
+                </article>
             </div>
         </div>
       <?php endif; ?>
@@ -166,7 +189,11 @@
     // Content Block ### Call to Action
     //
     if( get_row_layout() == 'call_to_action') : ?>
+    <?php if( get_sub_field('background_colour')) : ?>
+    <div class="call-to-action-block content-block" style="background-colour:<?php the_sub_field('background_colour'); ?>;">
+    <?php else : ?>
     <div class="call-to-action-block content-block">
+    <?php endif; ?>
         <div class="row">
             <div class="call-to-action">
 

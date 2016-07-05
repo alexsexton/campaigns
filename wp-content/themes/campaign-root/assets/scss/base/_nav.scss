@@ -24,6 +24,7 @@ $sub-nav-background-hover: $black;
         z-index: 15;
         line-height: 1;
         font-weight: bold;
+        padding-top: 2px;
     }
 
     .nav-item {
@@ -32,7 +33,7 @@ $sub-nav-background-hover: $black;
 
     .nav-item > a {
         display: inline-block;
-        padding: 12px $padding/2 0;
+        padding: 10px $padding/2;
         color: $nav-link;
     }
 

@@ -2,7 +2,7 @@
 // Each one of these should map to the HTML authored in templates/partials/content-blocks.php
 
 .content-block {
-    
+
 }
 
 .hero {
@@ -55,7 +55,7 @@
 }
 
 .title {
-    background: $brand-primary;
+    background-color: $brand-primary;
     padding: $padding 0;
 
     h1 {
@@ -65,7 +65,7 @@
 }
 
 .subtitle {
-    background: $brand-secondary;
+    background-color: $brand-secondary;
     padding: $padding 0;
 
     h2 {
@@ -75,7 +75,8 @@
 }
 
 .content-only {
-    padding-top: $padding;
+    padding: $padding 0;
+    background-color: transparent;
 }
 
 .promo-block {
@@ -128,8 +129,8 @@
     }
 }
 
-.call-to-action {
-    background: $brand-secondary;
+.call-to-action-block {
+    background-color: $brand-secondary;
     color: $white;
     padding: $padding/2;
 

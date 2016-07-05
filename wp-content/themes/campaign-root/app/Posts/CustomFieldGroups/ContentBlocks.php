@@ -77,6 +77,151 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 	'tab-function' => 0,
                                 ),
                                 array(
+                                    'key' => 'field_57724adb499233',
+                                    'label' => 'Button Text',
+                                    'name' => 'button_text',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_57724a9ffb445',
+                                    'label' => 'Button URL',
+                                    'name' => 'button_url',
+                                    'type' => 'url',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                ),
+                                array(
+                                    'key' => 'field_577503ccb2790',
+                                    'label' => 'GA Event tracking',
+                                    'name' => 'ga_event_tracking',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'event_tracking' => 'Add Event Tracking',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_578504d141a44',
+                                    'label' => 'Event Category',
+                                    'name' => 'event_category',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => 1,
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577503ccb2790',
+                                                'operator' => '==',
+                                                'value' => 'event_tracking',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_5775055c77eb5',
+                                    'label' => 'Event Action',
+                                    'name' => 'event_action',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => 1,
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577503ccb2790',
+                                                'operator' => '==',
+                                                'value' => 'event_tracking',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_5775057265fb6',
+                                    'label' => 'Event Label',
+                                    'name' => 'event_label',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577503ccb2790',
+                                                'operator' => '==',
+                                                'value' => 'event_tracking',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
                                     'key' => 'field_5741697a2fcb4',
                                     'label' => 'Text Colour',
                                     'name' => 'text_colour',
@@ -106,8 +251,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 ),
                                 array(
                                     'key' => 'field_571464645edf3',
-                                    'label' => 'Image',
-                                    'name' => 'image',
+                                    'label' => 'Background Image',
+                                    'name' => 'background_image',
                                     'type' => 'file',
                                     'instructions' => 'Adds a full width hero image, falls back to a solid background colour if no image is selected',
                                     'required' => 0,
@@ -183,7 +328,51 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'maxlength' => '',
                                     'readonly' => 0,
                                     'disabled' => 0
-                                )
+                                ),
+                                array(
+                                    'key' => 'field_577a39f69d299',
+                                    'label' => 'Customise Background',
+                                    'name' => 'customise_background',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'yes' => 'Yes',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_577a3a379d298',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69d299',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                ),
                             ),
                             'min' => '',
                             'max' => ''
@@ -215,7 +404,51 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'maxlength' => '',
                                     'readonly' => 0,
                                     'disabled' => 0
-                                )
+                                ),
+                                array(
+                                    'key' => 'field_577a39f69d400',
+                                    'label' => 'Customise Background',
+                                    'name' => 'customise_background',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'yes' => 'Yes',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_577a3a379d29a',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69d400',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                ),
                             ),
                             'min' => '',
                             'max' => ''
@@ -247,6 +480,78 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 	'syntax-theme' => 'sunburst',
                                 	'media-upload' => 0,
                                 	'tab-function' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_5741697a2fab4',
+                                    'label' => 'Text Colour',
+                                    'name' => 'text_colour',
+                                    'type' => 'select',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => ''
+                                    ),
+                                    'choices' => array(
+                                        'dark' => 'Dark',
+                                        'light' => 'Light',
+                                    ),
+                                    'default_value' => array(
+                                        0 => 'dark'
+                                    ),
+                                    'allow_null' => 0,
+                                    'multiple' => 0,
+                                    'ui' => 0,
+                                    'ajax' => 0,
+                                    'placeholder' => '',
+                                    'disabled' => 0,
+                                    'readonly' => 0
+                                ),
+                                array(
+                                    'key' => 'field_577a39f69d410',
+                                    'label' => 'Customise Background',
+                                    'name' => 'customise_background',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'yes' => 'Yes',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_577a3a379d31a',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69d410',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
                                 ),
                             ),
                             'min' => '',
@@ -477,6 +782,50 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     ),
                                     'default_value' => '',
                                     'placeholder' => '',
+                                ),
+                                array(
+                                    'key' => 'field_577a39f69a296',
+                                    'label' => 'Customise Background',
+                                    'name' => 'customise_background',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'yes' => 'Yes',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_577a3a379c298',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69a296',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
                                 ),
                                 array(
                                     'key' => 'field_577503aab2790',
