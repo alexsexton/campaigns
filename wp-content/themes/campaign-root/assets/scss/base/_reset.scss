@@ -1,6 +1,6 @@
 // Additional reset rules - govuk_template has it's own so we should inherit from there.
 
-ul, ol, p, blockquote {
+ul, ol, p, blockquote, figure, figcaption {
     padding: 0;
     margin: 0;
 }

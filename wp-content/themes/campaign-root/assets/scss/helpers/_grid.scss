@@ -28,6 +28,10 @@ $grid-gutter: $margin;
 @mixin col($width: 1, $padding: true) {
   float: left;
   width: percentage($width);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   @if($padding == true) {
     padding-left: $grid-gutter/2;
     padding-right: $grid-gutter/2;

@@ -63,7 +63,7 @@ textarea:focus {
   font-size: $base-font-size;
   color: $grey-3;
   transition: all 0.2s ease-in-out;
-  margin: 0 0 $margin 0;
+  display: inline-block;
 }
 
 .button:hover {
