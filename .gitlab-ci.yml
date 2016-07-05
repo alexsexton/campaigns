@@ -1,6 +1,3 @@
-.php55: &php55
-  image: thedxw/php-testing:5.5
-
 .php70: &php70
   image: thedxw/php-testing:7.0
 
@@ -25,16 +22,6 @@
     - npm install -g standard
   script:
     - standard ${PATHS}
-
-##############################################################################
-### phpunit 5.5
-##############################################################################
-
-php55_themes_campaign-root:
-  <<: *phpunit
-  <<: *php55
-  variables:
-    DIR: wp-content/themes/campaign-root
 
 ##############################################################################
 ### phpunit 7.0
