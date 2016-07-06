@@ -5,6 +5,7 @@
 require('./common')
 var enquire = require('../../bower_components/enquire/dist/enquire.js')
 require('../../bower_components/jquery-accessibleMegaMenu/js/jquery-accessibleMegaMenu.js')
+require('../../bower_components/fitvids/jquery.fitvids.js')
 
 jQuery(function ($) {
   // Mega menu
@@ -43,6 +44,11 @@ jQuery(function ($) {
       $(this).toggleText('Close', 'Menu')
       $('#js-navigation').toggleClass('open')
     })
+  })
+
+  // Call Fitvids on video elements
+  $(function () {
+    $('.fitvids').fitVids()
   })
 // end
 })
