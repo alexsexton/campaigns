@@ -24,7 +24,7 @@
           <div class="overlay <?php echo $hero_text_colour;?>">
             <h1><?php the_sub_field('title'); ?></h1>
             <div class="content rich-text">
-              <p><?php the_sub_field('caption'); ?></p>
+              <?php the_sub_field('caption'); ?>
             </div>
 
             <?php if( get_sub_field('button_url') && get_sub_field('button_text')) : ?>
@@ -286,21 +286,15 @@
     </div>
     <?php endif; ?>
 
+
     <?php
     //
-    // Content Block ### Info Graphic
+    // Content Block ### Video Block
     //
-    if( get_row_layout() == 'info_graphic') : ?>
-    <div class="info-graphic content-block">
+    if( get_row_layout() == 'video_content') : ?>
+    <div class="video-block content-block">
         <div class="row">
-
-          <?php $info_graphic_image = get_sub_field('image'); ?>
-            <figure>
-              <img src="<?php echo $info_graphic_image['url']; ?>" alt="<?php echo $info_graphic_image['alt']; ?>">
-              <?php if (get_sub_field('caption')) {
-              echo '<figcaption><p>' . the_sub_field('caption') . '</p></figcaption>';
-              } ?>
-            </figure>
+            <div class="fitvids"><?php the_sub_field('video'); ?></div>
         </div>
     </div>
     <?php endif; ?>
