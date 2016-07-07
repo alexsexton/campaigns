@@ -59,7 +59,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'key' => 'field_577a5dcc447fa',
                                     'label' => 'Caption',
                                     'name' => 'caption',
-                                    'type' => 'markdown',
+                                    'type' => 'wysiwyg',
                                     'instructions' => '',
                                     'required' => 0,
                                     'conditional_logic' => 0,
@@ -68,13 +68,10 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'autogrow' => 1,
-                                    'editor-theme' => 'light',
-                                    'preview-theme' => 'github',
-                                    'syntax-highlight' => 0,
-                                    'syntax-theme' => 'sunburst',
-                                    'media-upload' => 0,
-                                    'tab-function' => 0,
+                                    'default_value' => '',
+                                    'tabs' => 'all',
+                                    'toolbar' => 'full',
+                                    'media_upload' => 0,
                                 ),
                                 array(
                                     'key' => 'field_57724adb499233',
@@ -453,6 +450,35 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => ''
                         ),
+                        // Video Content
+                        array(
+                            'key' => '572c6183a937c',
+                            'name' => 'video_content',
+                            'label' => 'Video Content',
+                            'display' => 'row',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_577a5dcc447eb',
+                                    'label' => 'Video',
+                                    'name' => 'video',
+                                    'type' => 'wysiwyg',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'tabs' => 'all',
+                                    'toolbar' => 'basic',
+                                    'media_upload' => 0,
+                                ),
+                            ),
+                            'min' => '',
+                            'max' => ''
+                        ),
                         // Content
                         array(
                             'key' => '572c6183a937a',
@@ -464,7 +490,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'key' => 'field_577a5dcc447fb',
                                     'label' => 'Content',
                                     'name' => 'content',
-                                    'type' => 'markdown',
+                                    'type' => 'wysiwyg',
                                     'instructions' => '',
                                     'required' => 0,
                                     'conditional_logic' => 0,
@@ -473,13 +499,10 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'autogrow' => 1,
-                                    'editor-theme' => 'light',
-                                    'preview-theme' => 'github',
-                                    'syntax-highlight' => 0,
-                                    'syntax-theme' => 'sunburst',
-                                    'media-upload' => 0,
-                                    'tab-function' => 0,
+                                    'default_value' => '',
+                                    'tabs' => 'all',
+                                    'toolbar' => 'full',
+                                    'media_upload' => 0,
                                 ),
                                 array(
                                     'key' => 'field_5741697a2fab4',
@@ -658,62 +681,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_size' => '',
                                     'mime_types' => ''
                                 )
-                            ),
-                            'min' => '',
-                            'max' => ''
-                        ),
-                        // Info Graphic
-                        array(
-                            'key' => '5772492fcf6e3',
-                            'name' => 'info_graphic',
-                            'label' => 'Info Graphic',
-                            'display' => 'row',
-                            'sub_fields' => array(
-                                array(
-                                    'key' => 'field_5772494f9de0d',
-                                    'label' => 'Image',
-                                    'name' => 'image',
-                                    'type' => 'image',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => ''
-                                    ),
-                                    'return_format' => 'array',
-                                    'preview_size' => 'full',
-                                    'library' => 'all',
-                                    'min_width' => '',
-                                    'min_height' => '',
-                                    'min_size' => '',
-                                    'max_width' => '',
-                                    'max_height' => '',
-                                    'max_size' => '',
-                                    'mime_types' => ''
-                                ),
-                                array(
-                                    'key' => 'field_577a5dcc447fc',
-                                    'label' => 'Caption',
-                                    'name' => 'caption',
-                                    'type' => 'markdown',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'autogrow' => 1,
-                                    'editor-theme' => 'light',
-                                    'preview-theme' => 'github',
-                                    'syntax-highlight' => 0,
-                                    'syntax-theme' => 'sunburst',
-                                    'media-upload' => 0,
-                                    'tab-function' => 0,
-                                ),
                             ),
                             'min' => '',
                             'max' => ''
