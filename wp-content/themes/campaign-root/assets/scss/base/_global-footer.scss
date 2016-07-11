@@ -2,7 +2,6 @@
     background: $grey-3;
     border-top: 1px solid $grey-2;
 
-
     a {
         color: #454a4c;
         text-decoration: underline;
@@ -16,6 +15,10 @@
          max-width: $site-max-width;
          margin: auto;
          padding: $padding*2 $padding/2 0;
+
+        @media screen and (max-width: $small-screen) {
+            padding: $padding/2;
+        }
     }
 
     .footer-meta {
@@ -30,9 +33,18 @@
         width: 75%;
         display: inline-block;
 
+        @media screen and (max-width: $small-screen) {
+            width: 100%;
+            display: block;
+        }
+
         p {
             font-family: $font-family-sans;
             font-size: $footer-font-size;
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -44,10 +56,21 @@
         font-family: $font-family-sans;
         font-size: $footer-font-size;
 
+        @media screen and (max-width: $small-screen) {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: $margin;
+        }
+
         a {
             display: block;
             padding: 115px 0 0 0;
             background: url("#{$imagePath}govuk-crest.png") no-repeat 100% 0;
+
+            @media screen and (max-width: $small-screen) {
+                background: url("#{$imagePath}govuk-crest.png") no-repeat 50% 0;
+            }
         }
     }
 
@@ -56,12 +79,21 @@
         position: relative;
         clear: left;
 
+        @media screen and (max-width: $small-screen) {
+            padding-left: 0;
+            clear: both;
+        }
+
         .logo {
             position: absolute;
             left: 0;
             top: 0;
             width: 41px;
             height: 100%;
+            @media screen and (max-width: $small-screen) {
+                position: static;
+                margin-bottom: $margin/2;
+            }
 
             a {
                 position: relative;
