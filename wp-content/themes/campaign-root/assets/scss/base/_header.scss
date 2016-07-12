@@ -17,10 +17,10 @@
   color: $white;
 
   .logo {
-    width: 300px;
+    width: 25%;
     float: left;
     @media screen and (max-width: $small-screen) {
-        width: 50%;
+        width: 33%;
         float: none;
     }
 

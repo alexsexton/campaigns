@@ -31,3 +31,4 @@ $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\CustomFields::class, new \Dxw
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Pages::class, new \Dxw\GdsCampaignRoot\Theme\Pages());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\Options::class, new \Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\Options());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\ContentBlocks::class, new \Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\ContentBlocks());
+$registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Options::class, new \Dxw\GdsCampaignRoot\Theme\Options());
