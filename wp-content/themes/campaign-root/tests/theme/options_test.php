@@ -30,8 +30,8 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
             'args' => [[
                     'key' => 'group_577e95f281e15',
                     'title' => 'Options',
-                    'fields' => array (
-                        array (
+                    'fields' => array(
+                        array(
                             'key' => 'field_577e95fb0d7bf',
                             'label' => 'Facebook',
                             'name' => 'facebook',
@@ -39,7 +39,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -47,7 +47,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'default_value' => '',
                             'placeholder' => 'https://www.facebook.com/tom.tester.353',
                         ),
-                        array (
+                        array(
                             'key' => 'field_577e965e0d7c0',
                             'label' => 'Twitter',
                             'name' => 'twitter',
@@ -55,7 +55,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -63,7 +63,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'default_value' => '',
                             'placeholder' => 'https://twitter.com/dxw',
                         ),
-                        array (
+                        array(
                             'key' => 'field_577e96690d7c1',
                             'label' => 'YouTube',
                             'name' => 'youtube',
@@ -71,7 +71,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -79,7 +79,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'default_value' => '',
                             'placeholder' => 'https://www.youtube.com/channel/UC0F1JXZwfq_m9OJYVna5tMg',
                         ),
-                        array (
+                        array(
                             'key' => 'field_577e96bdc5879',
                             'label' => 'Logo',
                             'name' => 'logo',
@@ -87,7 +87,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -103,7 +103,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'max_size' => '',
                             'mime_types' => '',
                         ),
-                        array (
+                        array(
                             'key' => 'field_577e96cec587a',
                             'label' => 'Google Analytics ID',
                             'name' => 'google_analytics_id',
@@ -111,7 +111,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -125,9 +125,9 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'disabled' => 0,
                         ),
                     ),
-                    'location' => array (
-                        array (
-                            array (
+                    'location' => array(
+                        array(
+                            array(
                                 'param' => 'options_page',
                                 'operator' => '==',
                                 'value' => 'acf-options-options',

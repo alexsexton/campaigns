@@ -14,8 +14,8 @@ class Options implements \Dxw\Iguana\Registerable
         acf_add_local_field_group([
             'key' => 'group_577e95f281e15',
             'title' => 'Options',
-            'fields' => array (
-                array (
+            'fields' => array(
+                array(
                     'key' => 'field_577e95fb0d7bf',
                     'label' => 'Facebook',
                     'name' => 'facebook',
@@ -23,7 +23,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -31,7 +31,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'default_value' => '',
                     'placeholder' => 'https://www.facebook.com/tom.tester.353',
                 ),
-                array (
+                array(
                     'key' => 'field_577e965e0d7c0',
                     'label' => 'Twitter',
                     'name' => 'twitter',
@@ -39,7 +39,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -47,7 +47,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'default_value' => '',
                     'placeholder' => 'https://twitter.com/dxw',
                 ),
-                array (
+                array(
                     'key' => 'field_577e96690d7c1',
                     'label' => 'YouTube',
                     'name' => 'youtube',
@@ -55,7 +55,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -63,7 +63,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'default_value' => '',
                     'placeholder' => 'https://www.youtube.com/channel/UC0F1JXZwfq_m9OJYVna5tMg',
                 ),
-                array (
+                array(
                     'key' => 'field_577e96bdc5879',
                     'label' => 'Logo',
                     'name' => 'logo',
@@ -71,7 +71,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -87,7 +87,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'max_size' => '',
                     'mime_types' => '',
                 ),
-                array (
+                array(
                     'key' => 'field_577e96cec587a',
                     'label' => 'Google Analytics ID',
                     'name' => 'google_analytics_id',
@@ -95,7 +95,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -109,9 +109,9 @@ class Options implements \Dxw\Iguana\Registerable
                     'disabled' => 0,
                 ),
             ),
-            'location' => array (
-                array (
-                    array (
+            'location' => array(
+                array(
+                    array(
                         'param' => 'options_page',
                         'operator' => '==',
                         'value' => 'acf-options-options',
