@@ -1,6 +1,8 @@
 // Paths
-$imagePath: "/images";
-$fontPath: "/fonts";
+$imagePath: "img/";
+$fontPath: "fonts/";
+
+// Use like this : #{$fontPath} or #{$imagePath}
 
 // Site Width
 $site-max-width: 960px;
@@ -30,10 +32,6 @@ $error: $yellow;
 // Base Site
 $base-font-colour: $black;
 $body-background-colour: $white;
-
-// Links
-$link-colour: $brand-primary;
-$link-hover-colour: $brand-tertiary;
 
 // Buttons
 $button: $brand-primary;

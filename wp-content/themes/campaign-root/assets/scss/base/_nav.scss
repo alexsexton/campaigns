@@ -23,7 +23,6 @@ $sub-nav-background-hover: $black;
         position: relative;
         z-index: 15;
         line-height: 1;
-        font-weight: bold;
         padding-top: 2px;
     }
 
@@ -164,15 +163,12 @@ $sub-nav-background-hover: $black;
 // Nav Toggle
 
 .nav-toggle {
+    @include button;
     @include hide;
-    cursor: pointer;
-    font-size: $base-font-size;
-    color: $white;
-    padding: 0;
 
-    @media screen and (max-width: $medium-screen) {
+    @media screen and (max-width: $small-screen) {
         position: absolute;
-        right: 15px;
-        top: 20px;
+        left: 268px;
+        top: 5px;
     }
 }

@@ -2,6 +2,10 @@
 
 // For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
 
+@import 'shims';
+@import 'conditionals';
+@import 'mixins';
+
 // Example usage:
 
 // .button{
@@ -14,14 +18,13 @@
 //   @include button($red);
 // }
 
-
 @mixin button($colour: $button-colour) {
   // Colour
   background-color: $colour;
 
   // Size and shape
   position: relative;
-  @include inline-block;
+  display: inline-block;
   padding: .526315em .789473em .263157em; // 10px 15px 5px
   border: none;
   @include border-radius(0);

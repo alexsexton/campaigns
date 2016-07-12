@@ -17,12 +17,6 @@ class Scripts implements \Dxw\Iguana\Registerable
         add_action('admin_head', [$this, 'acfMarkdown']);
     }
 
-    // Adds a border to acf-markdown fields in the editor is there a better way to do this?
-    public function acfMarkdown()
-    {
-        echo '<style>.acf-field-markdown-editor iframe { border: 1px solid #ddd; } </style>';
-    }
-
     public function getAssetPath($path)
     {
         return dirname(get_stylesheet_directory_uri()).'/static/'.$path;
@@ -55,9 +49,7 @@ class Scripts implements \Dxw\Iguana\Registerable
         // Pretty much everything else should be compiled by Grunt.
         wp_enqueue_script('main',      $this->getAssetPath('main.min.js'), array('jquery', 'modernizr'), '', true);
 
-        wp_enqueue_style('govuk-template',      $this->getAssetPath('govuk-template.min.css'));
-
-        wp_enqueue_style('govuk-template-fonts',      $this->getAssetPath('fonts.min.css'));
+        wp_enqueue_style('govuk-fonts',      $this->getAssetPath('fonts.min.css'));
 
         wp_enqueue_style('main',      $this->getAssetPath('main.min.css'));
     }

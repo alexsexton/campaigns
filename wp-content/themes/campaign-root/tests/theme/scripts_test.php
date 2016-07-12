@@ -97,12 +97,7 @@ class Theme_Scripts_Test extends PHPUnit_Framework_TestCase
         ]);
 
         \WP_Mock::wpFunction('wp_enqueue_style', [
-            'args' => ['govuk-template', 'http://a.invalid/static/govuk-template.min.css'],
-            'times' => 1,
-        ]);
-
-        \WP_Mock::wpFunction('wp_enqueue_style', [
-            'args' => ['govuk-template-fonts', 'http://a.invalid/static/fonts.min.css'],
+            'args' => ['govuk-fonts', 'http://a.invalid/static/fonts.min.css'],
             'times' => 1,
         ]);
 

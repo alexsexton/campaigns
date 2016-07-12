@@ -1,10 +1,53 @@
 // Site
 
+body {
+    font-family: $font-family-sans;
+    font-weight: 400;
+}
+
+.js-enabled .js-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+// Group
+.group:before,
+.group:after,
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.group:after,
+.row:after {
+    clear: both;
+}
+
+// For IE 6/7 only Include this rule to trigger hasLayout and contain floats.
+.group, .row {
+    *zoom: 1;
+}
+
+// Row
 .row {
   max-width: $site-max-width;
   margin: auto;
   padding: 0 $padding/2;
 }
+
+// Text Links
+a:link {
+  color: $link-colour; }
+
+a:visited {
+  color: $link-visited-colour; }
+
+a:hover {
+  color: $link-hover-colour; }
+
+a:active {
+  color: $link-active-colour; }
 
 // Button Links
 a.button:link {
