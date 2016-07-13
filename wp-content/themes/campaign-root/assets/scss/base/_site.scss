@@ -31,6 +31,7 @@ body {
 
 // Row
 .row {
+  position: relative;
   max-width: $site-max-width;
   margin: auto;
   padding: 0 $padding/2;
