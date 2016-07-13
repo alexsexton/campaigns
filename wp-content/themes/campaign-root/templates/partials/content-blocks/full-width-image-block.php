@@ -1,0 +1,23 @@
+<?php
+//
+// Content Block ### Full-Width Image
+//
+if( get_row_layout() == 'full_width_image') : ?>
+<div class="full-width-image content-block">
+    <div class="row">
+
+      <?php $full_width_image = get_sub_field('image'); ?>
+        <figure>
+          <img src="<?php echo $full_width_image['url']; ?>" alt="<?php echo $full_width_image['alt']; ?>">
+          <figcaption>
+              <?php if ($full_width_image['title']) {
+              echo '<h2>' . $full_width_image['title'] . '</h2>';
+              } ?>
+              <?php if ($full_width_image['caption']) {
+              echo '<p>' . $full_width_image['caption'] . '</p>';
+              } ?>
+          </figcaption>
+        </figure>
+    </div>
+</div>
+<?php endif; ?>
