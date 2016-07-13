@@ -16,39 +16,39 @@ $system-font-family-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "
 // Headings
 h1 {
   font-size: $base-font-size*2.5;
-  font-weight: bold;
+  font-weight: 700;
   line-height: $header-line-height;
 }
 
 h2 {
   font-size: $base-font-size*2;
-  font-weight: bold;
+  font-weight: 700;
   line-height: $header-line-height;
 }
 
 h3 {
   font-size: $base-font-size*1.5;
-  font-weight: bold;
+  font-weight: 700;
   line-height: $header-line-height;
 }
 
 h4 {
   font-size: $base-font-size;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   line-height: $header-line-height;
 }
 
 h5 {
   font-size: $base-font-size;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   line-height: $header-line-height;
 }
 
 h6 {
   font-size: $base-font-size;
-  font-weight: bold;
+  font-weight: 700;
   line-height: $header-line-height;
 }
 
@@ -113,8 +113,8 @@ h6 {
   blockquote {
     padding: 0 0 0 $padding;
     margin: 0 0 $margin 0;
-    max-width: 40em;
-    border-left: 4px solid scale-color($base-font-colour, $lightness: 50%);
+    max-width: 20em;
+    border-left: 8px solid $grey-2;
 
     cite:before {
       content: "\2014\00a0";
