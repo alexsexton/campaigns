@@ -186,3 +186,22 @@
         display: block;
     }
 }
+
+.data-visualisation {
+
+    .data {
+        padding: $padding;
+        border: 1px solid $grey-2;
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 80px;
+        margin: 0;
+        line-height: 0.8
+    }
+
+    p {
+        font-weight: 700;
+    }
+}
