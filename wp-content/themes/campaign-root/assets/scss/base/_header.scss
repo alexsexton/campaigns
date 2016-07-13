@@ -34,7 +34,10 @@
   }
 
   .description {
-    float: left;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    margin: -8px 0 0 $margin;
     @media screen and (max-width: $small-screen) {
         width: 100%;
         float: none;
