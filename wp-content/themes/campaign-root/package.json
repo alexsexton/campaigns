@@ -13,6 +13,6 @@
     "grunt-standard": "^2.0.0"
   },
   "dependencies": {
-    "date-polyfill": "git+ssh://git@github.com/dxw/date-polyfill.git"
+    "date-polyfill": "git+https://github.com/dxw/date-polyfill.git"
   }
 }
