@@ -18,16 +18,3 @@ if (get_row_layout() == 'data_visualisation') : ?>
     </div>
 </div>
 <?php endif; ?>
-
-<script type="text/javascript">
-
-jQuery(function () {
-    var s = $('.data h2');
-    console.log(s);
-
-    if($('.data h2').indexOf('%') !== -1){
-        $(this).wrap('<span></span>');
-    }
-});
-
-</script>
