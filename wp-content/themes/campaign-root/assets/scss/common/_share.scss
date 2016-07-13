@@ -1,0 +1,31 @@
+.share-this {
+
+    li {
+        list-style: none;
+        margin: 0 $margin/2 0 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    a {
+        width: 32px;
+        line-height: 1;
+        @include transition (fill, .2s, ease-in-out);
+
+        .inline-icon {
+            width: 32px;
+            height: auto;
+        }
+
+        span {
+            @include hide;
+        }
+    }
+
+    a:hover {
+        .inline-icon {
+            fill: $brand-primary;
+        }
+    }
+
+}
