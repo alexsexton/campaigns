@@ -461,6 +461,50 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'toolbar' => 'basic',
                                     'media_upload' => 0,
                                 ),
+                                array(
+                                    'key' => 'field_577a39f69d499',
+                                    'label' => 'Customise Background',
+                                    'name' => 'customise_background',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'yes' => 'Yes',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_527b3a371d29d',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69d499',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                ),
                             ),
                             'min' => '',
                             'max' => ''
