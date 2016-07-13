@@ -13,8 +13,11 @@ if( get_row_layout() == 'hero') : ?>
     };
   ?>
 
-    <div class="hero content-block <?php echo $hero_background;?>">
-
+    <?php if (get_sub_field('background_colour')) : ?>
+    <div class="hero content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+    <?php else : ?>
+    <div class="hero content-block">    
+    <?php endif; ?>
       <div class="overlay <?php echo $hero_text_colour;?>">
         <h1><?php the_sub_field('title'); ?></h1>
         <div class="content rich-text">

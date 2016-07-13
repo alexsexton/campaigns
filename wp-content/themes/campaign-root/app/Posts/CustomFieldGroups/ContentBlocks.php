@@ -266,34 +266,20 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'mime_types' => ''
                                 ),
                                 array(
-                                    'key' => 'field_5744637a2fdf4',
+                                    'key' => 'field_577a3a39d27a',
                                     'label' => 'Background Colour',
                                     'name' => 'background_colour',
-                                    'type' => 'select',
+                                    'type' => 'color_picker',
                                     'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
+                                    'required' => '',
+                                    'conditional_logic' => '',
                                     'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
-                                        'id' => ''
+                                        'id' => '',
                                     ),
-                                    'choices' => array(
-                                        'brand-primary' => 'Brand Primary',
-                                        'brand-secondary' => 'Brand Secondary',
-                                        'brand-tertiary' => 'Brand Tertiary'
-                                    ),
-                                    'default_value' => array(
-                                        0 => 'brand-primary'
-                                    ),
-                                    'allow_null' => 0,
-                                    'multiple' => 0,
-                                    'ui' => 0,
-                                    'ajax' => 0,
-                                    'placeholder' => '',
-                                    'disabled' => 0,
-                                    'readonly' => 0
-                                )
+                                    'default_value' => '',
+                                ),
                             ),
                             'min' => '',
                             'max' => ''
