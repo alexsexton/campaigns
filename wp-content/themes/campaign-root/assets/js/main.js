@@ -2,6 +2,8 @@
 
 'use strict'
 
+// Etc
+require('date-polyfill')
 require('./common')
 var enquire = require('../../bower_components/enquire/dist/enquire.js')
 require('../../bower_components/jquery-accessibleMegaMenu/js/jquery-accessibleMegaMenu.js')

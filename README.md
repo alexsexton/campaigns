@@ -9,7 +9,7 @@
 
 ## Browser support
 
-* Front-end: Unknown
+* Front-end: https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices (assumed)
 * Back-end: Unknown
 
 ## Development
