@@ -11,6 +11,8 @@
         ?>
         </nav>
 
+        <?php get_template_part('partials/follow'); ?>
+
     </div>
 
 </footer>

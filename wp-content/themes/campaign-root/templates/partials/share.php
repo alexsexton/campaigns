@@ -1,15 +1,3 @@
-<?php if( get_field('facebook_id', 'option') ) : ?>
-    <?php $facebook_id = get_field('facebook_id', 'option'); ?>
-<?php endif ?>
-
-<?php if( get_field('twitter_id', 'option') ) : ?>
-    <?php $twitter_id = get_field('twitter_id', 'option'); ?>
-<?php endif ?>
-
-<?php if( get_field('linkedin_id', 'option') ) : ?>
-    <?php $linkedin_id = get_field('linkedin_id', 'option'); ?>
-<?php endif ?>
-
 <?php
     $post_url = get_the_permalink();
     $post_excerpt = strip_tags(get_the_excerpt());
@@ -22,7 +10,7 @@
 
     <h6>Share this</h6>
 
-    <ul class="share-this">
+    <ul>
         <li><a href="//www.facebook.com/sharer.php?href=<?php echo $post_url; ?>" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline-icon"><path d="M24 12c0 5.6-3.8 10.3-9 11.6v-9.1h2.6l.4-3h-3V8.9c0-.9.4-1.4 1.3-1.4h1.9V4.7s-.9-.2-2.2-.2c-2.9 0-4.3 1.6-4.3 4v3H9v3h2.7V24C5.2 23.9 0 18.5 0 12 0 5.4 5.4 0 12 0s12 5.4 12 12z"/></svg>
         <span>Facebook</span></a>
