@@ -1,21 +1,16 @@
 // Content Blocks
 // Each one of these should map to the HTML authored in templates/partials/content-blocks.php
 
-.content-block {
-
-}
-
 .hero {
     position: relative;
 
     .overlay {
         position: absolute;
-        max-width: $site-max-width;
+        max-width: #{$site-max-width/2};
         z-index: 1;
-        left: 50%;
-        top: 50%;
-        margin-top: -#{$base-font-size*2.5};
-        margin-left: -#{$site-max-width/2};
+        right: 50%;
+        top: 25%;
+        margin-right: -#{$site-max-width/2};
 
         @media screen and (max-width: $big-screen) {
             left: 0;
@@ -75,7 +70,6 @@
 }
 
 .content-only {
-    padding: $padding 0;
     background-color: transparent;
 }
 
@@ -184,5 +178,24 @@
     img {
         max-width: 100%;
         display: block;
+    }
+}
+
+.data-visualisation {
+
+    .data {
+        padding: $padding;
+        border: 1px solid $grey-2;
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 80px;
+        margin: 0;
+        line-height: 0.8
+    }
+
+    p {
+        font-weight: 700;
     }
 }

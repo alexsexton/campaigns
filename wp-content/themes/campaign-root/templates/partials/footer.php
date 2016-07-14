@@ -1,5 +1,9 @@
-<footer class="site-footer" id="site-footer" role="contentinfo">
 
+<?php if( get_field('footer_background_colour', 'option')) : ?>
+<footer class="site-footer" id="site-footer" role="contentinfo" style="background-color:<?php the_field('footer_background_colour', 'option'); ?>;">
+<?php else : ?>
+<footer class="site-footer" id="site-footer" role="contentinfo">
+<?php endif ?>
     <div class="row">
         <?php dynamic_sidebar('sidebar-footer'); ?>
 
