@@ -1213,13 +1213,13 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'max' => '',
                         ),
                         // Hidden Text
-                        array (
+                        array(
                             'key' => '578683e09daad',
                             'name' => 'hidden_text',
                             'label' => 'Hidden Text',
                             'display' => 'block',
-                            'sub_fields' => array (
-                                array (
+                            'sub_fields' => array(
+                                array(
                                     'key' => 'field_578684316746f',
                                     'label' => 'Summary',
                                     'name' => 'summary',
@@ -1227,7 +1227,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'instructions' => '',
                                     'required' => 0,
                                     'conditional_logic' => 0,
-                                    'wrapper' => array (
+                                    'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
                                         'id' => '',
@@ -1240,7 +1240,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'readonly' => 0,
                                     'disabled' => 0,
                                 ),
-                                array (
+                                array(
                                     'key' => 'field_5786843f67470',
                                     'label' => 'Details',
                                     'name' => 'details',
@@ -1248,7 +1248,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'instructions' => '',
                                     'required' => 0,
                                     'conditional_logic' => 0,
-                                    'wrapper' => array (
+                                    'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
                                         'id' => '',
