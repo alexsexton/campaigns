@@ -19,7 +19,7 @@
             padding: 0 $padding/2;
         }
 
-        &.light {
+        &.light-text {
             h1 {
                 color: $white;
             }
@@ -27,7 +27,7 @@
                 color: $white
             }
         }
-        &.dark {
+        &.dark-text {
             h1 {
                 color: $black;
             }
@@ -198,4 +198,26 @@
     p {
         font-weight: 700;
     }
+}
+
+
+.quote-block {
+
+}
+
+.hidden-text {
+    padding: $padding 0;
+    font-size: $base-font-size;
+
+    .summary {}
+
+    .panel {}
+}
+
+.light-text {
+    color: $white
+}
+
+.dark-text {
+    color: $black;
 }

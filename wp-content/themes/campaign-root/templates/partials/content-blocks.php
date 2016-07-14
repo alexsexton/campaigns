@@ -28,6 +28,8 @@
 
         <?php get_template_part('partials/content-blocks/quote-block'); ?>
 
+        <?php get_template_part('partials/content-blocks/hidden-text-block'); ?>
+
   <?php // end content block loop
     endwhile;
     endif;
