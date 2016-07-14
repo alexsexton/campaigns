@@ -232,11 +232,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => ''
                                     ),
                                     'choices' => array(
-                                        'dark' => 'Dark',
-                                        'light' => 'Light',
+                                        'dark-text' => 'Dark',
+                                        'light-text' => 'Light',
                                     ),
                                     'default_value' => array(
-                                        0 => 'dark'
+                                        0 => 'dark-text'
                                     ),
                                     'allow_null' => 0,
                                     'multiple' => 0,
@@ -1207,6 +1207,139 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     ),
                                     'default_value' => '',
                                     'placeholder' => '',
+                                ),
+                            ),
+                            'min' => '',
+                            'max' => '',
+                        ),
+                        // Hidden Text
+                        array(
+                            'key' => '578683e09daad',
+                            'name' => 'hidden_text',
+                            'label' => 'Hidden Text',
+                            'display' => 'block',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_578684316746f',
+                                    'label' => 'Summary',
+                                    'name' => 'summary',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_5786843f67470',
+                                    'label' => 'Details',
+                                    'name' => 'details',
+                                    'type' => 'textarea',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'maxlength' => '',
+                                    'rows' => '',
+                                    'new_lines' => 'br',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_577a39f69d255',
+                                    'label' => 'Customise Background',
+                                    'name' => 'customise_background',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'yes' => 'Yes',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_577a3a379d291',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69d255',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                ),
+                                array(
+                                    'key' => 'field_5741697a1fca4',
+                                    'label' => 'Text Colour',
+                                    'name' => 'text_colour',
+                                    'type' => 'select',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69d255',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => ''
+                                    ),
+                                    'choices' => array(
+                                        'dark-text' => 'Dark',
+                                        'light-text' => 'Light',
+                                    ),
+                                    'default_value' => array(
+                                        0 => 'dark-text'
+                                    ),
+                                    'allow_null' => 0,
+                                    'multiple' => 0,
+                                    'ui' => 0,
+                                    'ajax' => 0,
+                                    'placeholder' => '',
+                                    'disabled' => 0,
+                                    'readonly' => 0
                                 ),
                             ),
                             'min' => '',
