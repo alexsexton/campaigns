@@ -9,14 +9,16 @@
         max-width: #{$site-max-width/2};
         z-index: 1;
         right: 50%;
-        top: 25%;
+        top: 10%;
         margin-right: -#{$site-max-width/2};
 
         @media screen and (max-width: $big-screen) {
-            left: 0;
-            top: 0;
-            margin: 0;
+            position: absolute;;
+            top: 15px;
+            margin: auto;
+            right: 15px;
             padding: 0 $padding/2;
+            max-width: 100%;
         }
 
         &.light-text {
@@ -56,6 +58,7 @@
     h1 {
         line-height: 1;
         color: $white;
+        margin: 0;
     }
 }
 
@@ -82,6 +85,15 @@
     .promo-box {
         @include col(1/3);
         text-align: center;
+        margin: $margin 0;
+
+        @media screen and (max-width: $small-screen) {
+            @include col(1/1);
+        }
+
+        h2 {
+            margin: 0;
+        }
 
         &.title-content-image {
             img {
@@ -126,14 +138,15 @@
 .call-to-action-block {
     background-color: $brand-secondary;
     color: $white;
-    padding: $padding/2;
+    padding: $padding 0;
 
-    .buttons {
-        text-align: center;
+    h2 {
+        margin: 0;
     }
 }
 
 .left-image-caption {
+    padding: $padding 0;
 
     figure {
         @include row(true);
@@ -142,15 +155,23 @@
     img {
         @include col(2/4);
         float: left;
+        @media screen and (max-width: $small-screen) {
+            @include col(1/1);
+        }
     }
 
     figcaption {
         @include col(2/4);
         float: right;
+        font-size: $base-font-size;
+        @media screen and (max-width: $small-screen) {
+            @include col(1/1);
+        }
     }
 }
 
 .right-image-caption {
+    padding: $padding 0;
 
     figure {
         @include row(true);
@@ -159,50 +180,57 @@
     img {
         @include col(2/4);
         float: right;
+        @media screen and (max-width: $small-screen) {
+            @include col(1/1);
+        }
     }
 
     figcaption {
         @include col(2/4);
         float: left;
+        font-size: $base-font-size;
+        @media screen and (max-width: $small-screen) {
+            @include col(1/1);
+        }
     }
 }
 
 .full-width-image {
+    padding: $padding 0;
     img {
         max-width: 100%;
         display: block;
     }
-}
 
-.info-graphic {
-    img {
-        max-width: 100%;
-        display: block;
+    figcaption {
+        font-size: $base-font-size;
+        margin: 0 0 $margin 0;
     }
 }
 
 .data-visualisation {
 
     .data {
-        padding: $padding;
-        border: 1px solid $grey-2;
+        padding: $padding 0;
+        border-bottom: 8px solid $grey-2;
         display: inline-block;
+        margin: $margin 0;
     }
 
     h2 {
-        font-size: 80px;
+        font-size: 190px;
         margin: 0;
         line-height: 0.8
     }
 
     p {
         font-weight: 700;
+        font-size: #{$base-font-size*2}
     }
 }
 
-
-.quote-block {
-
+.video-block {
+    padding: $padding 0;
 }
 
 .hidden-text {

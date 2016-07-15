@@ -1,4 +1,9 @@
 .share-this {
+    padding: $padding 0;
+
+    h6 {
+        @include hide;
+    }
 
     li {
         list-style: none;
@@ -22,9 +27,27 @@
         }
     }
 
+    .share-this--facebook {
+        .inline-icon {
+            fill: $facebook;
+        }
+    }
+
+    .share-this--twitter {
+        .inline-icon {
+            fill: $twitter;
+        }
+    }
+
+    .share-this--linkedin {
+        .inline-icon {
+            fill: $linkedin;
+        }
+    }
+
     a:hover {
         .inline-icon {
-            fill: $brand-primary;
+            fill: $grey-1;
         }
     }
 

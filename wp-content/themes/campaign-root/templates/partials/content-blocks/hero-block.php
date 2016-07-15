@@ -16,7 +16,7 @@ if( get_row_layout() == 'hero') : ?>
     <?php if (get_sub_field('background_colour')) : ?>
     <div class="hero content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
     <?php else : ?>
-    <div class="hero content-block">    
+    <div class="hero content-block">
     <?php endif; ?>
       <div class="overlay <?php echo $hero_text_colour;?>">
         <h1><?php the_sub_field('title'); ?></h1>
@@ -31,7 +31,6 @@ if( get_row_layout() == 'hero') : ?>
         <?php endif; ?>
 
       </div>
-
 
         <?php if($hero_image) : ?>
           <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
