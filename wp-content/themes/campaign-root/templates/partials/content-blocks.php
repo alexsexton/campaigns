@@ -8,8 +8,6 @@
 
         <?php get_template_part('partials/content-blocks/title-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/subtitle-block'); ?>
-
         <?php get_template_part('partials/content-blocks/promo-block'); ?>
 
         <?php get_template_part('partials/content-blocks/content-only-block'); ?>
@@ -36,5 +34,3 @@
   ?>
 
 </section>
-
-<?php get_template_part('partials/share'); ?>
