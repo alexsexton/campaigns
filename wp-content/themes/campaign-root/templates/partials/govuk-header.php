@@ -21,7 +21,7 @@
     <div class="header-global">
 
       <div class="header-logo">
-        <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo">
+        <a href="/" title="Go to the GOV.UK homepage" id="logo">
           <img src="<?php h()->assetPath('img/hmgov.png') ?>" width="208" height="31" alt="HM Goverment">
         </a>
       </div>

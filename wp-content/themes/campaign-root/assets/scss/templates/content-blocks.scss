@@ -62,16 +62,6 @@
     }
 }
 
-.subtitle {
-    background-color: $brand-secondary;
-    padding: $padding 0;
-
-    h2 {
-        line-height: 1;
-        color: $white;
-    }
-}
-
 .content-only {
     background-color: transparent;
 }
@@ -209,11 +199,10 @@
 }
 
 .data-visualisation {
+    padding: $padding 0;
 
     .data {
-        padding: $padding 0;
         border-bottom: 8px solid $grey-2;
-        display: inline-block;
         margin: $margin 0;
     }
 
