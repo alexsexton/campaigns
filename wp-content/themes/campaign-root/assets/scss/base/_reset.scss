@@ -10,6 +10,12 @@ ul, ol, p, blockquote, figure, figcaption {
     margin: 0;
 }
 
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
 }
