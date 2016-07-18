@@ -64,6 +64,7 @@
 
 .content-only {
     background-color: transparent;
+    padding: $padding 0 0;
 }
 
 .promo-block {
@@ -233,7 +234,7 @@
     blockquote {
         padding: 0 0 0 $padding;
         margin: 0 0 $margin 0;
-        max-width: 30em;
+        max-width: 40em;
         border-left: 8px solid $grey-2;
 
         cite:before {

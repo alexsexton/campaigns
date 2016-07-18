@@ -1353,9 +1353,16 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                     array(
                         'param' => 'page_template',
                         'operator' => '==',
-                        'value' => 'default'
-                    )
-                )
+                        'value' => 'page-content-blocks.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-home.php',
+                    ),
+                ),
             ),
             'menu_order' => 0,
             'position' => 'normal',

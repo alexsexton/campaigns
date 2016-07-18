@@ -40,8 +40,29 @@ class Sidebar implements \Dxw\Iguana\Registerable
                         'value' => 'default',
                     ),
                 ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-content-blocks.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-static.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-home.php',
+                    ),
+                ),
             ),
-            'menu_order' => 0,
+            'menu_order' => 1,
             'position' => 'side',
             'style' => 'default',
             'label_placement' => 'top',
@@ -84,8 +105,29 @@ class Sidebar implements \Dxw\Iguana\Registerable
                         'value' => 'default',
                     ),
                 ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-content-blocks.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-static.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-home.php',
+                    ),
+                ),
             ),
-            'menu_order' => 0,
+            'menu_order' => 2,
             'position' => 'side',
             'style' => 'default',
             'label_placement' => 'top',
