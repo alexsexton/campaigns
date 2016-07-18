@@ -1,4 +1,4 @@
-<section id="comment-form" class="col-md-12">
+<section id="comment-form" class="comment-form row">
     <h3><?php comment_form_title(__('Leave a Reply', 'roots'), __('Leave a Reply to %s', 'roots')); ?></h3>
     <p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
@@ -28,7 +28,7 @@
                 <label for="comment"><?php _e('Comment', 'roots'); ?></label>
                 <textarea name="comment" id="comment" class="form-control" rows="5" aria-required="true"></textarea>
             </div>
-            <p><input name="submit" class="btn btn-primary" type="submit" id="submit" value="<?php _e('Submit Comment', 'roots'); ?>"></p>
+            <div class="form-buttons"><input name="submit" class="button" type="submit" id="submit" value="<?php _e('Submit Comment', 'roots'); ?>"></div>
             <?php comment_id_fields(); ?>
             <?php do_action('comment_form', $post->ID); ?>
         </form>
