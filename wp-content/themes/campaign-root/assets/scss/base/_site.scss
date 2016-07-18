@@ -34,7 +34,11 @@ body {
   position: relative;
   max-width: $site-max-width;
   margin: auto;
-  padding: 0 $padding/2;
+  padding: 0 #{$padding/2};
+}
+
+main {
+    padding-bottom: #{$padding*2};
 }
 
 // Text Links

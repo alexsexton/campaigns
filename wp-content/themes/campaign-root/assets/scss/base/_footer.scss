@@ -3,4 +3,23 @@
 .site-footer {
   background: $black;
   padding: $padding 0;
+
+
+  .footer-navigation {
+      @include col(3/4);
+      margin: 0 -15px;
+
+      li {
+          display: inline;
+
+          a {
+              display: block;
+              float: left;
+              margin: 0 #{$margin/2} 0 0;
+              line-height: 32px;
+          }
+      }
+  }
+
+
 }
