@@ -1,8 +1,17 @@
-<?php
 
-while (have_posts()) {
-    the_post();
-    get_template_part('partials/article');
+<section class="single row">
+    <div class="grid-row">
 
-    comments_template('/comments.php');
-}
+        <div class="article-comments">
+        <?php
+        while (have_posts()) {
+            the_post();
+            get_template_part('partials/article');
+            comments_template('/comments.php');
+        }
+        ?>
+        </div>
+
+        <?php get_template_part('partials/sidebar') ?>
+    </div>
+</section>

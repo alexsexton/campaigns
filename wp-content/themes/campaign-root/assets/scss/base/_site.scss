@@ -37,10 +37,6 @@ body {
   padding: 0 #{$padding/2};
 }
 
-main {
-    padding-bottom: #{$padding*2};
-}
-
 // Text Links
 a:link {
   color: $link-colour; }

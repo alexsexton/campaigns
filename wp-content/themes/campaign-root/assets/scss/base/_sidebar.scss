@@ -1,2 +1,17 @@
-@media screen and (max-width: $small-screen) {
+.sidebar {
+    @include col(1/4);
+    padding-top: 125px;
+    @media screen and (max-width: $small-screen) {
+        @include col(1);
+        padding-top: 0;
+    }
+
+
+    li {
+        font-size: $base-font-size;
+    }
+
+    .current-cat {
+        font-weight: 700;
+    }
 }

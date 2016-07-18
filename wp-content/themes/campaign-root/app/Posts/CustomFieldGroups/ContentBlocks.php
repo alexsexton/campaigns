@@ -360,82 +360,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => ''
                         ),
-                        // Subtitle
-                        array(
-                            'key' => '572c61a9a937c',
-                            'name' => 'subtitle',
-                            'label' => 'Subtitle',
-                            'display' => 'row',
-                            'sub_fields' => array(
-                                array(
-                                    'key' => 'field_572c61a9a937d',
-                                    'label' => 'Subtitle',
-                                    'name' => 'subtitle',
-                                    'type' => 'text',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => ''
-                                    ),
-                                    'default_value' => '',
-                                    'placeholder' => '',
-                                    'prepend' => '',
-                                    'append' => '',
-                                    'maxlength' => '',
-                                    'readonly' => 0,
-                                    'disabled' => 0
-                                ),
-                                array(
-                                    'key' => 'field_577a39f69d400',
-                                    'label' => 'Customise Background',
-                                    'name' => 'customise_background',
-                                    'type' => 'checkbox',
-                                    'instructions' => '',
-                                    'required' => '',
-                                    'conditional_logic' => '',
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'choices' => array(
-                                        'yes' => 'Yes',
-                                    ),
-                                    'default_value' => array(
-                                    ),
-                                    'layout' => 'vertical',
-                                    'toggle' => 0,
-                                ),
-                                array(
-                                    'key' => 'field_577a3a379d29a',
-                                    'label' => 'Background Colour',
-                                    'name' => 'background_colour',
-                                    'type' => 'color_picker',
-                                    'instructions' => '',
-                                    'required' => '',
-                                    'conditional_logic' => array(
-                                        array(
-                                            array(
-                                                'field' => 'field_577a39f69d400',
-                                                'operator' => '==',
-                                                'value' => 'yes',
-                                            ),
-                                        ),
-                                    ),
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'default_value' => '',
-                                ),
-                            ),
-                            'min' => '',
-                            'max' => ''
-                        ),
                         // Video Content
                         array(
                             'key' => '572c6183a937c',
@@ -1244,7 +1168,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'key' => 'field_5786843f67470',
                                     'label' => 'Details',
                                     'name' => 'details',
-                                    'type' => 'textarea',
+                                    'type' => 'wysiwyg',
                                     'instructions' => '',
                                     'required' => 0,
                                     'conditional_logic' => 0,
@@ -1254,12 +1178,9 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'default_value' => '',
-                                    'placeholder' => '',
-                                    'maxlength' => '',
-                                    'rows' => '',
-                                    'new_lines' => 'br',
-                                    'readonly' => 0,
-                                    'disabled' => 0,
+                                    'tabs' => 'all',
+                                    'toolbar' => 'full',
+                                    'media_upload' => 0,
                                 ),
                                 array(
                                     'key' => 'field_577a39f69d255',
