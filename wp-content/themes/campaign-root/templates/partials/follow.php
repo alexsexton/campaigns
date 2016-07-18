@@ -22,7 +22,7 @@
             <?php endif ?>
 
             <?php if( get_field('twitter_id', 'option') ) : ?>
-            <li><a href="//twitter.com/<?php echo $twitter_id; ?>&amp;url=<?php echo $post_url; ?>" target="_blank">
+            <li><a href="//twitter.com/<?php echo $twitter_id; ?>" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline-icon"><path d="M24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zm-3-4.4c-.6.3-1.3.4-2 .5.7-.4 1.2-1.1 1.5-1.9-.7.4-1.4.7-2.1.8-.6-.6-1.5-1-2.5-1-1.9 0-3.4 1.5-3.4 3.4 0 .2 0 .5.1.8-2.8-.1-5.4-1.5-7.1-3.6-.3.5-.4 1.1-.4 1.7 0 1.2.6 2.2 1.5 2.8-.6 0-1.1-.2-1.5-.4 0 1.7 1.2 3 2.7 3.4-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.3 3.2 2.3-1.2.9-2.6 1.6-4.2 1.6-.3 0-.6 0-.8-.1 1.5 1 3.3 1.5 5.2 1.5 6.3 0 9.7-5.2 9.7-9.7v-.3c.6-.5 1.1-1.1 1.6-1.8z"/></svg>
             <span>Twitter</span></a>
             </li>
