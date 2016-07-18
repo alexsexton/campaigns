@@ -1,5 +1,5 @@
 <?php
-    // Template name: Home
+    // Template name: Content Blocks
     the_post();
 ?>
 

@@ -52,6 +52,12 @@ h6 {
   line-height: $header-line-height;
 }
 
+p {
+  font-size: $base-font-size;
+  margin: 0 0 $margin 0;
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+}
+
 @media screen and (max-width: $small-screen) {
     h1, h2, h3 {
         font-size: $base-font-size*1.5;

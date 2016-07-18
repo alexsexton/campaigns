@@ -1,0 +1,21 @@
+.archive {
+
+    .grid-row {
+        @include row(true);
+    }
+
+    .archive-posts {
+        @include col(3/4);
+        @media screen and (max-width: $small-screen) {
+            @include col(1);
+        }
+    }
+
+    article h2 {
+        margin-bottom: 0;
+    }
+
+    article .byline a {
+        text-transform: capitalize;
+    }
+}
