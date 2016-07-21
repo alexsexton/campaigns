@@ -42,7 +42,7 @@ $registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Mailer::class, new 
 $registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Form::class, new \Dxw\GdsCampaignRoot\ApplicationForm\Form(
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class),
     $registrar->getInstance(\Dxw\Iguana\Value\Post::class),
-    $_SERVER,
+    $registrar->getInstance(\Dxw\Iguana\Value\Server::class),
     $registrar->getInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Storage::class),
     $registrar->getInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Mailer::class),
     $registrar->getInstance(\Dxw\Iguana\Value\Get::class)
