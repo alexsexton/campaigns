@@ -47,3 +47,9 @@ $registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Form::class, new \D
     $registrar->getInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Mailer::class),
     $registrar->getInstance(\Dxw\Iguana\Value\Get::class)
 ));
+
+// Wizard
+$registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\Page(
+    $registrar->getInstance(\Dxw\Iguana\Value\Post::class)
+));
+$registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\AnalyticsScript());

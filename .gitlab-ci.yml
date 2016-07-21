@@ -8,6 +8,13 @@
   script:
     - vendor/bin/phpunit
 
+.peridot: &peridot
+  before_script:
+    - cd ${DIR}
+    - composer install
+  script:
+    - vendor/bin/peridot spec
+
 .phpcsfixer: &phpcsfixer
   <<: *php70
   before_script:
@@ -29,6 +36,16 @@
 
 php70_themes_campaign-root:
   <<: *phpunit
+  <<: *php70
+  variables:
+    DIR: wp-content/themes/campaign-root
+
+##############################################################################
+### peridot 7.0
+##############################################################################
+
+peridot70_themes_campaign-root:
+  <<: *peridot
   <<: *php70
   variables:
     DIR: wp-content/themes/campaign-root
