@@ -15,7 +15,7 @@ class Acf implements \Dxw\Iguana\Registerable
                     'label' => 'Name',
                     'name' => 'name',
                     'type' => 'text',
-                    'instructions' => '',
+                    'instructions' => 'Your first name and last name please',
                     'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -117,7 +117,7 @@ class Acf implements \Dxw\Iguana\Registerable
                     'label' => 'What is the campaign site URL you would like to use?',
                     'name' => 'campaign_url',
                     'type' => 'text',
-                    'instructions' => 'If you know what URL you want, include it here. This will usually be in the form www.<campaignname>.gov.uk.',
+                    'instructions' => 'If you know what URL you want, include it here. This will usually be in the form www.[campaignname].gov.uk.',
                     'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
