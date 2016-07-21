@@ -3,6 +3,8 @@
 body {
     font-family: $font-family-sans;
     font-weight: normal;
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    -webkit-font-smoothing: antialiased;
 }
 
 .js-enabled .js-hidden {
