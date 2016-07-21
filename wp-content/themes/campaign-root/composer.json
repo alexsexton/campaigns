@@ -27,7 +27,7 @@
     },
     "require": {
         "dxw/pagination": "dev-master",
-        "dxw/iguana": "^1.0",
+        "dxw/iguana": "^1.1",
         "dxw/iguana-theme": "^1.0",
         "dxw/iguana-extras": "^1.0",
         "nikita2206/result": "^0.1.0"

@@ -12,7 +12,7 @@ class Form implements \Dxw\Iguana\Registerable
     // type=email converts the domain to punycode automatically so we don't need to convert the domain portion to punycode
     private $emailFormat = '/^[a-zA-Z0-9.!#$%&\'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/';
 
-    public function __construct(\Dxw\Iguana\Theme\Helpers $helpers, \Dxw\Iguana\Value\Post $__post, array $__server, \Dxw\GdsCampaignRoot\ApplicationForm\Storage $storage, \Dxw\GdsCampaignRoot\ApplicationForm\Mailer $mailer, \Dxw\Iguana\Value\Get $__get)
+    public function __construct(\Dxw\Iguana\Theme\Helpers $helpers, \Dxw\Iguana\Value\Post $__post, \Dxw\Iguana\Value\Server $__server, \Dxw\GdsCampaignRoot\ApplicationForm\Storage $storage, \Dxw\GdsCampaignRoot\ApplicationForm\Mailer $mailer, \Dxw\Iguana\Value\Get $__get)
     {
         $this->post = $__post;
         $this->server = $__server;
