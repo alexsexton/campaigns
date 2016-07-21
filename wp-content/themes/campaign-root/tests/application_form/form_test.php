@@ -302,7 +302,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
         $this->assertRegExp('&<input type="text" name="-appform_name-" value="-John Smith-" required>&s', $output);
         $this->assertRegExp('&<input type="email" name="-appform_email-" value="-johnsmith@gov.uk-" required&s', $output);
         $this->assertRegExp('&<input type="date" name="-appform_date-" value="-2016-06-28-" required>&s', $output);
-        $this->assertRegExp('&<textarea name="-appform_text-" required>_foobar_</textarea>&s', $output);
+        $this->assertRegExp('&<textarea name="-appform_text-" required rows="8">_foobar_</textarea>&s', $output);
     }
 
     public function testInitEmptyFields()
