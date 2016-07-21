@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "52bc7527da87a10b0021d684e6e451dc",
-    "content-hash": "c70640228f93be6d3cbbcb10dc94e498",
+    "hash": "c49d82ead0ee0bb1c1f4ab79ae47f7dd",
+    "content-hash": "8bf16d9e681ec9c28114d94e93cdad80",
     "packages": [
         {
             "name": "aura/autoload",
@@ -61,22 +61,23 @@
         },
         {
             "name": "dxw/iguana",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dxw/iguana.git",
-                "reference": "7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13"
+                "reference": "bbbcc299a316400724c09a7bfec24cae3305d32d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/iguana/zipball/7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13",
-                "reference": "7e9f3d40cd7bab57f5b6024047eaf8271f9f8d13",
+                "url": "https://api.github.com/repos/dxw/iguana/zipball/bbbcc299a316400724c09a7bfec24cae3305d32d",
+                "reference": "bbbcc299a316400724c09a7bfec24cae3305d32d",
                 "shasum": ""
             },
             "require": {
                 "aura/autoload": "^2.0"
             },
             "require-dev": {
+                "10up/wp_mock": "^0.1.1",
                 "mikey179/vfsstream": "^1.6",
                 "phpunit/phpunit": "4.8.*"
             },
@@ -91,7 +92,7 @@
                 "MIT"
             ],
             "homepage": "https://github.com/dxw/iguana",
-            "time": "2016-05-18 18:59:51"
+            "time": "2016-07-08 19:48:23"
         },
         {
             "name": "dxw/iguana-extras",
@@ -172,7 +173,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/pagination/zipball/f59275ef0d94c5752d2c6cd088ffb485aa8553a0",
+                "url": "https://api.github.com/repos/dxw/pagination/zipball/04100ff77902de9f269d8d4fcd908770e8fe400f",
                 "reference": "f59275ef0d94c5752d2c6cd088ffb485aa8553a0",
                 "shasum": ""
             },

@@ -28,21 +28,19 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
 
     private function getPost(array $__post)
     {
-        $GLOBALS['_POST'] = $__post;
-        return new \Dxw\Iguana\Value\Post();
+        return new \Dxw\Iguana\Value\Post($__post);
     }
 
     private function getGet(array $__get)
     {
-        $GLOBALS['_GET'] = $__get;
-        return new \Dxw\Iguana\Value\Get();
+        return new \Dxw\Iguana\Value\Get($__get);
     }
 
     private function getServer(string $requestMethod='POST')
     {
-        return [
+        return new \Dxw\Iguana\Value\Server([
             'REQUEST_METHOD' => $requestMethod,
-        ];
+        ]);
     }
 
     private function getStorage()
