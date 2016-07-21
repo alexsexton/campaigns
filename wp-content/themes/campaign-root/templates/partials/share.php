@@ -5,6 +5,8 @@
     $source = get_bloginfo('name');
 ?>
 
+<?php if( get_field('show_sharing_icons') ) : ?>
+
 <section class="share-this">
     <div class="row">
 
@@ -29,6 +31,8 @@
 
     </div>
 </section>
+
+<?php endif; ?>
 
 
 <?php
