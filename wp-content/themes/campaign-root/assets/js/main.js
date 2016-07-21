@@ -12,7 +12,7 @@ require('../../bower_components/fitvids/jquery.fitvids.js')
 jQuery(function ($) {
   // Mega menu
   $(function () {
-    enquire.register('screen and (min-width:500px)', {
+    enquire.register('screen and (min-width:779px)', {
       match: function () {
         // Main Nav
         $('.menu-header-container').accessibleMegaMenu({
@@ -51,6 +51,27 @@ jQuery(function ($) {
   // Call Fitvids on video elements
   $(function () {
     $('.fitvids').fitVids()
+  })
+
+  // Magic to give the hero block some height dimmensions if it has no image
+  $(function () {
+    enquire.register('screen and (min-width:779px)', {
+      match: function () {
+        $(function () {
+          var overlayHeight = $('.has-background-colour').height()
+          var padding = '30'
+          var heroContainerHeight = overlayHeight + (padding * 2)
+          if (overlayHeight !== '') {
+            $('.hero').height(heroContainerHeight)
+          }
+        })
+      },
+      unmatch: function () {
+        $(function () {
+          $('.hero').height('auto')
+        })
+      }
+    })
   })
 // end
 })

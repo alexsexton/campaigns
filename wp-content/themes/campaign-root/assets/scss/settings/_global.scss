@@ -14,6 +14,12 @@ $medium-screen: 900px;
 $small-screen: 780px;
 $tiny-screen: 480px;
 
+// MQs
+// @media screen and (max-width: $big-screen) {}
+// @media screen and (max-width: $medium-screen) {}
+// @media screen and (max-width: $small-screen) {}
+// @media screen and (max-width: $tiny-screen) {}
+
 // Margins & Padding
 $margin: 30px;
 $padding: 30px;

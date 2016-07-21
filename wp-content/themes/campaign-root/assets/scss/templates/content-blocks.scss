@@ -13,13 +13,33 @@
         @include translate(0,-50%);
         margin-right: -#{$site-max-width/2};
 
-        @media screen and (max-width: $big-screen) {
-            position: absolute;;
+        h1 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            position: absolute;
             top: 15px;
             margin: auto;
             right: 15px;
             padding: 0 $padding/2;
             max-width: 100%;
+        }
+
+        &.has-background-colour {
+            @media screen and (max-width: $small-screen) {
+                position: static;
+                top: 15px;
+                margin: auto;
+                right: 15px;
+                padding: 0 $padding/2;
+                max-width: 100%;
+                @include translate(0,0);
+            }
         }
 
         &.light-text {
