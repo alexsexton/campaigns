@@ -145,11 +145,11 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
         $this->assertRegExp('&</form>&s', $output);
         $this->assertRegExp('&<input type="submit" value="Submit application" class="button">&s', $output);
 
-        $this->assertRegExp('&<label >.*_Name_.*</label><input type="text" name="-appform_name-" +required>.*_hi there_.*&s', $output);
-        $this->assertRegExp('&<label >.*_Government department_.*</label><input type="text" name="-appform_department-" +required>.*.*&s', $output);
-        $this->assertRegExp('&<label >.*_Email address_.*</label><input type="email" name="-appform_email-" +required pattern="'.preg_quote('.*@(.+\.)?gov\.uk').'">.*.*&s', $output);
-        $this->assertRegExp('&<label >.*_Description_.*</label><textarea name="-appform_descr-" +required></textarea>.*.*&s', $output);
-        $this->assertRegExp('&<label >.*_Deadline_.*</label><input type="date" name="-appform_deadline-" +required>.*&s', $output);
+        $this->assertRegExp('&<label>.*_Name_.*</label><input type="text" name="-appform_name-" +required>.*_hi there_.*&s', $output);
+        $this->assertRegExp('&<label for="-appform_department-" >.*_Government department_.*</label><input type="text" name="-appform_department-" +required>.*.*&s', $output);
+        $this->assertRegExp('&<label for="-appform_email-" >.*_Email address_.*</label><input type="email" name="-appform_email-" +required pattern="'.preg_quote('.*@(.+\.)?gov\.uk').'">.*.*&s', $output);
+        $this->assertRegExp('&<label for="-appform_descr-" >.*_Description_.*</label><textarea name="-appform_descr-" +required></textarea>.*.*&s', $output);
+        $this->assertRegExp('&<label for="-appform_deadline-" >.*_Deadline_.*</label><input type="date" name="-appform_deadline-" +required>.*&s', $output);
     }
 
     public function testApplicationFormSuccessTrue()

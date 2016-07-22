@@ -110,7 +110,7 @@ class Form implements \Dxw\Iguana\Registerable
 
         <?php foreach ($this->getFields() as $field) : ?>
             <div class="form-group">
-                <label <?php $this->errorAttributes($field) ?>>
+                <label for="<?php $this->name($field) ?>" <?php $this->errorAttributes($field) ?>>
                 <?php echo esc_html($field['label']) ?>
                 <?php if (!empty($field['instructions'])) : ?>
                     <span class="hint">
