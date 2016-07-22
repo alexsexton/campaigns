@@ -5,10 +5,11 @@
 if( get_row_layout() == 'title') : ?>
 
   <?php if( get_sub_field('title')) : ?>
+      <?php $align = get_sub_field('text_align') ?>
         <?php if( get_sub_field('background_colour')) : ?>
-            <header class="title content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+            <header class="title content-block <?php echo $align; ?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
         <?php else : ?>
-            <header class="title content-block">
+            <header class="title content-block <?php echo $align; ?>">
         <?php endif; ?>
         <div class="row">
             <h2><?php the_sub_field('title'); ?></h2>

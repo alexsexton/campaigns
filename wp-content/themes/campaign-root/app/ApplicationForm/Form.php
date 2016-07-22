@@ -82,7 +82,7 @@ class Form implements \Dxw\Iguana\Registerable
     private function errorAttributes(array $field)
     {
         if ($this->isError($field)) {
-            echo 'class="error"';
+            echo 'class="form-error"';
         }
     }
 
@@ -106,33 +106,34 @@ class Form implements \Dxw\Iguana\Registerable
 
         ?>
 
-        <form method="POST">
+        <form method="POST" class="data-collection">
 
         <?php foreach ($this->getFields() as $field) : ?>
-            <p><label <?php $this->errorAttributes($field) ?>>
+            <div class="form-group">
+                <label <?php $this->errorAttributes($field) ?>>
                 <?php echo esc_html($field['label']) ?>
+                <?php if (!empty($field['instructions'])) : ?>
+                    <span class="hint"><?php echo esc_html($field['instructions']) ?></span>
+                <?php endif ?>
+                </label>
 
                 <?php if ($field['type'] === 'email') : ?>
                     <input type="email" <?php $this->name($field) ?> <?php $this->value($field) ?> required pattern=".*@(.+\.)?gov\.uk">
                 <?php elseif ($field['type'] === 'textarea') : ?>
-                    <textarea <?php $this->name($field) ?> required><?php $this->valueTextarea($field) ?></textarea>
+                    <textarea <?php $this->name($field) ?> required rows="8"><?php $this->valueTextarea($field) ?></textarea>
                 <?php elseif ($field['type'] === 'date_picker') : ?>
                     <input type="date" <?php $this->name($field) ?> <?php $this->value($field) ?> required>
                 <?php else : ?>
                     <input type="text" <?php $this->name($field) ?> <?php $this->value($field) ?> required>
                 <?php endif ?>
 
-                <?php if (!empty($field['instructions'])) : ?>
-                    <span class="instructions">
-                        <?php echo esc_html($field['instructions']) ?>
-                    </span>
-                <?php endif ?>
-
                 <?php $this->errorNotice($field) ?>
-            </label></p>
+            </div>
         <?php endforeach ?>
 
-        <input type="submit" value="Submit application">
+        <div class="form-buttons">
+            <input type="submit" value="Submit Application" class="button">
+        </div>
 
         </form>
 

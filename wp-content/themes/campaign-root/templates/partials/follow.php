@@ -28,6 +28,13 @@
             </li>
             <?php endif ?>
 
+            <?php if( get_field('youtube_id', 'option') ) : ?>
+            <li><a href="//youtube.com/<?php echo $twitter_id; ?>" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline-icon"><path d="M24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zm-4.5 0c0-5.5 0-5.5-7.5-5.5s-7.5 0-7.5 5.5 0 5.5 7.5 5.5 7.5 0 7.5-5.5zM10 9l5 3-5 3V9z"/></svg>
+            <span>YouTube</span></a>
+            </li>
+            <?php endif ?>
+
             <?php if( get_field('linkedin_id', 'option') ) : ?>
             <li><a href="//www.linkedin.com/company/<?php echo $linkedin_id ?>" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline-icon"><path d="M24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zM9 6.2c0-1-.8-1.7-2-1.7s-2 .8-2 1.7C5 7.2 5.8 8 7 8s2-.8 2-1.8zm-.5 3.3h-3V18h3V9.5zm11 4c0-2.8-1.4-4.5-3.5-4.5-1.2 0-2.1.7-2.5 1.8l-.1-1.3h-3c0 .3.1 2 .1 2V18h3v-4.5c0-1.2.6-2 1.5-2s1.5.5 1.5 2V18h3v-4.5z"/></svg>

@@ -3,6 +3,8 @@
 body {
     font-family: $font-family-sans;
     font-weight: normal;
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    -webkit-font-smoothing: antialiased;
 }
 
 .js-enabled .js-hidden {
@@ -66,12 +68,3 @@ a.button:hover {
 a.button:active {
   color: $button-text-hover;
 }
-
-// MQs
-@media screen and (max-width: $big-screen) {}
-
-@media screen and (max-width: $medium-screen) {}
-
-@media screen and (max-width: $small-screen) {}
-
-@media screen and (max-width: $tiny-screen) {}

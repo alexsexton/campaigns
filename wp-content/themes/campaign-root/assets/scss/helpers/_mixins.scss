@@ -40,6 +40,19 @@
     color: $colour;
 }
 
+@mixin form-input ($input-border) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 2px solid $input-border;
+    font-size: $base-font-size;
+    padding: 5px;
+    margin: 0;
+    outline: 0;
+    transition: all 0.2s ease-in-out;
+}
+
 // CSS 3 mixins - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_css3.scss
 
 // This file includes mixins for CSS properties that require vendor prefixes.

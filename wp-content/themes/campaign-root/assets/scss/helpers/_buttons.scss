@@ -25,7 +25,7 @@
   // Size and shape
   position: relative;
   display: inline-block;
-  padding: .526315em .789473em .263157em; // 10px 15px 5px
+  padding: 10px 15px 7px;
   border: none;
   @include border-radius(0);
   -webkit-appearance: none;
@@ -37,8 +37,9 @@
   }
 
   // Text
-  font-size: 1em; // inherit from parent
-  line-height: 1.25;
+  font-size: 17px; // inherit from parent
+  font-weight: 700;
+  line-height: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 

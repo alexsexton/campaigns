@@ -5,18 +5,23 @@ input[type=search],
 input[type=email],
 input[type=phone],
 input[type=password],
+input[type=date],
 textarea {
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
   border-radius: 0;
-  border: 2px solid scale-color($input-border, $lightness: 50%);
+  border: 2px solid $input-border;
   font-size: $base-font-size;
   padding: 5px;
   margin: 0;
   outline: 0;
   transition: all 0.2s ease-in-out;
   width: 50%;
+}
+
+input[type=date] {
+    width: auto;
 }
 
 @media screen and (max-width: $small-screen) {
@@ -26,6 +31,7 @@ textarea {
   input[type=email],
   input[type=phone],
   input[type=password],
+  input[type=date],
   textarea {
     width:100%;
   }
@@ -46,6 +52,7 @@ input[type=search]:focus,
 input[type=email]:focus,
 input[type=phone]:focus,
 input[type=password]:focus,
+input[type=date]:focus,
 textarea:focus {
   border: 2px solid $input-border-focus;
 }
@@ -80,23 +87,29 @@ textarea:focus {
   opacity: 0.5;
 }
 
+.button {
+    @include button;
+}
+
 // Labels
 
 .data-collection {
   padding: $padding/2;
+  margin: 0 0 $margin;
   border: 1px solid scale-color($input-border, $lightness: 75%);
 }
 
 .form-group label, .form-group legend {
   display: block;
   padding: 0 0 $padding/4 0;
+  font-size: $base-font-size;
 }
 
-.form-group em {
+.form-group span {
   font-style: italic;
   display: block;
   color: scale-color($base-font-colour, $lightness: 50%);
-  font-size: $base-font-size/1.618;
+  font-size: ($base-font-size)-4;
 }
 
 .form-group, .form-buttons {
