@@ -17,7 +17,6 @@ class Pages implements \Dxw\Iguana\Registerable
         if ($wp_query->get('category_name') || $wp_query->get('cat')) {
             $wp_query->set('post_type', $my_post_array);
         }
-
     }
 
     public function register()
