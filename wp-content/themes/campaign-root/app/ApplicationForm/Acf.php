@@ -8,7 +8,7 @@ class Acf implements \Dxw\Iguana\Registerable
     {
         acf_add_local_field_group(array(
             'key' => 'group_576c321629352',
-            'title' => 'Application form',
+            'title' => 'Applicationform',
             'fields' => array(
                 array(
                     'key' => 'field_576c3271e4513',

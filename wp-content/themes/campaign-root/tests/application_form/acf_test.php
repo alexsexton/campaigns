@@ -22,14 +22,14 @@ class ApplicationForm_Acf_Test extends PHPUnit_Framework_TestCase
             'args' => [
                 array(
                     'key' => 'group_576c321629352',
-                    'title' => 'Application form',
+                    'title' => 'Applicationform',
                     'fields' => array(
                         array(
                             'key' => 'field_576c3271e4513',
                             'label' => 'Name',
                             'name' => 'name',
                             'type' => 'text',
-                            'instructions' => '',
+                            'instructions' => 'Your first name and last name please',
                             'required' => 1,
                             'conditional_logic' => 0,
                             'wrapper' => array(
@@ -131,7 +131,7 @@ class ApplicationForm_Acf_Test extends PHPUnit_Framework_TestCase
                             'label' => 'What is the campaign site URL you would like to use?',
                             'name' => 'campaign_url',
                             'type' => 'text',
-                            'instructions' => 'If you know what URL you want, include it here. This will usually be in the form www.<campaignname>.gov.uk.',
+                            'instructions' => 'If you know what URL you want, include it here. This will usually be in the form www.[campaignname].gov.uk.',
                             'required' => 1,
                             'conditional_logic' => 0,
                             'wrapper' => array(

@@ -110,12 +110,10 @@ class Form implements \Dxw\Iguana\Registerable
 
         <?php foreach ($this->getFields() as $field) : ?>
             <div class="form-group">
-                <label for="<?php $this->name($field) ?>" <?php $this->errorAttributes($field) ?>>
+                <label <?php $this->errorAttributes($field) ?>>
                 <?php echo esc_html($field['label']) ?>
                 <?php if (!empty($field['instructions'])) : ?>
-                    <span class="hint">
-                        <?php echo esc_html($field['instructions']) ?>
-                    </span>
+                    <span class="hint"><?php echo esc_html($field['instructions']) ?></span>
                 <?php endif ?>
                 </label>
 
@@ -134,7 +132,7 @@ class Form implements \Dxw\Iguana\Registerable
         <?php endforeach ?>
 
         <div class="form-buttons">
-            <input type="submit" value="Submit application" class="button">
+            <input type="submit" value="Submit Application" class="button">
         </div>
 
         </form>
