@@ -1,6 +1,6 @@
 <?php
     // Template name: Application Form
-    the_post();
+    // Should we hide this template from the admin in subsites? It won't ever be used there.
 ?>
 
 <section class="application-form">
