@@ -2,4 +2,4 @@
     the_post();
 ?>
 
-<?php get_template_part('partials/content-blocks'); ?>
+<?php get_template_part('partials/page'); ?>
