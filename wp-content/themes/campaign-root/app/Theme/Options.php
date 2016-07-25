@@ -195,7 +195,7 @@ class Options implements \Dxw\Iguana\Registerable
                         'id' => '',
                     ),
                     'default_value' => '',
-                    'placeholder' => 'https://www.linkedin.com/example',
+                    'placeholder' => 'https://www.linkedin.com/company/example',
                     'prepend' => '',
                     'append' => '',
                     'maxlength' => '',
