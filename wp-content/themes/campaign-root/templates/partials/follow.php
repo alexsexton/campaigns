@@ -1,4 +1,4 @@
-<?php if(get_field('facebook_id', 'option') || get_field('twitter_id', 'option') || get_field('linkedin_id', 'option') ) : ?>
+<?php if(get_field('facebook_id', 'option') || get_field('youtube_id', 'option') || get_field('twitter_id', 'option') || get_field('linkedin_id', 'option') ) : ?>
 <div class="follow-us">
         <ul>
             <?php if( get_field('facebook_id', 'option') ) : ?>
