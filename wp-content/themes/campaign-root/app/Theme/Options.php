@@ -185,7 +185,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'key' => 'field_5783ae3160316',
                     'label' => 'Linkedin ID',
                     'name' => 'linkedin_id',
-                    'type' => 'text',
+                    'type' => 'url',
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
