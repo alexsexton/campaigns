@@ -23,7 +23,9 @@ if( get_row_layout() == 'hero') : ?>
       <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
     <?php endif; ?>
 
-        <?php if (get_sub_field('background_colour')) : ?>
+        <?php if (get_sub_field('background_colour') && get_sub_field('background_image') === null) : ?>
+            <div class="overlay has-background-colour <?php echo $hero_text_colour;?>">
+            <?php elseif (get_sub_field('background_colour')) : ?>
             <div class="overlay has-background-colour <?php echo $hero_text_colour;?>">
             <?php else : ?>
             <div class="overlay <?php echo $hero_text_colour;?>">
