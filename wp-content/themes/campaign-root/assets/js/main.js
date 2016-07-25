@@ -59,9 +59,9 @@ jQuery(function ($) {
       match: function () {
         $(function () {
           var overlayHeight = $('.has-background-colour').height()
-          var padding = '30'
+          var padding = '60'
           var heroContainerHeight = overlayHeight + (padding * 2)
-          if (overlayHeight !== '') {
+          if (overlayHeight !== null) {
             $('.hero').height(heroContainerHeight)
           }
         })
