@@ -34,7 +34,7 @@ class Form implements \Dxw\Iguana\Registerable
     {
         $group = null;
         foreach (\acf_local()->groups as $_group) {
-            if ($_group['title'] === 'Application form') {
+            if ($_group['title'] === 'Application Form') {
                 $group = $_group;
                 break;
             }
