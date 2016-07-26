@@ -93,7 +93,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
                         'key' => 'aaa',
                     ],
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -107,7 +107,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
                         'name' => 'name',
                         'parent' => 'bbb',
                         'type' => 'text',
-                        'instructions' => 'hi there',
+                        'instructions' => 'Your first name and last name please',
                     ],
                     [
                         'label' => 'Government department',
@@ -174,7 +174,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -217,7 +217,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -251,7 +251,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -311,7 +311,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -381,7 +381,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -417,7 +417,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -453,7 +453,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -489,7 +489,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -526,7 +526,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -605,7 +605,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -661,7 +661,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],
@@ -704,7 +704,7 @@ class ApplicationForm_Form_Test extends PHPUnit_Framework_TestCase
             'return' => (object) [
                 'groups' => [
                     [
-                        'title' => 'Application form',
+                        'title' => 'Application Form',
                         'key' => 'bbb',
                     ],
                 ],

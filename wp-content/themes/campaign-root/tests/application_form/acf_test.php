@@ -22,7 +22,7 @@ class ApplicationForm_Acf_Test extends PHPUnit_Framework_TestCase
             'args' => [
                 array(
                     'key' => 'group_576c321629352',
-                    'title' => 'Applicationform',
+                    'title' => 'Application Form',
                     'fields' => array(
                         array(
                             'key' => 'field_576c3271e4513',
