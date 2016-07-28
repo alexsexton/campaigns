@@ -1,5 +1,5 @@
 <?php
-    // Template name: Static
+    // Template name: Page
     the_post();
 ?>
 
