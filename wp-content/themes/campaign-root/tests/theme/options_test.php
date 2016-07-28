@@ -72,7 +72,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'library' => 'all',
                             'min_size' => '',
                             'max_size' => '',
-                            'mime_types' => '',
+                            'mime_types' => 'png,jpg',
                         ),
                         array(
                             'key' => 'field_5783ada6c8404',
@@ -87,7 +87,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                                 'class' => '',
                                 'id' => '',
                             ),
-                            'default_value' => '',
+                            'default_value' => '#005ea5',
                         ),
                         array(
                             'key' => 'field_5783ae4e60318',
