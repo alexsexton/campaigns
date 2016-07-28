@@ -30,8 +30,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         // Hero
                         array(
                             'key' => '572b45ec7bc15',
-                            'name' => 'hero',
-                            'label' => 'Hero',
+                            'name' => 'banner',
+                            'label' => 'Banner',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
@@ -284,11 +284,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => ''
                         ),
-                        // Title
+                        // Heading
                         array(
                             'key' => '572b45dc7bc15',
-                            'name' => 'title',
-                            'label' => 'Title',
+                            'name' => 'heading',
+                            'label' => 'Heading',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
@@ -528,8 +528,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         // Content
                         array(
                             'key' => '572c6183a937a',
-                            'name' => 'content',
-                            'label' => 'Content',
+                            'name' => 'text',
+                            'label' => 'Text',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
@@ -620,7 +620,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                             ),
                             'min' => '',
@@ -1198,11 +1198,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 ),
                             ),
                         ),
-                        // Data Visualisation
+                        // Statistic
                         array(
                             'key' => '5783776eabb7e',
-                            'name' => 'data_visualisation',
-                            'label' => 'Data Visualisation',
+                            'name' => 'statistic',
+                            'label' => 'Statistic',
                             'display' => 'block',
                             'sub_fields' => array(
                                 array(
@@ -1320,11 +1320,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => '',
                         ),
-                        // Hidden Text
+                        // Hidden Help Text
                         array(
                             'key' => '578683e09daad',
-                            'name' => 'hidden_text',
-                            'label' => 'Hidden Text',
+                            'name' => 'hidden_help_text',
+                            'label' => 'Hidden Help Text',
                             'display' => 'block',
                             'sub_fields' => array(
                                 array(
@@ -1543,6 +1543,13 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                 )
             ),
             'location' => array(
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'default',
+                    ),
+                ),
                 array(
                     array(
                         'param' => 'page_template',

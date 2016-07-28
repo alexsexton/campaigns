@@ -1,10 +1,10 @@
 <?php
 //
-// Content Block ### Data Visualisation
+// Content Block ### Statistic
 //
-if (get_row_layout() == 'data_visualisation') : ?>
+if (get_row_layout() == 'statistic') : ?>
 
-<div class="data-visualisation content-block">
+<div class="statistic content-block">
     <div class="row">
         <div class="data">
             <?php if (get_sub_field('data_value')) : ?>
