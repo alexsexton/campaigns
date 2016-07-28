@@ -1,15 +1,15 @@
 <?php
 //
-// Content Block ### Title
+// Content Block ### Heading
 //
-if( get_row_layout() == 'title') : ?>
+if( get_row_layout() == 'heading') : ?>
 
   <?php if( get_sub_field('title')) : ?>
       <?php $align = get_sub_field('text_align') ?>
         <?php if( get_sub_field('background_colour')) : ?>
-            <header class="title content-block <?php echo $align; ?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+            <header class="heading content-block <?php echo $align; ?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
         <?php else : ?>
-            <header class="title content-block <?php echo $align; ?>">
+            <header class="heading content-block <?php echo $align; ?>">
         <?php endif; ?>
         <div class="row">
             <h2><?php the_sub_field('title'); ?></h2>

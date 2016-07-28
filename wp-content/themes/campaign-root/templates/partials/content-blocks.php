@@ -4,13 +4,13 @@
     if( have_rows('content_blocks') ):
     while ( have_rows('content_blocks') ) : the_row(); ?>
 
-        <?php get_template_part('partials/content-blocks/hero-block'); ?>
+        <?php get_template_part('partials/content-blocks/banner-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/title-block'); ?>
+        <?php get_template_part('partials/content-blocks/heading-block'); ?>
 
         <?php get_template_part('partials/content-blocks/promo-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/content-only-block'); ?>
+        <?php get_template_part('partials/content-blocks/text-only-block'); ?>
 
         <?php get_template_part('partials/content-blocks/call-to-action-block'); ?>
 
@@ -22,11 +22,11 @@
 
         <?php get_template_part('partials/content-blocks/video-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/data-visualisation-block'); ?>
+        <?php get_template_part('partials/content-blocks/statistic-block'); ?>
 
         <?php get_template_part('partials/content-blocks/quote-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/hidden-text-block'); ?>
+        <?php get_template_part('partials/content-blocks/hidden-help-text-block'); ?>
 
         <?php get_template_part('partials/content-blocks/link-block'); ?>
 

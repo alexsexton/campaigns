@@ -1,8 +1,8 @@
 <?php
 //
-// Content Block ### Hero
+// Content Block ### Banner
 //
-if( get_row_layout() == 'hero') : ?>
+if( get_row_layout() == 'banner') : ?>
 
   <?php
     $hero_background = get_sub_field('background_colour');
@@ -14,9 +14,9 @@ if( get_row_layout() == 'hero') : ?>
   ?>
 
     <?php if (get_sub_field('background_colour')) : ?>
-    <div class="hero content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+    <div class="banner content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
     <?php else : ?>
-    <div class="hero content-block">
+    <div class="banner content-block">
     <?php endif; ?>
 
     <?php if($hero_image) : ?>

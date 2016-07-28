@@ -1,15 +1,15 @@
 <?php
 //
-// Content Block ### Hidden Text
+// Content Block ### Hidden Help Text
 //
-if( get_row_layout() == 'hidden_text') : ?>
+if( get_row_layout() == 'hidden_help_text') : ?>
 
-<?php $hidden_text_colour = get_sub_field('text_colour'); ?>
+<?php $hidden_text_colour = get_sub_field('hidden_help_text'); ?>
 
 <?php if( get_sub_field('background_colour')) : ?>
-<div class="hidden-text content-block <?php echo $hidden_text_colour;?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+<div class="hidden-help-text content-block <?php echo $hidden_text_colour;?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
 <?php else : ?>
-<div class="hidden-text content-block <?php echo $hidden_text_colour;?>">
+<div class="hidden-help-text content-block <?php echo $hidden_text_colour;?>">
 <?php endif; ?>
     <div class="row">
         <details>
