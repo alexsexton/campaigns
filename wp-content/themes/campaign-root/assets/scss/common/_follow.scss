@@ -1,5 +1,7 @@
 .follow-us {
     @include col(1/4);
+    padding: 0;
+    float: right;
 
     @media screen and (max-width: $small-screen) {
         @include col(1/1);
@@ -39,27 +41,9 @@
         }
     }
 
-    .follow-us--facebook {
-        .inline-icon {
-            fill: $facebook;
-        }
-    }
-
-    .follow-us--twitter {
-        .inline-icon {
-            fill: $twitter;
-        }
-    }
-
-    .follow-us--linkedin {
-        .inline-icon {
-            fill: $linkedin;
-        }
-    }
-
     a:hover {
         .inline-icon {
-            fill: $grey-1;
+            opacity: 0.5;
         }
     }
 
