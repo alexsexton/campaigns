@@ -1,9 +1,11 @@
 // Site footer
 
+$footer-link: $white;
+$footer-link-hover: $link-hover-colour;
+
 .site-footer {
   background: $black;
   padding: $padding 0;
-
 
   .footer-navigation {
       @include col(3/4);
@@ -21,9 +23,13 @@
               float: left;
               margin: 0 #{$margin/2} 0 0;
               line-height: 32px;
+              color: $footer-link;
+
+              &:hover {
+                color: $footer-link-hover;
+                text-decoration: underline;
+              }
           }
       }
   }
-
-
 }
