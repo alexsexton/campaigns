@@ -278,7 +278,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#005ea5',
                                 ),
                             ),
                             'min' => '',
@@ -386,7 +386,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                                 array(
                                     'key' => 'field_59d95a4abf97a',
@@ -519,7 +519,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                             ),
                             'min' => '',
@@ -620,7 +620,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                             ),
                             'min' => '',
@@ -870,7 +870,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#005ea5',
                                 ),
                                 array(
                                     'key' => 'field_b3aac07896e62',
@@ -930,7 +930,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                                 array(
                                     'key' => 'field_577503aab2790',
@@ -1408,7 +1408,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                                 array(
                                     'key' => 'field_5741697a1fca4',
@@ -1543,6 +1543,13 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                 )
             ),
             'location' => array(
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'default',
+                    ),
+                ),
                 array(
                     array(
                         'param' => 'page_template',
