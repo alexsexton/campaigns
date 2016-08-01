@@ -13,6 +13,9 @@
     "grunt-standard": "^2.0.0"
   },
   "dependencies": {
-    "date-polyfill": "git+https://github.com/dxw/date-polyfill.git"
+    "angular": "^1.5.7",
+    "angular-sanitize": "^1.5.8",
+    "date-polyfill": "git+https://github.com/dxw/date-polyfill.git",
+    "lodash": "^4.14.0"
   }
 }
