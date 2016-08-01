@@ -15,7 +15,6 @@ class Scripts implements \Dxw\Iguana\Registerable
         add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
         add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
         add_action('wp_print_scripts', [$this, 'wpPrintScripts']);
-        add_action('admin_head', [$this, 'acfMarkdown']);
     }
 
     public function getAssetPath($path)
