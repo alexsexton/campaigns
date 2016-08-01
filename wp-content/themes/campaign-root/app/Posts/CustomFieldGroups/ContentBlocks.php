@@ -261,9 +261,13 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     ),
                                     'return_format' => 'array',
                                     'library' => 'all',
+                                    'min_width' => '',
+                                    'min_height' => '',
                                     'min_size' => '',
-                                    'max_size' => '',
-                                    'mime_types' => ''
+                                    'max_width' => '1600 PX',
+                                    'max_height' => '',
+                                    'max_size' => '512 KB',
+                                    'mime_types' => 'jpg,png',
                                 ),
                                 array(
                                     'key' => 'field_577a3a39d27a',
@@ -363,7 +367,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_width' => '',
                                     'max_height' => '',
                                     'max_size' => '',
-                                    'mime_types' => '',
+                                    'mime_types' => 'jpg,png',
                                 ),
                                 array(
                                     'key' => 'field_e801e9b25ecee',
@@ -655,7 +659,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_width' => '',
                                     'max_height' => '',
                                     'max_size' => '',
-                                    'mime_types' => ''
+                                    'mime_types' => 'jpg,png'
                                 )
                             ),
                             'min' => '',
@@ -688,7 +692,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_width' => '',
                                     'max_height' => '',
                                     'max_size' => '',
-                                    'mime_types' => '',
+                                    'mime_types' => 'jpg,png',
                                     'return_format' => 'array',
                                     'library' => 'all'
                                 )
@@ -725,7 +729,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_width' => '',
                                     'max_height' => '',
                                     'max_size' => '',
-                                    'mime_types' => ''
+                                    'mime_types' => 'jpg,png'
                                 )
                             ),
                             'min' => '',
@@ -847,7 +851,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_width' => '',
                                     'max_height' => '',
                                     'max_size' => '',
-                                    'mime_types' => '',
+                                    'mime_types' => 'jpg,png'
                                 ),
                                 array(
                                     'key' => 'field_bfd182e264b5e',
@@ -1151,7 +1155,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                     'max_width' => '',
                                                     'max_height' => '',
                                                     'max_size' => '',
-                                                    'mime_types' => '',
+                                                    'mime_types' => 'jpg,png'
                                                 ),
                                                 array(
                                                     'key' => 'field_5773c12abbc41',
