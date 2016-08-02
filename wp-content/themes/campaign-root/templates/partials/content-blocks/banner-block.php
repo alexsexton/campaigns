@@ -5,31 +5,34 @@
 if( get_row_layout() == 'banner') : ?>
 
   <?php
-    $hero_background = get_sub_field('background_colour');
-    $hero_text_colour = get_sub_field('text_colour');
+    $banner_background = get_sub_field('background_colour');
+    $banner_text_colour = get_sub_field('text_colour');
 
     if( get_sub_field('background_image')) {
-      $hero_image = get_sub_field('background_image');
+      $banner_image = get_sub_field('background_image');
     };
   ?>
 
-    <?php if (get_sub_field('background_colour')) : ?>
+    <?php if ($banner_background) : ?>
     <div class="banner content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
     <?php else : ?>
     <div class="banner content-block">
     <?php endif; ?>
 
-    <?php if($hero_image) : ?>
-      <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
+    <?php if($banner_image) : ?>
+      <img src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>">
     <?php endif; ?>
 
-        <?php if (get_sub_field('background_colour') && get_sub_field('background_image') === null) : ?>
-            <div class="overlay has-background-colour <?php echo $hero_text_colour;?>">
-            <?php elseif (get_sub_field('background_colour')) : ?>
-            <div class="overlay has-background-colour <?php echo $hero_text_colour;?>">
+        <?php if ($banner_background && !$banner_image) : ?>
+            <div class="overlay has-background-colour <?php echo $banner_text_colour;?>">
+            <?php elseif ($banner_background && $banner_image) : ?>
+            <div class="overlay <?php echo $banner_text_colour;?>">
             <?php else : ?>
-            <div class="overlay <?php echo $hero_text_colour;?>">
+            <div class="overlay <?php echo $banner_text_colour;?>">
           <?php endif; ?>
+
+          <?php //var_dump($banner_image); ?>
+
         <h1><?php the_sub_field('title'); ?></h1>
         <div class="content rich-text">
           <?php the_sub_field('caption'); ?>
