@@ -53,3 +53,5 @@ $registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\Page(
     $registrar->getInstance(\Dxw\Iguana\Value\Post::class)
 ));
 $registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\AnalyticsScript());
+
+$registrar->addInstance(new \Dxw\GdsCampaignRoot\UserGuide\AdminBar());
