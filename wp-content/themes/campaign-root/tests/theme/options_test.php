@@ -36,7 +36,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'label' => 'Site Logo',
                             'name' => 'site_logo',
                             'type' => 'image',
-                            'instructions' => 'The logo will take up no more than 25% of the space at the top of the page.',
+                            'instructions' => 'The logo will scale so that is 208 pixels in width',
                             'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
@@ -50,10 +50,10 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                             'min_width' => '',
                             'min_height' => '',
                             'min_size' => '',
-                            'max_width' => '',
+                            'max_width' => '416 PX',
                             'max_height' => '',
-                            'max_size' => '',
-                            'mime_types' => '',
+                            'max_size' => '256 KB',
+                            'mime_types' => 'png',
                         ),
                         array(
                             'key' => 'field_5783ad80c8403',
