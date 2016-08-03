@@ -12,7 +12,7 @@ $sub-nav-background-hover: $black;
     float: right;
 }
 
-.menu-header-container {
+.menu-header {
     float: left;
 }
 
@@ -104,7 +104,7 @@ $sub-nav-background-hover: $black;
 @media screen and (max-width: $small-screen) {
 
     .nav-container,
-    .menu-header-container {
+    .menu-header {
         float: none;
     }
 

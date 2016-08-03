@@ -5,6 +5,7 @@
       if (has_nav_menu('header')) {
         $defaults = array(
           'theme_location' => 'header',
+          'container_class' => 'menu-header',
           'depth' => 2,
           );
         $header = wp_nav_menu($defaults);
