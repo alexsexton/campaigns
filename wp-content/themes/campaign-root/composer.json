@@ -18,7 +18,8 @@
         "mikey179/vfsStream": "^1.6",
         "peridot-php/peridot": "^1.18",
         "peridot-php/leo": "^1.5",
-        "peridot-php/peridot-dot-reporter": "^1.0"
+        "peridot-php/peridot-dot-reporter": "^1.0",
+        "fabpot/php-cs-fixer": "1.11.4"
     },
     "autoload": {
         "psr-4": {

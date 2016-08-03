@@ -5,7 +5,10 @@ return \Symfony\CS\Config\Config::create()
 ->finder(
     \Symfony\CS\Finder\DefaultFinder::create()
     ->exclude('vendor')
+    ->exclude('assets')
+    ->exclude('build')
+    ->exclude('node_modules')
+    ->exclude('bower_components')
     ->exclude('templates')
-    ->exclude('lib')
     ->in(__DIR__)
 );
