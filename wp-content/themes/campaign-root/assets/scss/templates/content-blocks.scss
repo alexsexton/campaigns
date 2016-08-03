@@ -22,9 +22,10 @@
             position: absolute;
             top: 15px;
             margin: auto;
-            right: 15px;
-            padding: $padding/2;
-            max-width: 100%;
+            left: 15px;
+            padding: $padding/2 0;
+            width: 100%;
+            @include translate(0,0);
         }
 
         &.has-background-colour {
@@ -32,9 +33,9 @@
                 position: static;
                 top: 15px;
                 margin: auto;
-                right: 15px;
-                padding: $padding/2;
-                max-width: 100%;
+                left: 15px;
+                padding: $padding/2 0;
+                width: 100%;
                 @include translate(0,0);
             }
         }

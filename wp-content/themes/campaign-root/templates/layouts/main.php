@@ -22,5 +22,16 @@
     <?php get_template_part('partials/govuk-footer'); ?>
 
     <?php wp_footer(); ?>
+    <?php if( get_field('header_background_image', 'option')) : ?>
+    <?php $header_image = get_field('header_background_image', 'option'); ?>
+    <script>
+    // Call backstretch on campaign header
+    jQuery(function ($) {
+        $(function () {
+          $('.site-header').backstretch("<?php echo $header_image['url']; ?>")
+        })
+    })
+    </script>
+    <?php endif; ?>
 </body>
 </html>
