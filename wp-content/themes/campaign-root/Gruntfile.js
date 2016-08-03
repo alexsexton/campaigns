@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         'dest': 'static/lib/modernizr.min.js',
         'tests': [
           'flexbox',
-          'svgasimg'
+          'svg'
         ],
         'options': [
           'html5printshiv',
