@@ -19,8 +19,9 @@
   <<: *php70
   before_script:
     - cd ${DIR}
+    - composer install
   script:
-    - php-cs-fixer fix --dry-run -v --diff
+    - vendor/bin/php-cs-fixer fix --dry-run -v --diff
 
 .standardjs: &standardjs
   image: node:latest
