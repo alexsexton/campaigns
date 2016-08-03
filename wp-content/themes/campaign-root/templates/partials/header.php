@@ -1,5 +1,7 @@
 <?php if( get_field('header_background_colour', 'option')) : ?>
 <header role="banner" id="site-header" class="site-header" style="background-color:<?php the_field('header_background_colour', 'option'); ?>;">
+<?php elseif ( get_field('header_background_image', 'option')) : ?>
+<header role="banner" id="site-header" class="site-header has-background-image">
 <?php else : ?>
 <header role="banner" id="site-header" class="site-header">
 <?php endif ?>
