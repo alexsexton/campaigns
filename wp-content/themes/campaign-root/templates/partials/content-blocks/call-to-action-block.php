@@ -10,11 +10,11 @@ if( get_sub_field('text_align')) {
 ?>
 
 <?php if( get_sub_field('background_colour') && get_sub_field('text_colour')) : ?>
-    <div class="call-to-action-block content-block <?php echo $text_align; ?>" style="color:<?php the_sub_field('text_colour'); ?>;background-color:<?php the_sub_field('background_colour'); ?>;">
+<div id="call-to-action-p-<?php echo get_row_index(); ?>" class="call-to-action-block content-block <?php echo $text_align; ?>" style="color:<?php the_sub_field('text_colour'); ?>;background-color:<?php the_sub_field('background_colour'); ?>;">
 <?php elseif( get_sub_field('background_colour'))  : ?>
-<div class="call-to-action-block content-block <?php echo $text_align; ?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+<div  id="call-to-action-p-<?php echo get_row_index(); ?>" class="call-to-action-block content-block <?php echo $text_align; ?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
 <?php else : ?>
-<div class="call-to-action-block content-block <?php echo $text_align; ?>">
+<div  id="call-to-action-p-<?php echo get_row_index(); ?>" class="call-to-action-block content-block <?php echo $text_align; ?>">
 <?php endif; ?>
     <div class="row">
         <div class="call-to-action">

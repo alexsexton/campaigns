@@ -4,7 +4,7 @@
 //
 if( get_row_layout() == 'promo_boxes') : ?>
 
-<div class="promo-block content-block">
+<div id="promo-block-p-<?php echo get_row_index(); ?>" class="promo-block content-block">
     <div class="row">
         <div class="promo-boxes">
 

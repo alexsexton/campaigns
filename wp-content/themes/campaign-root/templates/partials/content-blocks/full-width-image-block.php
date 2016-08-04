@@ -3,7 +3,7 @@
 // Content Block ### Full-Width Image
 //
 if( get_row_layout() == 'full_width_image') : ?>
-<div class="full-width-image content-block">
+<div id="full-width-image-p-<?php echo get_row_index(); ?>" class="full-width-image content-block">
     <div class="row">
 
       <?php $full_width_image = get_sub_field('image'); ?>
