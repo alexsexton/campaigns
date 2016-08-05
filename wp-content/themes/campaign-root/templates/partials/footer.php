@@ -12,7 +12,7 @@
             if (has_nav_menu('footer')) {
                 wp_nav_menu(array(
                     'theme_location' => 'footer',
-                    'menu_class' => 'footer',
+                    'menu_class' => 'menu-footer',
                     'depth' => '1',
                 ));
             }

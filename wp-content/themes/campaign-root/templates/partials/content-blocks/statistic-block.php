@@ -4,7 +4,7 @@
 //
 if (get_row_layout() == 'statistic') : ?>
 
-<div class="statistic content-block">
+<div id="statistic-p-<?php echo get_row_index(); ?>" class="statistic content-block">
     <div class="row">
         <div class="data">
             <?php if (get_sub_field('data_value')) : ?>

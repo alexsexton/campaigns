@@ -529,7 +529,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => ''
                         ),
-                        // Content
+                        // Text
                         array(
                             'key' => '572c6183a937a',
                             'name' => 'text',
@@ -1455,94 +1455,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'max' => '',
                         ),
                         // Links
-                        array(
-                            'key' => 'field_578ca74c637cc',
-                            'label' => 'Link Block',
-                            'name' => 'link_block',
-                            'type' => 'repeater',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => '',
-                            ),
-                            'collapsed' => '',
-                            'min' => '',
-                            'max' => '',
-                            'layout' => 'table',
-                            'button_label' => 'Add Row',
-                            'sub_fields' => array(
-                                array(
-                                    'key' => 'field_578e02173e91f',
-                                    'label' => 'Links',
-                                    'name' => 'links',
-                                    'type' => 'flexible_content',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'button_label' => 'Add link',
-                                    'min' => '',
-                                    'collapsed' => 'field_578e02293e920',
-                                    'max' => '',
-                                    'layouts' => array(
-                                        array(
-                                            'key' => '578e021e35dba',
-                                            'name' => 'link',
-                                            'label' => 'Link',
-                                            'display' => 'block',
-                                            'sub_fields' => array(
-                                                array(
-                                                    'key' => 'field_578e02293e920',
-                                                    'label' => 'Title',
-                                                    'name' => 'title',
-                                                    'type' => 'text',
-                                                    'instructions' => '',
-                                                    'required' => 0,
-                                                    'conditional_logic' => 0,
-                                                    'wrapper' => array(
-                                                        'width' => '',
-                                                        'class' => '',
-                                                        'id' => '',
-                                                    ),
-                                                    'default_value' => '',
-                                                    'placeholder' => '',
-                                                    'prepend' => '',
-                                                    'append' => '',
-                                                    'maxlength' => '',
-                                                    'readonly' => 0,
-                                                    'disabled' => 0,
-                                                ),
-                                                array(
-                                                    'key' => 'field_578e02583e921',
-                                                    'label' => 'URL',
-                                                    'name' => 'url',
-                                                    'type' => 'url',
-                                                    'instructions' => '',
-                                                    'required' => 0,
-                                                    'conditional_logic' => 0,
-                                                    'wrapper' => array(
-                                                        'width' => '',
-                                                        'class' => '',
-                                                        'id' => '',
-                                                    ),
-                                                    'default_value' => '',
-                                                    'placeholder' => '',
-                                                ),
-                                            ),
-                                            'min' => '',
-                                            'max' => '',
-                                        ),
-                                    )
-                                )
-                            )
-                        )
                     )
                 )
             ),
