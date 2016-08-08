@@ -7,7 +7,7 @@ class Options implements \Dxw\Iguana\Registerable
     public function register()
     {
         acf_add_options_sub_page([
-            'page_title' => 'Site Wide Appearance',
+            'page_title' => 'Sitewide Appearance',
             'parent_slug' => 'themes.php',
         ]);
 
@@ -65,7 +65,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Header Background Image',
                     'name' => 'header_background_image',
                     'type' => 'file',
-                    'instructions' => 'The background image should be greater about 1400px by 300px (depending on the dimensions of the logo). The image will scale and stretch to fill the available space.',
+                    'instructions' => 'The background image should be bigger than 1400px by 300px.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -190,7 +190,7 @@ class Options implements \Dxw\Iguana\Registerable
                     array(
                         'param' => 'options_page',
                         'operator' => '==',
-                        'value' => 'acf-options-site-wide-appearance',
+                        'value' => 'acf-options-sitewide-appearance',
                     ),
                 ),
             ),
