@@ -55,3 +55,4 @@ $registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\Page(
 $registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\AnalyticsScript());
 
 $registrar->addInstance(new \Dxw\GdsCampaignRoot\UserGuide\AdminBar());
+$registrar->addInstance(new \Dxw\GdsCampaignRoot\UserGuide\DashboardBox());
