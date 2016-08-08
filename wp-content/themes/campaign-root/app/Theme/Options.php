@@ -7,14 +7,35 @@ class Options implements \Dxw\Iguana\Registerable
     public function register()
     {
         acf_add_options_sub_page([
-            'page_title' => 'Options',
+            'page_title' => 'Site Wide Appearance',
             'parent_slug' => 'themes.php',
         ]);
 
         acf_add_local_field_group([
             'key' => 'group_577e95f281e15',
-            'title' => 'Options',
+            'title' => 'Header',
             'fields' => array(
+                array(
+                    'key' => 'field_576c2b1d4517',
+                    'label' => 'Site Tagline',
+                    'name' => 'site_tagline',
+                    'type' => 'textarea',
+                    'instructions' => 'This shows in the site wide header to the right of the logo.',
+                    'required' => '',
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'maxlength' => '',
+                    'rows' => '',
+                    'new_lines' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ),
                 array(
                     'key' => 'field_5783ad6ac8402',
                     'label' => 'Site Logo',
@@ -44,7 +65,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Header Background Image',
                     'name' => 'header_background_image',
                     'type' => 'file',
-                    'instructions' => '',
+                    'instructions' => 'The background image should be greater about 1400px by 300px (depending on the dimensions of the logo). The image will scale and stretch to fill the available space.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -55,7 +76,9 @@ class Options implements \Dxw\Iguana\Registerable
                     'return_format' => 'array',
                     'library' => 'all',
                     'min_size' => '',
-                    'max_size' => '',
+                    'max_size' => '512 KB',
+                    'min_width' => '1400 PX',
+                    'min_height' => '300 PX',
                     'mime_types' => 'png,jpg',
                 ),
                 array(
@@ -73,6 +96,30 @@ class Options implements \Dxw\Iguana\Registerable
                     ),
                     'default_value' => '#005ea5',
                 ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'acf-options-site-wide-appearance',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => 1,
+            'description' => '',
+        ]);
+
+        acf_add_local_field_group([
+            'key' => 'group_534e95f281a15',
+            'title' => 'Social Media Icons',
+            'fields' => array(
                 array(
                     'key' => 'field_5783adf460314',
                     'label' => 'Facebook',
@@ -143,7 +190,7 @@ class Options implements \Dxw\Iguana\Registerable
                     array(
                         'param' => 'options_page',
                         'operator' => '==',
-                        'value' => 'acf-options-options',
+                        'value' => 'acf-options-site-wide-appearance',
                     ),
                 ),
             ),

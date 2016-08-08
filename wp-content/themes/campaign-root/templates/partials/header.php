@@ -15,9 +15,9 @@
                 <h1><?php bloginfo('name'); ?></h1>
             <?php endif ?>
         </div>
-        <?php if (get_bloginfo('description')) : ?>
+        <?php if( get_field('site_tagline', 'option') ) : ?>
             <div class="description">
-                <p><?php bloginfo('description'); ?></p>
+                <p><?php the_field('site_tagline', 'option'); ?></p>
             </div>
         <?php endif ?>
     </div>
