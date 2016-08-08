@@ -1232,7 +1232,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 ),
                                 array(
                                     'key' => 'field_578377c76ff43',
-                                    'label' => 'statistic Description',
+                                    'label' => 'Statistic Description',
                                     'name' => 'statistic_data_value_description',
                                     'type' => 'textarea',
                                     'instructions' => '',
