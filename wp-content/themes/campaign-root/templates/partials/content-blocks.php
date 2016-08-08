@@ -8,7 +8,7 @@
 
         <?php get_template_part('partials/content-blocks/heading-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/promo-block'); ?>
+        <?php get_template_part('partials/content-blocks/boxes-block'); ?>
 
         <?php get_template_part('partials/content-blocks/text-only-block'); ?>
 
