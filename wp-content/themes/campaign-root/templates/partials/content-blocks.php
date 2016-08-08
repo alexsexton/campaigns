@@ -33,6 +33,4 @@
     endif;
   ?>
 
-  <?php get_template_part('partials/share'); ?>
-
 </section>

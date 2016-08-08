@@ -12,7 +12,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
             'fields' => array(
                 array(
                     'key' => 'field_572b3982eabf4',
-                    'label' => 'Content Blocks',
+                    'label' => 'Section',
                     'name' => 'content_blocks',
                     'type' => 'flexible_content',
                     'instructions' => '',
@@ -23,7 +23,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         'class' => '',
                         'id' => ''
                     ),
-                    'button_label' => 'Add Content Block',
+                    'button_label' => 'Add Section',
                     'min' => '',
                     'max' => '',
                     'layouts' => array(
