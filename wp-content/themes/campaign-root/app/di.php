@@ -21,6 +21,7 @@ $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Menus::class, new \Dxw\GdsCam
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Widgets::class, new \Dxw\GdsCampaignRoot\Theme\Widgets());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Helpers::class, new \Dxw\GdsCampaignRoot\Theme\Helpers());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\TitleTag::class, new \Dxw\GdsCampaignRoot\Theme\TitleTag());
+$registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\WpHead::class, new \Dxw\GdsCampaignRoot\Theme\WpHead());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Pagination::class, new \Dxw\GdsCampaignRoot\Theme\Pagination(
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
