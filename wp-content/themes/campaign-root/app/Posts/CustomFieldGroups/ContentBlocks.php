@@ -292,7 +292,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         array(
                             'key' => '572b45dc7bc15',
                             'name' => 'heading',
-                            'label' => 'Heading',
+                            'label' => 'Large Heading',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
@@ -1081,14 +1081,14 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'button_label' => 'Add Box',
+                                    'button_label' => 'Add Item',
                                     'min' => 3,
                                     'max' => '',
                                     'layouts' => array(
                                         array(
                                             'key' => '5773c0f362bdc',
                                             'name' => 'box',
-                                            'label' => 'Box',
+                                            'label' => 'Add Box',
                                             'display' => 'table',
                                             'sub_fields' => array(
                                                 array(
@@ -1134,11 +1134,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                     'disabled' => 0,
                                                 ),
                                                 array(
-                                                    'key' => 'field_5773c116bbc40',
+                                                    'key' => 'field_5773c156bbc40',
                                                     'label' => 'Image',
                                                     'name' => 'box_image',
-                                                    'type' => 'Image',
-                                                    'instructions' => 'You can add images up to 256 KB in file size.',
+                                                    'type' => 'image',
+                                                    'instructions' => 'You can add images up to 256 KB in file size. Images will be displayed above the title, caption and button',
                                                     'required' => 0,
                                                     'conditional_logic' => 0,
                                                     'wrapper' => array(
