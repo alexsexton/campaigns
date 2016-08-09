@@ -7,7 +7,7 @@ class Options implements \Dxw\Iguana\Registerable
     public function register()
     {
         acf_add_options_sub_page([
-            'page_title' => 'Site Wide Appearance',
+            'page_title' => 'Sitewide Appearance',
             'parent_slug' => 'themes.php',
         ]);
 
@@ -20,7 +20,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Site Tagline',
                     'name' => 'site_tagline',
                     'type' => 'textarea',
-                    'instructions' => 'This shows in the site wide header to the right of the logo.',
+                    'instructions' => 'This shows in the sitewide header to the right of the logo.',
                     'required' => '',
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -41,7 +41,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Site Logo',
                     'name' => 'site_logo',
                     'type' => 'image',
-                    'instructions' => 'The logo will scale so that is 208 pixels in width',
+                    'instructions' => 'The logo should be no bigger than 416px in width.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -65,7 +65,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Header Background Image',
                     'name' => 'header_background_image',
                     'type' => 'file',
-                    'instructions' => 'The background image should be greater about 1400px by 300px (depending on the dimensions of the logo). The image will scale and stretch to fill the available space.',
+                    'instructions' => 'The background image should be bigger than 1400px by 300px.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -86,7 +86,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Header Background Colour',
                     'name' => 'header_background_colour',
                     'type' => 'color_picker',
-                    'instructions' => 'Shows when no image is defined.',
+                    'instructions' => 'Shown when no image is defined.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -102,7 +102,7 @@ class Options implements \Dxw\Iguana\Registerable
                     array(
                         'param' => 'options_page',
                         'operator' => '==',
-                        'value' => 'acf-options-site-wide-appearance',
+                        'value' => 'acf-options-sitewide-appearance',
                     ),
                 ),
             ),
@@ -190,7 +190,7 @@ class Options implements \Dxw\Iguana\Registerable
                     array(
                         'param' => 'options_page',
                         'operator' => '==',
-                        'value' => 'acf-options-site-wide-appearance',
+                        'value' => 'acf-options-sitewide-appearance',
                     ),
                 ),
             ),
