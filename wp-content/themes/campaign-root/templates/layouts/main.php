@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <?php wp_head(); ?>
     <?php get_template_part('partials/open-graph-tags'); ?>
+    <?php get_template_part('partials/analytics'); ?>
 </head>
 <body <?php body_class(); ?>>
 

@@ -1,4 +1,4 @@
-/* globals jQuery */
+/* globals jQuery, ga */
 
 'use strict'
 
@@ -46,6 +46,23 @@ jQuery(function ($) {
     $('#js-navigation-toggle').click(function () {
       $(this).toggleText('Close', 'Menu')
       $('#js-navigation').toggleClass('open')
+    })
+  })
+
+  // Opens adds outbound class to links for tracking
+  $(function () {
+    $('a').not('[href*="mailto:"]').each(function () {
+      var isInternalLink = new RegExp('/' + window.location.host + '/')
+      if (!isInternalLink.test(this.href)) {
+        $(this).addClass('outbound')
+      }
+    })
+  })
+
+  // Tracks outbound links but not those with event tracking already attached
+  $(function () {
+    $('.outbound:not([onclick])').click(function () {
+      ga('send', 'event', 'outbound', 'click', this.href)
     })
   })
 
