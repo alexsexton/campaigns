@@ -125,7 +125,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Facebook',
                     'name' => 'facebook_id',
                     'type' => 'url',
-                    'instructions' => '',
+                    'instructions' => 'The link to your Facebook profile.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -141,7 +141,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Twitter',
                     'name' => 'twitter_id',
                     'type' => 'url',
-                    'instructions' => '',
+                    'instructions' => 'The link to your Twitter profile.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -153,11 +153,30 @@ class Options implements \Dxw\Iguana\Registerable
                     'placeholder' => 'https://twitter.com/example',
                 ),
                 array(
+                    'key' => 'ield_5783ae4261315',
+                    'label' => 'Twitter Handle',
+                    'name' => 'twitter_handle',
+                    'type' => 'text',
+                    'instructions' => 'Your Twitter handle E.G. @govuk',
+                    'required' => '',
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => '@govuk',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ),
+                array(
                     'key' => 'field_5783ae3160426',
                     'label' => 'YouTube',
                     'name' => 'youtube_id',
                     'type' => 'url',
-                    'instructions' => '',
+                    'instructions' => 'The link to your YouTube profile.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -173,7 +192,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'label' => 'Linkedin ID',
                     'name' => 'linkedin_id',
                     'type' => 'url',
-                    'instructions' => '',
+                    'instructions' => 'The link to your Linkedin profile.',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(

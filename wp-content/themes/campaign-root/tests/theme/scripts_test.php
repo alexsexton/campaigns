@@ -139,8 +139,7 @@ class Theme_Scripts_Test extends PHPUnit_Framework_TestCase
         $this->expectOutputString(implode("\n", [
             '        <meta name="viewport" content="width=device-width, initial-scale=1.0">',
             '',
-            '        <!-- Prefetch external asset dns -->',
-            '        <link rel="dns-prefetch" href="#">',
+            '        <link rel="dns-prefetch" href="//google-analytics.com/">',
             '',
             '        <link rel="shortcut icon" href="_http://a.invalid/static/img/favicon.ico_" type="image/x-icon">',
             '        <link rel="mask-icon" href="_http://a.invalid/static/img/gov.uk_logotype_crown.svg_" color="#0b0c0c">',

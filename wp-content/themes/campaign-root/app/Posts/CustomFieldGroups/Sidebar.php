@@ -15,7 +15,7 @@ class Sidebar implements \Dxw\Iguana\Registerable
                     'label' => 'Description',
                     'name' => 'description',
                     'type' => 'textarea',
-                    'instructions' => 'Used for page description and pulls into open graph tags',
+                    'instructions' => 'Used for SEO page description and open graph tags',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -35,30 +35,16 @@ class Sidebar implements \Dxw\Iguana\Registerable
             'location' => array(
                 array(
                     array(
-                        'param' => 'page_template',
+                        'param' => 'post_type',
                         'operator' => '==',
-                        'value' => 'default',
+                        'value' => 'post',
                     ),
                 ),
                 array(
                     array(
-                        'param' => 'page_template',
+                        'param' => 'post_type',
                         'operator' => '==',
-                        'value' => 'page-content-blocks.php',
-                    ),
-                ),
-                array(
-                    array(
-                        'param' => 'page_template',
-                        'operator' => '==',
-                        'value' => 'page-static.php',
-                    ),
-                ),
-                array(
-                    array(
-                        'param' => 'page_template',
-                        'operator' => '==',
-                        'value' => 'page-home.php',
+                        'value' => 'page',
                     ),
                 ),
             ),
