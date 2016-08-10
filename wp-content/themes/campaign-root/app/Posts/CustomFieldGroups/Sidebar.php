@@ -33,15 +33,15 @@ class Sidebar implements \Dxw\Iguana\Registerable
                 ),
             ),
             'location' => array(
-                array (
-                    array (
+                array(
+                    array(
                         'param' => 'post_type',
                         'operator' => '==',
                         'value' => 'post',
                     ),
                 ),
-                array (
-                    array (
+                array(
+                    array(
                         'param' => 'post_type',
                         'operator' => '==',
                         'value' => 'page',
