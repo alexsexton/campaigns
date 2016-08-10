@@ -66,8 +66,7 @@ class Scripts implements \Dxw\Iguana\Registerable
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Prefetch external asset dns -->
-        <link rel="dns-prefetch" href="#">
+        <link rel="dns-prefetch" href="//google-analytics.com/">
 
         <link rel="shortcut icon" href="<?php $this->assetPAth('img/favicon.ico')?>" type="image/x-icon">
         <link rel="mask-icon" href="<?php $this->assetPAth('img/gov.uk_logotype_crown.svg')?>" color="#0b0c0c">
