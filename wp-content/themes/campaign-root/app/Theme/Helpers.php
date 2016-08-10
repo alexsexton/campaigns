@@ -11,6 +11,6 @@ class Helpers implements \Dxw\Iguana\Registerable
 
     public function wpFooter()
     {
-      //..
+        //..
     }
 }
