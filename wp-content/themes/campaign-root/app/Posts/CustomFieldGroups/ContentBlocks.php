@@ -219,34 +219,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'disabled' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_5741697a2fcb4',
-                                    'label' => 'Text Colour',
-                                    'name' => 'text_colour',
-                                    'type' => 'select',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => ''
-                                    ),
-                                    'choices' => array(
-                                        'dark-text' => 'Dark',
-                                        'light-text' => 'Light',
-                                    ),
-                                    'default_value' => array(
-                                        0 => 'dark-text'
-                                    ),
-                                    'allow_null' => 0,
-                                    'multiple' => 0,
-                                    'ui' => 0,
-                                    'ajax' => 0,
-                                    'placeholder' => '',
-                                    'disabled' => 0,
-                                    'readonly' => 0
-                                ),
-                                array(
                                     'key' => 'field_571464645edf3',
                                     'label' => 'Background Image',
                                     'name' => 'background_image',
@@ -459,27 +431,30 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         // Video Content
                         array(
                             'key' => '572c6183a937c',
-                            'name' => 'video_content',
-                            'label' => 'Video Content',
+                            'name' => 'video',
+                            'label' => 'Video',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
                                     'key' => 'field_577a5dcc447eb',
-                                    'label' => 'Video',
-                                    'name' => 'video',
-                                    'type' => 'wysiwyg',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
+                                    'label' => 'YouTube Video Link',
+                                    'name' => 'video_link',
+                                    'type' => 'text',
+                                    'instructions' => 'Paste in the link to the YouTube video E.G. https://www.youtube.com/watch?v=YdsUunJAums',
+                                    'required' => '',
+                                    'conditional_logic' => '',
                                     'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
                                         'id' => '',
                                     ),
                                     'default_value' => '',
-                                    'tabs' => 'all',
-                                    'toolbar' => 'basic',
-                                    'media_upload' => 0,
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
                                 ),
                                 array(
                                     'key' => 'field_577a39f69d499',

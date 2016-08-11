@@ -24,14 +24,10 @@ if( get_row_layout() == 'banner') : ?>
     <?php endif; ?>
 
         <?php if ($banner_background && !$banner_image) : ?>
-            <div class="overlay has-background-colour <?php echo $banner_text_colour;?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
-            <?php elseif ($banner_background && $banner_image) : ?>
-            <div class="overlay <?php echo $banner_text_colour;?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+            <div class="overlay has-background-colour">
             <?php else : ?>
-            <div class="overlay <?php echo $banner_text_colour;?>">
-          <?php endif; ?>
-
-          <?php //var_dump($banner_image); ?>
+            <div class="overlay">
+         <?php endif; ?>
 
         <h1><?php the_sub_field('title'); ?></h1>
         <div class="content rich-text">
