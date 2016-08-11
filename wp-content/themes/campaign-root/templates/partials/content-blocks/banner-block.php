@@ -29,8 +29,6 @@ if( get_row_layout() == 'banner') : ?>
             <div class="overlay">
          <?php endif; ?>
 
-          <?php //var_dump($banner_image); ?>
-
         <h1><?php the_sub_field('title'); ?></h1>
         <div class="content rich-text">
           <?php the_sub_field('caption'); ?>
