@@ -710,11 +710,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => ''
                         ),
-                        // Call to Action
+                        // Call to Action Banner
                         array(
-                            'key' => '57724a89fb427',
-                            'name' => 'call_to_action',
-                            'label' => 'Call to Action',
+                            'key' => '57724a89fb454',
+                            'name' => 'call_to_action_banner',
+                            'label' => 'Call to Action Banner',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
@@ -1001,6 +1001,162 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         array(
                                             array(
                                                 'field' => 'field_577503aab2790',
+                                                'operator' => '==',
+                                                'value' => 'event_tracking',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                            ),
+                            'min' => '',
+                            'max' => '',
+                        ),
+                        // Call to Action Button
+                        array(
+                            'key' => '57724a89fb427',
+                            'name' => 'call_to_action_button',
+                            'label' => 'Call to Action Button',
+                            'display' => 'row',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_57724adb49913',
+                                    'label' => 'Button Text',
+                                    'name' => 'button_text',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => '1',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_57524a9ffb449',
+                                    'label' => 'Button URL',
+                                    'name' => 'button_url',
+                                    'type' => 'url',
+                                    'instructions' => 'URL\'s should be written as the full domain including http or https E.G. "http://www.example.com" or "https://www.example.com"',
+                                    'required' => 1,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => 'http://www.example.com',
+                                ),
+                                array(
+                                    'key' => 'field_578703aab2790',
+                                    'label' => 'GA Event tracking',
+                                    'name' => 'ga_event_tracking',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'event_tracking' => 'Add Event Tracking',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_598501e141a44',
+                                    'label' => 'Event Category',
+                                    'name' => 'event_category',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => 1,
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_578703aab2790',
+                                                'operator' => '==',
+                                                'value' => 'event_tracking',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_5771355c65eb5',
+                                    'label' => 'Event Action',
+                                    'name' => 'event_action',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => 1,
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_578703aab2790',
+                                                'operator' => '==',
+                                                'value' => 'event_tracking',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                    'prepend' => '',
+                                    'append' => '',
+                                    'maxlength' => '',
+                                    'readonly' => 0,
+                                    'disabled' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_5675057265eb6',
+                                    'label' => 'Event Label',
+                                    'name' => 'event_label',
+                                    'type' => 'text',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_578703aab2790',
                                                 'operator' => '==',
                                                 'value' => 'event_tracking',
                                             ),
