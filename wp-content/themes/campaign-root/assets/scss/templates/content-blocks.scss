@@ -15,8 +15,26 @@
         margin-right: -#{$site-max-width/2};
         padding: $padding/2;
 
-        h1 {
+        h1, p {
+            position: relative;
             margin-top: 0;
+            line-height: 1;
+            display: inline;
+            background: $black;
+            color: $white;
+            white-space: pre-wrap;
+            border: 0 solid $black;
+            border-width: 3px 3px 3px 0;
+        }
+
+        h1:after, p:after {
+            background: $black;
+            content: "";
+            position: absolute;
+            top: -3px;
+            right: 100%;
+            bottom: -3px;
+            width: 3px;
         }
 
         @media screen and (max-width: $small-screen) {
@@ -40,23 +58,11 @@
                 @include translate(0,0);
             }
         }
+    }
 
-        &.light-text {
-            h1 {
-                color: $white;
-            }
-            .content {
-                color: $white
-            }
-        }
-        &.dark-text {
-            h1 {
-                color: $black;
-            }
-            .content {
-                color: $black;
-            }
-        }
+    .buttons {
+        padding: $padding/2 0;
+        margin-left: -3px;
     }
 
     .content {
