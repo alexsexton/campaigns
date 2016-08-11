@@ -1,0 +1,20 @@
+{
+    "hash": "7031454fbabe827b0c2e4956f31eb2154dc15824",
+    "plugins": [
+        {
+            "name": "advanced-custom-fields-pro",
+            "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "4c61ecd39e80eb295897b5cd7b3a05aa3ce15c70"
+        },
+        {
+            "name": "google-tag-manager",
+            "src": "git@git.dxw.net:wordpress-plugins/google-tag-manager",
+            "revision": "71b8b033a87ef5578b8d93b2c8010eb5b228556a"
+        },
+        {
+            "name": "user-role-editor",
+            "src": "git@git.dxw.net:wordpress-plugins/user-role-editor",
+            "revision": "160aa9b69cac0534f1fcf4cea56dfb34016cfd90"
+        }
+    ]
+}
