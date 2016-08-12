@@ -53,6 +53,34 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                         'disabled' => 0,
                     ),
                     array(
+                        'key' => 'field_5731697a2fac4',
+                        'label' => 'Tagline Colour',
+                        'name' => 'tagline_colour',
+                        'type' => 'select',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => ''
+                        ),
+                        'choices' => array(
+                            'light-text' => 'Light',
+                            'dark-text' => 'Dark',
+                        ),
+                        'default_value' => array(
+                            0 => 'light-text'
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'ui' => 0,
+                        'ajax' => 0,
+                        'placeholder' => '',
+                        'disabled' => 0,
+                        'readonly' => 0
+                    ),
+                    array(
                         'key' => 'field_5783ad6ac8402',
                         'label' => 'Site Logo',
                         'name' => 'site_logo',
@@ -222,6 +250,22 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                         ),
                         'default_value' => '',
                         'placeholder' => 'https://www.linkedin.com/company/example',
+                    ),
+                    array(
+                        'key' => 'field_5783ae3160476',
+                        'label' => 'Instagram ID',
+                        'name' => 'instagram_id',
+                        'type' => 'url',
+                        'instructions' => 'The link to your Instagram profile.',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => 'https://www.instagram.com/example',
                     ),
                 ),
                 'location' => array(

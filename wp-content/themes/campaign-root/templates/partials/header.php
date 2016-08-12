@@ -16,8 +16,9 @@
             <?php endif ?>
         </div>
         <?php if( get_field('site_tagline', 'option') ) : ?>
+            <?php $tagline_colour = get_field('tagline_colour', 'option'); ?>
             <div class="description">
-                <p><?php the_field('site_tagline', 'option'); ?></p>
+                <p class="<?php echo $tagline_colour; ?>"><?php the_field('site_tagline', 'option'); ?></p>
             </div>
         <?php endif ?>
     </div>
