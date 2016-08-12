@@ -362,7 +362,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '#ffffff',
+                                    'default_value' => '#005ea5',
                                 ),
                                 array(
                                     'key' => 'field_59d95a4abf97a',
@@ -422,7 +422,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '',
+                                    'default_value' => '#ffffff',
                                 ),
                             ),
                             'min' => '',
@@ -543,11 +543,11 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => ''
                                     ),
                                     'choices' => array(
-                                        'dark' => 'Dark',
-                                        'light' => 'Light',
+                                        'dark-text' => 'Dark',
+                                        'light-text' => 'Light',
                                     ),
                                     'default_value' => array(
-                                        0 => 'dark'
+                                        0 => 'dark-text'
                                     ),
                                     'allow_null' => 0,
                                     'multiple' => 0,
