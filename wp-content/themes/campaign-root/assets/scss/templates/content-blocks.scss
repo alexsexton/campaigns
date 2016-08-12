@@ -79,12 +79,11 @@
 
 .heading {
     background-color: $brand-primary;
-    padding: $padding 0;
 
-    h1 {
+    h2 {
         line-height: 1;
         color: $white;
-        margin: 0;
+        font-size: 54px;
     }
 }
 
@@ -160,6 +159,10 @@
     h2 {
         margin-top: 0;
     }
+}
+
+.call-to-action-button {
+    padding: $padding 0;
 }
 
 .left-image-caption {
