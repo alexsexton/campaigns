@@ -4,9 +4,9 @@
 //
 if( get_row_layout() == 'boxes') : ?>
 
-<div id="box-block-p-<?php echo get_row_index(); ?>" class="promo-block content-block">
+<div id="box-block-p-<?php echo get_row_index(); ?>" class="boxes-block">
     <div class="row">
-        <div class="promo-boxes">
+        <div class="boxes">
 
         <?php // start promo boxes loop
         if( have_rows('boxes') ):
@@ -27,11 +27,11 @@ if( get_row_layout() == 'boxes') : ?>
             }
             ?>
 
-            <div class="promo-box<?php echo $box_class; ?>">
-                <div class="promo-box-inner">
+            <div class="box<?php echo $box_class; ?>">
+                <div class="box-inner">
 
                     <?php if( get_sub_field('box_image')) : ?>
-                    <div class="promo-image">
+                    <div class="box-image">
                         <?php $box_image = get_sub_field('box_image'); ?>
                         <img src="<?php echo $box_image['url']; ?>" alt="<?php echo $box_image['alt']; ?>">
                     </div>

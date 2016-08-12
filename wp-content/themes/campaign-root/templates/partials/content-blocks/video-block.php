@@ -5,9 +5,9 @@
 if( get_row_layout() == 'video') : ?>
 
 <?php if( get_sub_field('background_colour')) : ?>
-<div id="video-block-p-<?php echo get_row_index(); ?>" class="video-block content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+<div id="video-block-p-<?php echo get_row_index(); ?>" class="video-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
 <?php else : ?>
-<div id="video-block-p-<?php echo get_row_index(); ?>" class="video-block content-block">
+<div id="video-block-p-<?php echo get_row_index(); ?>" class="video-block">
 <?php endif; ?>
     <div class="row">
         <div class="fitvids">

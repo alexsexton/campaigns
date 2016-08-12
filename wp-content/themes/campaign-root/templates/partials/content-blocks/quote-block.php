@@ -3,7 +3,7 @@
 // Content Block ### Quote Block
 //
 if( get_row_layout() == 'block_quote') : ?>
-<div id="quote-block-p-<?php echo get_row_index(); ?>" class="quote-block content-block">
+<div id="quote-block-p-<?php echo get_row_index(); ?>" class="quote-block">
     <div class="row">
         <?php if( get_sub_field('quote_citation_url')) : ?>
         <blockquote cite="<?php the_sub_field('quote_citation_url'); ?>">

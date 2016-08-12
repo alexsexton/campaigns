@@ -40,9 +40,9 @@ $base-font-colour: $black;
 $body-background-colour: $white;
 
 // Buttons
-$button: $brand-primary;
-$button-inactive: scale-color($brand-primary, $lightness: 50%);
-$button-hover: $brand-tertiary;
+$button: #00823b;
+$button-inactive: #00823b;
+$button-hover: #006435;
 $button-text: $white;
 $button-text-hover: $white;
 

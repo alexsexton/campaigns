@@ -79,12 +79,11 @@
 
 .heading {
     background-color: $brand-primary;
-    padding: $padding 0;
 
-    h1 {
+    h2 {
         line-height: 1;
         color: $white;
-        margin: 0;
+        font-size: 54px;
     }
 }
 
@@ -93,13 +92,13 @@
     padding: $padding 0 0;
 }
 
-.promo-block {
+.boxes-block {
 
-    .promo-boxes {
+    .boxes {
         @include row(true);
     }
 
-    .promo-box {
+    .box {
         @include col(1/3);
         text-align: center;
         margin: $margin 0;
@@ -132,7 +131,7 @@
                 display: block;
             }
 
-            .promo-box-inner {
+            .box-inner {
                 padding: $padding/2;
                 border: 1px solid $black;
             }
@@ -143,7 +142,7 @@
                 max-width: 100%;
                 display: block;
             }
-            .promo-box-inner {
+            .box-inner {
                 padding: $padding/2;
                 border: 1px solid $black;
             }
@@ -152,7 +151,7 @@
     }
 }
 
-.call-to-action-block {
+.call-to-action-banner {
     background-color: $brand-secondary;
     color: $white;
     padding: $padding 0;
@@ -160,6 +159,10 @@
     h2 {
         margin-top: 0;
     }
+}
+
+.call-to-action-button {
+    padding: $padding 0;
 }
 
 .left-image-caption {

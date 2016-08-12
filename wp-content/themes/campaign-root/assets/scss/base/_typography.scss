@@ -15,25 +15,25 @@ $system-font-family-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "
 
 // Headings
 h1 {
-  font-size: $base-font-size*2.5;
+  font-size: $base-font-size*3;
   font-weight: 700;
   line-height: $header-line-height;
 }
 
 h2 {
-  font-size: $base-font-size*2;
+  font-size: $base-font-size*2.5;
   font-weight: 700;
   line-height: $header-line-height;
 }
 
 h3 {
-  font-size: $base-font-size*1.5;
+  font-size: $base-font-size*2;
   font-weight: 700;
   line-height: $header-line-height;
 }
 
 h4 {
-  font-size: $base-font-size;
+  font-size: $base-font-size*1.5;
   text-transform: uppercase;
   font-weight: 700;
   line-height: $header-line-height;
@@ -144,6 +144,7 @@ p {
 
   a:hover {
     color: $link-hover-colour;
+    text-decoration: underline;
   }
 
   a:visited {
@@ -153,6 +154,12 @@ p {
   a:active {
     color: $black;
     background: $highlight;
+  }
+
+  a.outbound {
+      position: relative;
+      padding: 0 20px 0 0;
+      background: url(#{$imagePath}iocn-outbound_2x.png) no-repeat 100% 2px;
   }
 
 }

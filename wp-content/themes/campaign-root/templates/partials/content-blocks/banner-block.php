@@ -14,9 +14,9 @@ if( get_row_layout() == 'banner') : ?>
   ?>
 
     <?php if ($banner_background) : ?>
-    <div id="banner-p-<?php echo get_row_index(); ?>" class="banner content-block" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+    <div id="banner-p-<?php echo get_row_index(); ?>" class="banner" style="background-color:<?php the_sub_field('background_colour'); ?>;">
     <?php else : ?>
-    <div id="banner-p-<?php echo get_row_index(); ?>" class="banner content-block">
+    <div id="banner-p-<?php echo get_row_index(); ?>" class="banner">
     <?php endif; ?>
 
     <?php if($banner_image) : ?>

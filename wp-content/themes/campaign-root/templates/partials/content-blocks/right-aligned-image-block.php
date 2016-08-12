@@ -3,7 +3,7 @@
 // Content Block ### Right-Aligned Image and Caption
 //
 if( get_row_layout() == 'right_aligned_image') : ?>
-    <div id="right-image-caption-p-<?php echo get_row_index(); ?>" class="right-image-caption content-block">
+    <div id="right-image-caption-p-<?php echo get_row_index(); ?>" class="right-image-caption">
         <div class="row">
 
           <?php $right_aligned_image = get_sub_field('image'); ?>
