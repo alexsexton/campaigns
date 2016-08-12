@@ -1,7 +1,7 @@
 /config/server-local.php
 /wp-content/uploads
-/wp-content/plugins/advanced-custom-fields-pro
 /wp-content/whippet-wp-config.php
 
+/wp-content/plugins/advanced-custom-fields-pro
 /wp-content/plugins/google-tag-manager
-/wp-content/plugins/user-role-editor
+/wp-content/plugins/members
