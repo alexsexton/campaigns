@@ -30,6 +30,17 @@ jQuery(function ($) {
       unmatch: function () {}
     })
   })
+  // Change aria-hidden state
+  $(function () {
+    enquire.register('screen and (max-width:779px)', {
+      match: function () {
+        $('#js-navigation-toggle').attr('aria-hidden', 'false')
+      },
+      unmatch: function () {
+        $('#js-navigation-toggle').attr('aria-hidden', 'true')
+      }
+    })
+  })
 
   // Extend jQuery to make a toggle text function.
   jQuery.fn.extend({

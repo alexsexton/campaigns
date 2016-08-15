@@ -11,15 +11,13 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <?php get_template_part('partials/govuk-header'); ?>
-    <?php get_template_part('partials/header'); ?>
+    <?php get_template_part('partials/global-header'); ?>
 
     <main class="main" role="main" id="content">
         <?php h()->w_requested_template(); ?>
     </main>
 
-    <?php get_template_part('partials/footer'); ?>
-    <?php get_template_part('partials/govuk-footer'); ?>
+    <?php get_template_part('partials/global-footer'); ?>
 
     <?php wp_footer(); ?>
     <?php if( get_field('header_background_image', 'option')) : ?>

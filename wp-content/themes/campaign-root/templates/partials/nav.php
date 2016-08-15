@@ -1,5 +1,5 @@
 <div class="nav-container group">
-  <button class="nav-toggle" id="js-navigation-toggle">Menu</button>
+  <a class="button nav-toggle" id="js-navigation-toggle" aria-hidden="true">Menu</a>
   <nav class="navigation" id="js-navigation">
     <?php
       if (has_nav_menu('header')) {
