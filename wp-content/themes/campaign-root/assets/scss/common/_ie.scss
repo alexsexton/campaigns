@@ -1,0 +1,53 @@
+// Hold fixes for old versions of IE
+
+// IE8 or less
+.lt-ie9 {
+
+    .header-logo {
+        a, img {
+            border: none;
+        }
+    }
+
+    .navigation li {
+        display: inline;
+    }
+
+    .footer-navigation {
+        @include col(2/4);
+    }
+
+    .follow-us {
+        @include col(2/4);
+    }
+
+}
+
+// SVG Fallback to text
+.no-svg {
+
+    .follow-us li {
+        display: inline;
+    }
+
+    .follow-us a {
+        width: auto;
+        height: auto;
+        line-height: 32px;
+
+        &:hover span {
+            color: $footer-link-hover;
+            text-decoration: underline;
+        }
+
+        .inline-icon {
+            display: none;
+        }
+
+        span {
+            position: static;
+            left: auto;
+            color: $white;
+        }
+    }
+}
