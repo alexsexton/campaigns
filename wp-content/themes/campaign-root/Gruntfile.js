@@ -80,7 +80,8 @@ module.exports = function (grunt) {
     copy: {
       production: {
         files: {
-          'static/lib/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js'
+          'static/lib/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js',
+          'static/lib/media.match.min.js': 'bower_components/media-match/media.match.min.js'
         }
       }
     },
