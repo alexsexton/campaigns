@@ -15,6 +15,7 @@
 </div>
 
 <header role="banner" id="global-header" class="global-header group">
+    
     <div class="header-wrapper group">
         <div class="header-global">
          <div class="header-logo">
@@ -34,22 +35,47 @@
     <div class="site-header">
     <?php endif ?>
         <div class="row">
-         <div class="logo">
-             <a href="/"></a>
-             <?php if( get_field('site_logo', 'option') ) : ?>
-                 <?php $site_logo = get_field('site_logo', 'option'); ?>
-                 <img src="<?php echo $site_logo['url']; ?>" alt="<?php bloginfo('name'); ?>">
+            <?php if( get_field('site_logo', 'option') ) : ?>
+                 <div class="logo">
+                     <a href="/">
+                         <?php $site_logo = get_field('site_logo', 'option'); ?>
+                         <img src="<?php echo $site_logo['url']; ?>" alt="<?php bloginfo('name'); ?>">
+                     </a>
+                 </div>
+             <?php if( get_field('site_tagline', 'option') ) : ?>
+                 <?php $tagline_colour = get_field('tagline_colour', 'option'); ?>
+                 <div class="description">
+                     <p class="<?php echo $tagline_colour; ?>"><?php the_field('site_tagline', 'option'); ?></p>
+                 </div>
              <?php else : ?>
-                 <h1><?php bloginfo('name'); ?></h1>
+                 <div class="description">
+                     <p><?php the_field('site_tagline', 'option'); ?></p>
+                 </div>
              <?php endif ?>
-         </div>
-         <?php if( get_field('site_tagline', 'option') ) : ?>
-             <?php $tagline_colour = get_field('tagline_colour', 'option'); ?>
-             <div class="description">
-                 <p class="<?php echo $tagline_colour; ?>"><?php the_field('site_tagline', 'option'); ?></p>
+
+         <?php else : ?>
+             <div class="logo-name">
+                 <a href="/">
+                     <?php if( get_field('site_tagline', 'option') ) : ?>
+                     <?php $tagline_colour = get_field('tagline_colour', 'option'); ?>
+                     <h1 class="<?php echo $tagline_colour; ?>"><?php bloginfo('name'); ?></h1>
+                     <?php else : ?>
+                     <h1 class="<?php echo $tagline_colour; ?>"><?php bloginfo('name'); ?></h1>
+                     <?php endif ?>
+                 </a>
              </div>
-         <?php endif ?>
-        </div>
+                 <?php if( get_field('site_tagline', 'option') ) : ?>
+                     <?php $tagline_colour = get_field('tagline_colour', 'option'); ?>
+                     <div class="description has-logo-name">
+                         <p class="<?php echo $tagline_colour; ?>"><?php the_field('site_tagline', 'option'); ?></p>
+                     </div>
+                 <?php else : ?>
+                     <div class="description has-logo-name">
+                         <p><?php the_field('site_tagline', 'option'); ?></p>
+                     </div>
+                 <?php endif ?>
+             <?php endif ?>
+            </div>
     </div>
 
 
