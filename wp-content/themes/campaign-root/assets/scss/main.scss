@@ -14,8 +14,6 @@
 @import "base/global-header";
 @import "base/global-footer";
 @import "base/nav";
-@import "base/header";
-@import "base/footer";
 @import "base/sidebar";
 
 @import "common/icons";
@@ -23,6 +21,7 @@
 @import "common/tabs";
 @import "common/share";
 @import "common/follow";
+@import "common/pagination";
 
 @import "templates/content-blocks";
 @import "templates/page";
@@ -30,5 +29,7 @@
 @import "templates/archive";
 @import "templates/single";
 @import "templates/error404";
+
+@import "common/ie";
 
 @import "../../node_modules/pikaday/scss/pikaday";

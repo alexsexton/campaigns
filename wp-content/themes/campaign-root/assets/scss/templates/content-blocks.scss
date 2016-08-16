@@ -13,7 +13,6 @@
         right: 50%;
         @include translate(0,-50%);
         margin-right: -#{$site-max-width/2};
-        padding: $padding/2;
 
         h1, p {
             position: relative;
