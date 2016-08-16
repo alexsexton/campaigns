@@ -3,7 +3,7 @@
 // IE8 or less
 .lt-ie9 {
 
-    .header-logo {
+    .logo, .header-logo {
         a, img {
             border: none;
         }
@@ -19,6 +19,11 @@
 
     .follow-us {
         @include col(2/4);
+    }
+
+
+    .overlay {
+        top: 25%;
     }
 
 }
