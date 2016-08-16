@@ -42,9 +42,8 @@ class Scripts implements \Dxw\Iguana\Registerable
         // This will break any plugin that requires a feature/behaviour in jQuery 2.x which is missing/different in jQuery 1.10.x
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery',   $this->getAssetPath('lib/jquery.min.js'));
-
-        // Because it's awesome
         wp_enqueue_script('modernizr', $this->getAssetPath('lib/modernizr.min.js'));
+        wp_enqueue_script('media-match', $this->getAssetPath('lib/media.match.min.js'));
 
         // Pretty much everything else should be compiled by Grunt.
         wp_enqueue_script('main',      $this->getAssetPath('main.min.js'), array('jquery', 'modernizr'), '', true);

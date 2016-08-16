@@ -93,6 +93,11 @@ class Theme_Scripts_Test extends PHPUnit_Framework_TestCase
         ]);
 
         \WP_Mock::wpFunction('wp_enqueue_script', [
+            'args' => ['media-match', 'http://a.invalid/static/lib/media.match.min.js'],
+            'times' => 1,
+        ]);
+
+        \WP_Mock::wpFunction('wp_enqueue_script', [
             'args' => ['main', 'http://a.invalid/static/main.min.js', ['jquery', 'modernizr'], '', true],
             'times' => 1,
         ]);
