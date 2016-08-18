@@ -1,30 +1,10 @@
 {
-    "hash": "bcbc92b4b594fcb9eea18bc804df88ee757a1c69",
+    "hash": "0586b6bce57a6c8b51a4ca8933f53552bd917b73",
     "plugins": [
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
             "revision": "4c61ecd39e80eb295897b5cd7b3a05aa3ce15c70"
-        },
-        {
-            "name": "google-tag-manager",
-            "src": "git@git.dxw.net:wordpress-plugins/google-tag-manager",
-            "revision": "71b8b033a87ef5578b8d93b2c8010eb5b228556a"
-        },
-        {
-            "name": "members",
-            "src": "git@git.dxw.net:wordpress-plugins/members",
-            "revision": "6d1a593f8d52a1c1632bf3346b556dee3d81dd55"
-        },
-        {
-            "name": "advanced-custom-fields-pro",
-            "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "4c61ecd39e80eb295897b5cd7b3a05aa3ce15c70"
-        },
-        {
-            "name": "google-tag-manager",
-            "src": "git@git.dxw.net:wordpress-plugins/google-tag-manager",
-            "revision": "71b8b033a87ef5578b8d93b2c8010eb5b228556a"
         },
         {
             "name": "members",
