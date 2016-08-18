@@ -156,10 +156,15 @@ p {
     background: $highlight;
   }
 
-  a.outbound {
+  a.external {
       position: relative;
-      padding: 0 20px 0 0;
-      background: url(#{$imagePath}iocn-outbound_2x.png) no-repeat 100% 2px;
+  }
+
+  a.external:after {
+      content: url(#{$imagePath}icon-external.png);
+      height: 12px;
+      width: 12px;
+      margin-left: 4px;
   }
 
 }
