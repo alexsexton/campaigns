@@ -1,28 +1,23 @@
 <div class="wrap">
-    <h2>Setup Wizard</h2>
+    <h2>Setting up analytics</h2>
 
     <div ng-app="wizard" ng-controller="Wizard" data-nonce="<?php echo esc_attr(wp_create_nonce('campaigns_wizard')) ?>">
 
-        <div>
-            <p ng-repeat="instruction in currentStep().instructions" ng-bind-html="instruction"></p>
+        <p>Here you can set up analytics for your site. You can choose to set up either Google Analytics or Google Tag Manager.</p>
 
-            <ul>
-                <li ng-repeat="field in currentStep().fields">
-                    <div ng-if="field.type === 'text-and-submit'">
-                        <input type="text">
-                        <button class="button button-secondary" ng-click="field.buttonAction()">
-                            {{field.buttonText}}
-                        </button>
-                    </div>
-                </li>
-            </ul>
+        <p>To set up Google Analytics, enter your GA tracking ID below.</p>
 
-            <ul>
-                <li ng-repeat="(action, target) in currentStep().actions">
-                    <button class="button button-primary" ng-click="nextStep(target)">{{action}}</button>
-                </li>
-            </ul>
-        </div>
+        <input type="text" ng-model="gaid">
+        <button class="button button-primary" ng-click="set('ga', gaid)">Activate GA</button>
+
+        <p>To set up Google Tag Manager, enter your GTM ID here.</p>
+
+        <input type="text" ng-model="gtmid">
+        <button class="button button-primary" ng-click="set('gtm', gtmid)">Activate GTM</button>
+
+        <h3>Help</h3>
+
+	<p>TODO</p>
 
     </div>
 </div>
