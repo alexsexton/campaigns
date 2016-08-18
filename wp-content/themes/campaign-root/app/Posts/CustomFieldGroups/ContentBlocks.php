@@ -136,8 +136,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Event Category',
                                     'name' => 'event_category',
                                     'type' => 'select',
-                        			'instructions' => '',
-                        			'required' => 1,
+                                    'instructions' => '',
+                                    'required' => 1,
                                     'conditional_logic' => array(
                                         array(
                                             array(
@@ -147,25 +147,25 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                             ),
                                         ),
                                     ),
-                        			'wrapper' => array (
-                        				'width' => '',
-                        				'class' => '',
-                        				'id' => '',
-                        			),
-                        			'choices' => array (
-                        				'External Link Clicked' => 'External Link Clicked',
-                        				'Button Clicked' => 'Button Clicked',
-                        				'Header Clicked' => 'Header Clicked',
-                        			),
-                        			'default_value' => array (
-                        			),
-                        			'allow_null' => 0,
-                        			'multiple' => 0,
-                        			'ui' => 0,
-                        			'ajax' => 0,
-                        			'placeholder' => '',
-                        			'disabled' => 0,
-                        			'readonly' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'External Link Clicked' => 'External Link Clicked',
+                                        'Button Clicked' => 'Button Clicked',
+                                        'Header Clicked' => 'Header Clicked',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'allow_null' => 0,
+                                    'multiple' => 0,
+                                    'ui' => 0,
+                                    'ajax' => 0,
+                                    'placeholder' => '',
+                                    'disabled' => 0,
+                                    'readonly' => 0,
                                 ),
                                 array(
                                     'key' => 'field_571464645edf3',
@@ -897,17 +897,17 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                             ),
                                         ),
                                     ),
-                                    'wrapper' => array (
+                                    'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'choices' => array (
+                                    'choices' => array(
                                         'External Link Clicked' => 'External Link Clicked',
                                         'Button Clicked' => 'Button Clicked',
                                         'Header Clicked' => 'Header Clicked',
                                     ),
-                                    'default_value' => array (
+                                    'default_value' => array(
                                     ),
                                     'allow_null' => 0,
                                     'multiple' => 0,
@@ -991,8 +991,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Event Category',
                                     'name' => 'event_category',
                                     'type' => 'select',
-                        			'instructions' => '',
-                        			'required' => 1,
+                                    'instructions' => '',
+                                    'required' => 1,
                                     'conditional_logic' => array(
                                         array(
                                             array(
@@ -1002,25 +1002,25 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                             ),
                                         ),
                                     ),
-                        			'wrapper' => array (
-                        				'width' => '',
-                        				'class' => '',
-                        				'id' => '',
-                        			),
-                        			'choices' => array (
-                        				'External Link Clicked' => 'External Link Clicked',
-                        				'Button Clicked' => 'Button Clicked',
-                        				'Header Clicked' => 'Header Clicked',
-                        			),
-                        			'default_value' => array (
-                        			),
-                        			'allow_null' => 0,
-                        			'multiple' => 0,
-                        			'ui' => 0,
-                        			'ajax' => 0,
-                        			'placeholder' => '',
-                        			'disabled' => 0,
-                        			'readonly' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'External Link Clicked' => 'External Link Clicked',
+                                        'Button Clicked' => 'Button Clicked',
+                                        'Header Clicked' => 'Header Clicked',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'allow_null' => 0,
+                                    'multiple' => 0,
+                                    'ui' => 0,
+                                    'ajax' => 0,
+                                    'placeholder' => '',
+                                    'disabled' => 0,
+                                    'readonly' => 0,
                                 ),
                             ),
                             'min' => '',
