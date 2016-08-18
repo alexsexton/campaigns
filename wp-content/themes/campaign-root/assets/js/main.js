@@ -60,20 +60,20 @@ jQuery(function ($) {
     })
   })
 
-  // Opens adds outbound class to links for tracking
+  // Opens adds external class to outbound links for tracking
   $(function () {
     $('a').not('[href*="mailto:"]').each(function () {
       var isInternalLink = new RegExp('/' + window.location.host + '/')
       if (!isInternalLink.test(this.href)) {
-        $(this).addClass('outbound').attr('rel', 'external')
+        $(this).addClass('external').attr('rel', 'external')
       }
     })
   })
 
-  // Tracks outbound links but not those with event tracking already attached
+  // Tracks external links but not those with event tracking already attached
   $(function () {
-    $('.outbound:not([onclick])').click(function () {
-      ga('send', 'event', 'outbound', 'click', this.href)
+    $('.external:not([onclick])').click(function () {
+      ga('send', 'event', 'External Link Clicked', this.href, $(this).text())
     })
   })
 
