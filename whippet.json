@@ -3,14 +3,7 @@
         "plugins": "git@git.dxw.net:wordpress-plugins/"
     },
     "plugins": [
-        {
-            "name": "advanced-custom-fields-pro"
-        },
-        {
-            "name": "google-tag-manager"
-        },
-        {
-            "name": "members"
-        }
+        {"name": "advanced-custom-fields-pro"},
+        {"name": "members"}
     ]
 }
