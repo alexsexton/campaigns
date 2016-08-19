@@ -3,7 +3,6 @@
         "plugins": "git@git.dxw.net:wordpress-plugins/"
     },
     "plugins": [
-        {"name": "advanced-custom-fields-pro"},
-        {"name": "members"}
+        {"name": "advanced-custom-fields-pro"}
     ]
 }
