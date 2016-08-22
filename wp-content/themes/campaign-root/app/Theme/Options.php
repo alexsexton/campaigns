@@ -111,16 +111,16 @@ class Options implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
                     ),
-                    'choices' => array (
+                    'choices' => array(
                         'no' => 'No',
                         'yes' => 'Yes',
                     ),
-                    'default_value' => array (
+                    'default_value' => array(
                         0 => 'no',
                     ),
                     'layout' => 'vertical',
