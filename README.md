@@ -15,3 +15,7 @@
 ## Development
 
 [`whippet`](https://github.com/dxw/whippet) and/or [`whippet-server`](https://github.com/dxw/whippet-server)
+
+## Merge policy (at least until the site is released)
+
+Once the client has accepted the story it should be merged.

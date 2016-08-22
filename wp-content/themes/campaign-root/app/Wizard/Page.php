@@ -12,12 +12,12 @@ class Page implements \Dxw\Iguana\Registerable
     public function register()
     {
         add_action('admin_menu', [$this, 'adminMenu']);
-        add_action('wp_ajax_campaigns_wizard_ga_id', [$this, 'wpAjax']);
+        add_action('wp_ajax_campaigns_wizard_set', [$this, 'wpAjax']);
     }
 
     public function adminMenu()
     {
-        add_submenu_page('tools.php', 'Setup Wizard', 'Setup Wizard', 'activate_plugins', 'wizard', [$this, 'callback']);
+        add_submenu_page('tools.php', 'Setting up analytics', 'Setting up analytics', 'activate_plugins', 'wizard', [$this, 'callback']);
     }
 
     public function callback()
@@ -46,6 +46,14 @@ class Page implements \Dxw\Iguana\Registerable
             return $this->ajaxResponse(true, 'nonce missing');
         }
 
+        if (!(isset($this->post['campaigns_wizard_type']))) {
+            return $this->ajaxResponse(true, 'type missing');
+        }
+
+        if (!($this->post['campaigns_wizard_type'] === 'ga' || $this->post['campaigns_wizard_type'] === 'gtm')) {
+            return $this->ajaxResponse(true, 'type incorrect');
+        }
+
         if (!wp_verify_nonce($this->post['nonce'], 'campaigns_wizard')) {
             return $this->ajaxResponse(true, 'invalid nonce');
         }
@@ -54,7 +62,7 @@ class Page implements \Dxw\Iguana\Registerable
             return $this->ajaxResponse(true, 'user not permitted');
         }
 
-        update_option('campaigns_ga_id', $this->post['campaigns_ga_id']);
+        update_option('campaigns_'.$this->post['campaigns_wizard_type'].'_id', $this->post['campaigns_wizard_id']);
 
         return $this->ajaxResponse(false);
     }

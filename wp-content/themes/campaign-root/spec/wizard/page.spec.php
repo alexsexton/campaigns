@@ -15,7 +15,7 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
             expect($this->page)->to->be->instanceof(\Dxw\Iguana\Registerable::class);
 
             \WP_Mock::expectActionAdded('admin_menu', [$this->page, 'adminMenu']);
-            \WP_Mock::expectActionAdded('wp_ajax_campaigns_wizard_ga_id', [$this->page, 'wpAjax']);
+            \WP_Mock::expectActionAdded('wp_ajax_campaigns_wizard_set', [$this->page, 'wpAjax']);
 
             $this->page->register();
         });
@@ -26,8 +26,8 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
             \WP_Mock::wpFunction('add_submenu_page', [
                 'args' => [
                     'tools.php',
-                    'Setup Wizard',
-                    'Setup Wizard',
+                    'Setting up analytics',
+                    'Setting up analytics',
                     'activate_plugins',
                     'wizard',
                     [$this->page, 'callback'],
@@ -40,14 +40,21 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
     });
 
     describe('->callback()', function () {
-        xit('TODO', function () {
+        it('calls get_template_part', function () {
+            \WP_Mock::wpFunction('get_template_part', [
+                'args' => ['admin/wizard/page'],
+                'times' => 1,
+            ]);
+
+            $this->page->callback();
         });
     });
 
     describe('->wpAjax()', function () {
         beforeEach(function () {
             $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
-                'campaigns_ga_id' => 'UA-123456',
+                'campaigns_wizard_type' => 'ga',
+                'campaigns_wizard_id' => 'UA-123456',
                 'nonce' => '999999',
             ]));
 
@@ -61,10 +68,50 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
             ]);
         });
 
+        context('with no type', function () {
+            beforeEach(function () {
+                $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
+                    'campaigns_wizard_id' => 'UA-123456',
+                    'nonce' => '999999',
+                ]));
+            });
+
+            it('does nothing', function () {
+                ob_start();
+                $this->page->wpAjax();
+                $output = ob_get_clean();
+                expect(json_decode($output, true))->to->equal([
+                    'error' => true,
+                    'message' => 'type missing',
+                ]);
+            });
+        });
+
+        context('with invalid type', function () {
+            beforeEach(function () {
+                $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
+                    'nonce' => '999999',
+                    'campaigns_wizard_type' => 'meow',
+                    'campaigns_wizard_id' => 'UA-123456',
+                ]));
+            });
+
+            it('does nothing', function () {
+                ob_start();
+                $this->page->wpAjax();
+                $output = ob_get_clean();
+                expect(json_decode($output, true))->to->equal([
+                    'error' => true,
+                    'message' => 'type incorrect',
+                ]);
+            });
+        });
+
         context('with no nonce', function () {
             beforeEach(function () {
                 $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
-                    'campaigns_ga_id' => 'UA-123456',
+                    'campaigns_wizard_type' => 'ga',
+                    'campaigns_wizard_id' => 'UA-123456',
                 ]));
             });
 
@@ -82,7 +129,8 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
         context('with a non-string nonce', function () {
             beforeEach(function () {
                 $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
-                    'campaigns_ga_id' => 'UA-123456',
+                    'campaigns_wizard_type' => 'ga',
+                    'campaigns_wizard_id' => 'UA-123456',
                     'nonce' => [],
                 ]));
             });
@@ -101,7 +149,8 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
         context('with an invalid nonce', function () {
             beforeEach(function () {
                 $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
-                    'campaigns_ga_id' => 'UA-123456',
+                    'campaigns_wizard_type' => 'ga',
+                    'campaigns_wizard_id' => 'UA-123456',
                     'nonce' => '111111',
                 ]));
 
@@ -157,9 +206,29 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
                     ]);
                 });
 
-                it('updates an option', function () {
+                it('updates the ga option', function () {
                     \WP_Mock::wpFunction('update_option', [
                         'args' => ['campaigns_ga_id', 'UA-123456'],
+                        'times' => 1,
+                    ]);
+
+                    ob_start();
+                    $this->page->wpAjax();
+                    $output = ob_get_clean();
+                    expect(json_decode($output, true))->to->equal([
+                        'error' => false,
+                    ]);
+                });
+
+                it('updates the gtm option', function () {
+                    $this->page = new \Dxw\GdsCampaignRoot\Wizard\Page(new \Dxw\Iguana\Value\Post([
+                        'campaigns_wizard_type' => 'gtm',
+                        'campaigns_wizard_id' => 'GTM-123456',
+                        'nonce' => '999999',
+                    ]));
+
+                    \WP_Mock::wpFunction('update_option', [
+                        'args' => ['campaigns_gtm_id', 'GTM-123456'],
                         'times' => 1,
                     ]);
 
