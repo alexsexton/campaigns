@@ -31,10 +31,19 @@ if( get_row_layout() == 'boxes') : ?>
                 <div class="box-inner">
 
                     <?php if( get_sub_field('box_image')) : ?>
-                    <div class="box-image">
-                        <?php $box_image = get_sub_field('box_image'); ?>
-                        <img src="<?php echo $box_image['url']; ?>" alt="<?php echo $box_image['alt']; ?>">
-                    </div>
+                        <?php if( get_sub_field('box_button_url')) : ?>
+                        <div class="box-image">
+                            <?php $box_image = get_sub_field('box_image'); ?>
+                            <a href="<?php the_sub_field('box_button_url'); ?>">
+                                <img src="<?php echo $box_image['url']; ?>" alt="<?php echo $box_image['alt']; ?>">
+                            </a>
+                        </div>
+                        <?php else : ?>
+                        <div class="box-image">
+                            <?php $box_image = get_sub_field('box_image'); ?>
+                            <img src="<?php echo $box_image['url']; ?>" alt="<?php echo $box_image['alt']; ?>">
+                        </div>
+                        <?php endif; ?>
                     <?php endif; ?>
 
                     <?php if( get_sub_field('box_title')) : ?>
@@ -49,7 +58,7 @@ if( get_row_layout() == 'boxes') : ?>
 
                     <?php if( get_sub_field('box_button_url')) : ?>
                         <div class="buttons">
-                            <a href="<?php the_sub_field('box_button_url'); ?>" class="button"><?php the_sub_field('box_button_text'); ?></a>
+                            <a href="<?php the_sub_field('box_button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { echo the_field('button_style', 'option'); } ?>"><?php the_sub_field('box_button_text'); ?></a>
                         </div>
                     <?php endif; ?>
 

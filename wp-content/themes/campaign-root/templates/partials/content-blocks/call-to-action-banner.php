@@ -22,7 +22,7 @@ if( get_sub_field('text_align')) {
             <?php if( get_sub_field('title')) : ?><h2><?php the_sub_field('title'); ?></h2><?php endif; ?>
 
             <div class="buttons">
-                <a href="<?php the_sub_field('button_url'); ?>" class="button"<?php if( get_sub_field('ga_event_tracking') == true): ?> onclick="ga('send', 'event', '<?php the_sub_field('event_category'); ?>', this.href, '<?php the_sub_field('button_text'); ?>');"<?php endif; ?>><?php the_sub_field('button_text'); ?></a>
+                <a href="<?php the_sub_field('button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { echo the_field('button_style', 'option'); } ?>"<?php if( get_sub_field('ga_event_tracking') == true): ?> onclick="ga('send', 'event', '<?php the_sub_field('event_category'); ?>', this.href, '<?php the_sub_field('button_text'); ?>');"<?php endif; ?>><?php the_sub_field('button_text'); ?></a>
             </div>
         </div>
     </div>
