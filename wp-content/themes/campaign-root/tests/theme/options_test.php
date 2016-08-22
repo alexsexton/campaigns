@@ -28,8 +28,8 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
 
         \WP_Mock::wpFunction('acf_add_local_field_group', [
             'args' => [[
-                'key' => 'group_577e95f281e19',
-                'title' => 'Header',
+                'key' => 'group_577e95f281e15',
+                'title' => 'Campaign Header',
                 'fields' => array(
                     array(
                         'key' => 'field_576c2b1d4517',
@@ -165,58 +165,58 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
 
         \WP_Mock::wpFunction('acf_add_local_field_group', [
             'args' => [[
-                    'key' => 'group_579e95e281f15',
-                    'title' => 'Button Styles',
-                    'fields' => array(
+                'key' => 'group_577e95f281e19',
+                'title' => 'Button Styles',
+                'fields' => array(
+                    array(
+                        'key' => 'field_5331597f2fac1',
+                        'label' => 'Button Style',
+                        'name' => 'button_style',
+                        'type' => 'select',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => ''
+                        ),
+                        'choices' => array(
+                            'default' => 'Default (Green)',
+                            'button-dark' => 'Dark with light text',
+                            'button-light' => 'Light with dark text',
+                            'button-ghost--dark' => 'Outlined with dark text',
+                            'button-ghost--light' => 'Outlined with light text',
+                        ),
+                        'default_value' => array(
+                            0 => 'default'
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'ui' => 0,
+                        'ajax' => 0,
+                        'placeholder' => '',
+                        'disabled' => 0,
+                        'readonly' => 0
+                    ),
+                ),
+                'location' => array(
+                    array(
                         array(
-                            'key' => 'field_5331597f2fac1',
-                            'label' => 'Button Style',
-                            'name' => 'button_style',
-                            'type' => 'select',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => ''
-                            ),
-                            'choices' => array(
-                                'default' => 'Default (Green)',
-                                'button-dark' => 'Dark with light text',
-                                'button-light' => 'Light with dark text',
-                                'button-ghost--dark' => 'Outlined with dark text',
-                                'button-ghost--light' => 'Outlined with light text',
-                            ),
-                            'default_value' => array(
-                                0 => 'default'
-                            ),
-                            'allow_null' => 0,
-                            'multiple' => 0,
-                            'ui' => 0,
-                            'ajax' => 0,
-                            'placeholder' => '',
-                            'disabled' => 0,
-                            'readonly' => 0
+                            'param' => 'options_page',
+                            'operator' => '==',
+                            'value' => 'acf-options-sitewide-appearance',
                         ),
                     ),
-                    'location' => array(
-                        array(
-                            array(
-                                'param' => 'options_page',
-                                'operator' => '==',
-                                'value' => 'acf-options-sitewide-appearance',
-                            ),
-                        ),
-                    ),
-                    'menu_order' => 2,
-                    'position' => 'normal',
-                    'style' => 'default',
-                    'label_placement' => 'top',
-                    'instruction_placement' => 'label',
-                    'hide_on_screen' => '',
-                    'active' => 1,
-                    'description' => '',
+                ),
+                'menu_order' => 2,
+                'position' => 'normal',
+                'style' => 'default',
+                'label_placement' => 'top',
+                'instruction_placement' => 'label',
+                'hide_on_screen' => '',
+                'active' => 1,
+                'description' => '',
                     ],
                 ],
             'times' => 1,
@@ -225,7 +225,7 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
         \WP_Mock::wpFunction('acf_add_local_field_group', [
             'args' => [[
                 'key' => 'group_534e95f281a15',
-                'title' => 'Social Media Icons',
+                'title' => 'Footer Social Media Icons',
                 'fields' => array(
                     array(
                         'key' => 'field_5783adf460314',
