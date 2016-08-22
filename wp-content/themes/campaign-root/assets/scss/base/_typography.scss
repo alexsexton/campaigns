@@ -83,6 +83,23 @@ p {
     font-size: $small-screen-font-size;
   }
 
+  // Text Links
+  a:link {
+    color: $link-colour;
+  }
+
+  a:visited {
+    color: $link-visited-colour;
+  }
+
+  a:hover {
+    color: $link-hover-colour;
+  }
+
+  a:active {
+    color: $link-active-colour;
+  }
+
   p {
     margin: 0 0 $margin 0;
     max-width: 40em;
@@ -120,13 +137,19 @@ p {
     max-width: 20em;
     border-left: 8px solid $grey-2;
 
+    cite {
+      font-family: $font-family-serif;
+      font-size: $base-font-size;
+      a:link, a:visited, a:active {
+        color: $link-colour;
+        text-decoration: none;
+      }
+    }
+
     cite:before {
       content: "\2014\00a0";
     }
 
-    cite {
-      font-family: $font-family-serif;
-    }
   }
 
   // Horizontal Rule

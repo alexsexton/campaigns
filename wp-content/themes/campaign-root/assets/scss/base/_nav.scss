@@ -163,8 +163,10 @@ $sub-nav-background-hover: $black;
 // Nav Toggle
 
 .nav-toggle {
-    @include button;
+    @include button($button, $button-text, default);
     @include hide;
+    padding: 3px 6px;
+
 
     @media screen and (max-width: $small-screen) {
         position: absolute;

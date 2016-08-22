@@ -13,7 +13,7 @@ class Options implements \Dxw\Iguana\Registerable
 
         acf_add_local_field_group([
             'key' => 'group_577e95f281e15',
-            'title' => 'Header',
+            'title' => 'Campaign Header',
             'fields' => array(
                 array(
                     'key' => 'field_576c2b1d4517',
@@ -134,7 +134,62 @@ class Options implements \Dxw\Iguana\Registerable
                     ),
                 ),
             ),
-            'menu_order' => 0,
+            'menu_order' => 1,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => 1,
+            'description' => '',
+        ]);
+
+        acf_add_local_field_group([
+            'key' => 'group_577e95f281e19',
+            'title' => 'Button Styles',
+            'fields' => array(
+                array(
+                    'key' => 'field_5331597f2fac1',
+                    'label' => 'Button Style',
+                    'name' => 'button_style',
+                    'type' => 'select',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => ''
+                    ),
+                    'choices' => array(
+                        'default' => 'Default (Green)',
+                        'button-dark' => 'Dark with light text',
+                        'button-light' => 'Light with dark text',
+                        'button-ghost--dark' => 'Outlined with dark text',
+                        'button-ghost--light' => 'Outlined with light text',
+                    ),
+                    'default_value' => array(
+                        0 => 'default'
+                    ),
+                    'allow_null' => 0,
+                    'multiple' => 0,
+                    'ui' => 0,
+                    'ajax' => 0,
+                    'placeholder' => '',
+                    'disabled' => 0,
+                    'readonly' => 0
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'acf-options-sitewide-appearance',
+                    ),
+                ),
+            ),
+            'menu_order' => 2,
             'position' => 'normal',
             'style' => 'default',
             'label_placement' => 'top',
@@ -146,7 +201,7 @@ class Options implements \Dxw\Iguana\Registerable
 
         acf_add_local_field_group([
             'key' => 'group_534e95f281a15',
-            'title' => 'Social Media Icons',
+            'title' => 'Footer Social Media Icons',
             'fields' => array(
                 array(
                     'key' => 'field_5783adf460314',
@@ -257,7 +312,7 @@ class Options implements \Dxw\Iguana\Registerable
                     ),
                 ),
             ),
-            'menu_order' => 0,
+            'menu_order' => 3,
             'position' => 'normal',
             'style' => 'default',
             'label_placement' => 'top',
