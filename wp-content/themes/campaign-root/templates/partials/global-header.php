@@ -29,8 +29,6 @@
 
     <?php if( get_field('header_background_colour', 'option')) : ?>
     <div class="site-header<?php if( get_field('hide_campaign_header', 'option') == 'yes') { echo ' visually-hidden'; } ?>" style="background-color:<?php the_field('header_background_colour', 'option'); ?>;">
-    <?php elseif ( get_field('header_background_image', 'option')) : ?>
-    <div class="site-header has-background-image<?php if( get_field('hide_campaign_header', 'option') == 'yes') { echo ' visually-hidden'; } ?>">
     <?php else : ?>
     <div class="site-header<?php if( get_field('hide_campaign_header', 'option') == 'yes') { echo ' visually-hidden'; } ?>">
     <?php endif ?>
