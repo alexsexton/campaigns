@@ -1,6 +1,8 @@
 // Site - general site set up rules and some ultility classes
 
 body {
+    background: $body-background-colour;
+    color: $base-font-colour;
     font-family: $font-family-sans;
     font-weight: normal;
     -webkit-font-variant-ligatures: discretionary-ligatures;
