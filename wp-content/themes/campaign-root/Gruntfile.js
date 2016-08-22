@@ -48,7 +48,8 @@ module.exports = function (grunt) {
         'options': [
           'html5printshiv',
           'html5shiv',
-          'setClasses'
+          'setClasses',
+          'mq'
         ],
         'uglify': true
       }
