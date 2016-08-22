@@ -33,20 +33,6 @@ $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\ContentBloc
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\Sidebar::class, new \Dxw\GdsCampaignRoot\Posts\CustomFieldGroups\Sidebar());
 $registrar->addInstance(\Dxw\GdsCampaignRoot\Theme\Options::class, new \Dxw\GdsCampaignRoot\Theme\Options());
 
-// Application Form
-$registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\PostType::class, new \Dxw\GdsCampaignRoot\ApplicationForm\PostType());
-$registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Acf::class, new \Dxw\GdsCampaignRoot\ApplicationForm\Acf());
-$registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Storage::class, new \Dxw\GdsCampaignRoot\ApplicationForm\Storage());
-$registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Mailer::class, new \Dxw\GdsCampaignRoot\ApplicationForm\Mailer());
-$registrar->addInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Form::class, new \Dxw\GdsCampaignRoot\ApplicationForm\Form(
-    $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class),
-    $registrar->getInstance(\Dxw\Iguana\Value\Post::class),
-    $registrar->getInstance(\Dxw\Iguana\Value\Server::class),
-    $registrar->getInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Storage::class),
-    $registrar->getInstance(\Dxw\GdsCampaignRoot\ApplicationForm\Mailer::class),
-    $registrar->getInstance(\Dxw\Iguana\Value\Get::class)
-));
-
 // Wizard
 $registrar->addInstance(new \Dxw\GdsCampaignRoot\Wizard\Page(
     $registrar->getInstance(\Dxw\Iguana\Value\Post::class)
