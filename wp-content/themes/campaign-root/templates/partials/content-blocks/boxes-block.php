@@ -58,7 +58,7 @@ if( get_row_layout() == 'boxes') : ?>
 
                     <?php if( get_sub_field('box_button_url')) : ?>
                         <div class="buttons">
-                            <a href="<?php the_sub_field('box_button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { echo the_field('button_style', 'option'); } ?>"><?php the_sub_field('box_button_text'); ?></a>
+                            <a href="<?php the_sub_field('box_button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { the_field('button_style', 'option'); } ?>"><?php the_sub_field('box_button_text'); ?></a>
                         </div>
                     <?php endif; ?>
 

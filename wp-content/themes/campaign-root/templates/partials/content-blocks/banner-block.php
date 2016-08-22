@@ -36,7 +36,7 @@ if( get_row_layout() == 'banner') : ?>
 
         <?php if( get_sub_field('button_url') && get_sub_field('button_text')) : ?>
         <div class="buttons">
-            <a href="<?php the_sub_field('button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { echo the_field('button_style', 'option'); } ?>"<?php if( get_sub_field('ga_event_tracking') == true): ?> onclick="ga('send', 'event', '<?php the_sub_field('event_category'); ?>', this.href, '<?php the_sub_field('button_text'); ?>');"<?php endif; ?>><?php the_sub_field('button_text'); ?></a>
+            <a href="<?php the_sub_field('button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { the_field('button_style', 'option'); } ?>"<?php if( get_sub_field('ga_event_tracking') == true): ?> onclick="ga('send', 'event', '<?php the_sub_field('event_category'); ?>', this.href, '<?php the_sub_field('button_text'); ?>');"<?php endif; ?>><?php the_sub_field('button_text'); ?></a>
         </div>
         <?php endif; ?>
 
