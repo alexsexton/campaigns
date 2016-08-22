@@ -34,12 +34,6 @@
     left: inherit;
 }
 
-@mixin ghost-button ($colour) {
-    background: transparent;
-    border: 2px solid $colour;
-    color: $colour;
-}
-
 @mixin form-input ($input-border) {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -142,4 +136,48 @@
   zoom: 1;
   filter: unquote('alpha(opacity=' + ($trans * 100) + ')'); // IE6 to IE8
   opacity: $trans;
+}
+
+@mixin button($background, $colour, $size) {
+    position: relative;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor: pointer;
+    border: 0;
+    @if $size == big {
+        padding: $padding/2 $padding;
+        font-size: $base-font-size*1.5;
+        font-weight: 700;
+    } @else {
+        padding: 8px $padding/2;
+        font-size: $base-font-size;
+        font-weight: 400;
+    }
+    background: $background;
+    color: $colour;
+    display: inline-block;
+    box-shadow: 0 3px 0 scale-color($background, $lightness: -25%);
+}
+
+@mixin ghost-button ($border-colour, $colour, $size) {
+    position: relative;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor: pointer;
+    border: 0;
+    @if $size == big {
+        padding: $padding/2 $padding;
+        font-size: $base-font-size*1.5;
+    } @else {
+        padding: 8px $padding/2;
+        font-size: $base-font-size;
+    }
+    font-weight: 700;
+    background: transparent;
+    color: $colour;
+    display: inline-block;
+    border: 2px solid $border-colour;
+    box-shadow: none;
 }

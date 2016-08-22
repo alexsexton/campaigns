@@ -58,49 +58,6 @@ textarea:focus {
   border: 2px solid $input-border-focus;
 }
 
-// Buttons
-
-.button {
-  position: relative;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  cursor: pointer;
-  border: 0;
-  padding: 8px $padding/2;
-  background: $button;
-  font-size: $base-font-size;
-  font-weight: 700;
-  color: $button-text;
-  display: inline-block;
-  box-shadow: 0 3px 0 #003618;
-}
-
-.button:hover {
-  background: $button-hover;
-  color: $button-text-hover;
-}
-
-.button:active, .button:focus {
-  background: $button-hover;
-  color: $button-text-hover;
-  outline: 3px solid $highlight;
-  box-shadow: 0 0 0 #000;
-  top: 3px;
-}
-
-.button[disabled="disabled"], .button:hover[disabled="disabled"] {
-  background: $button-inactive;
-  cursor: default;
-  opacity: 0.5;
-}
-
-.button-big {
-    padding: $padding/2 $padding;
-    font-size: $base-font-size*1.5;
-}
-
-
 // Labels
 
 .data-collection {

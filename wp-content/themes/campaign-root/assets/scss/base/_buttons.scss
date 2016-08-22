@@ -1,0 +1,66 @@
+// Buttons
+
+.button {
+    @include button($button, $button-text, default);
+
+    &:hover {
+        @include button($button-hover, $button-text-hover, default);
+    }
+
+    &:active, &:focus {
+      @include button($button-hover, $button-text-hover, default);
+      outline: 3px solid $highlight;
+      box-shadow: 0 0 0 #000;
+      top: 3px;
+    }
+}
+
+.button[disabled="disabled"], .button:hover[disabled="disabled"] {
+  @include button($button-inactive, $button-text, default);
+  cursor: default;
+  opacity: 0.5;
+}
+
+.button-dark {
+    @include button($black, $white, default);
+
+    &:hover, &:focus, &:active  {
+        @include button($grey-1, $white, default);
+    }
+}
+
+.button-light {
+    @include button($white, $black, default);
+
+    &:hover, &:focus, &:active  {
+        @include button($grey-3, $black, default);
+    }
+}
+
+.button-ghost--light {
+    @include ghost-button($white, $white, default);
+
+    &:hover, &:focus, &:active  {
+        @include ghost-button($purple, $purple, default);
+    }
+}
+
+.button-ghost--dark {
+    @include ghost-button($black, $black, default);
+
+    &:hover, &:focus, &:active  {
+        @include ghost-button($purple, $purple, default);
+    }
+}
+
+.button-big {
+    padding: $padding/2 $padding;
+    font-size: $base-font-size*1.5;
+    font-weight: 700;
+
+    &:hover, &:focus, &:active  {
+        padding: $padding/2 $padding;
+        font-size: $base-font-size*1.5;
+        font-weight: 700;
+    }
+}
