@@ -12,6 +12,11 @@ body {
   visibility: hidden;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 [aria-hidden="true"] {
     visibility: hidden;
 }

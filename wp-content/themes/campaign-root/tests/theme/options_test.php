@@ -140,6 +140,30 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                         ),
                         'default_value' => '#005ea5',
                     ),
+                    array(
+                        'key' => 'field_57bb14e3c2205',
+                        'label' => 'Hide campaign header?',
+                        'name' => 'hide_campaign_header',
+                        'type' => 'radio',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array (
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'choices' => array (
+                            'no' => 'No',
+                            'yes' => 'Yes',
+                        ),
+                        'default_value' => array (
+                            0 => 'no',
+                        ),
+                        'layout' => 'vertical',
+                        'toggle' => 0,
+                        ),
+                    ),
                 ),
                 'location' => array(
                     array(
