@@ -26,14 +26,14 @@
     }
 
     a {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         @include transition (fill, .2s, ease-in-out);
         display: block;
 
         .inline-icon {
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
         }
 
         span {

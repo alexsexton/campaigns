@@ -1,4 +1,4 @@
-// Site
+// Site - general site set up rules and some ultility classes
 
 body {
     font-family: $font-family-sans;
@@ -41,34 +41,4 @@ body {
   max-width: $site-max-width;
   margin: auto;
   padding: 0 #{$padding/2};
-}
-
-// Text Links
-a:link {
-  color: $link-colour; }
-
-a:visited {
-  color: $link-visited-colour; }
-
-a:hover {
-  color: $link-hover-colour; }
-
-a:active {
-  color: $link-active-colour; }
-
-// Button Links
-a.button:link {
-  color: $button-text;
-}
-
-a.button:visited {
-  color: $button-text;
-}
-
-a.button:hover {
-  color: $button-text-hover;
-}
-
-a.button:active {
-  color: $button-text-hover;
 }
