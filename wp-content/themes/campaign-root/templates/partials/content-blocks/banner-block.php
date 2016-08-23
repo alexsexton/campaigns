@@ -13,7 +13,9 @@ if( get_row_layout() == 'banner') : ?>
     };
   ?>
 
-    <?php if ($banner_background) : ?>
+    <?php if ($banner_background && !$banner_image) : ?>
+    <div id="banner-p-<?php echo get_row_index(); ?>" class="banner banner-has-background-colour"  style="background-color:<?php the_sub_field('background_colour'); ?>;">
+    <?php elseif ($banner_background) : ?>
     <div id="banner-p-<?php echo get_row_index(); ?>" class="banner" style="background-color:<?php the_sub_field('background_colour'); ?>;">
     <?php else : ?>
     <div id="banner-p-<?php echo get_row_index(); ?>" class="banner">
@@ -25,7 +27,7 @@ if( get_row_layout() == 'banner') : ?>
 
         <?php if ($banner_background && !$banner_image) : ?>
             <div class="overlay has-background-colour">
-            <?php else : ?>
+        <?php else : ?>
             <div class="overlay">
          <?php endif; ?>
 
