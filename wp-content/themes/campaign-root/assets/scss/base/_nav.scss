@@ -8,169 +8,183 @@ $sub-nav-link-hover: $link-hover-colour;
 $sub-nav-background: $black;
 $sub-nav-background-hover: $black;
 
-.nav-container {
+@media screen and (min-width: $small-screen) {
+
+  .nav-container {
     float: right;
-}
+  }
 
-.menu-header {
+  .menu-header {
     float: left;
-}
+  }
 
-.navigation {
+  .navigation {
 
     .nav-menu {
-        text-align: left;
-        display: block;
-        position: relative;
-        z-index: 1;
-        line-height: 1;
+      text-align: left;
+      display: block;
+      position: relative;
+      z-index: 1;
+      line-height: 1;
     }
 
     .nav-item {
-        display: inline-block;
+      display: inline-block;
     }
 
     .nav-item > a {
-        display: inline-block;
-        padding: 8px $padding/2;
-        color: $nav-link;
+      display: inline-block;
+      padding: 8px $padding/2;
+      color: $nav-link;
     }
 
     .nav-item > a:hover,
     .nav-item > a.open {
-        color: $nav-link-hover;
-        text-decoration: underline;
+      color: $nav-link-hover;
+      text-decoration: underline;
     }
 
     .active a {
-        color: $nav-link-hover;
+      color: $nav-link-hover;
     }
 
     .nav-item > a:focus {
-        color: $sub-nav-link;
-        outline: 2px solid $highlight;
+      color: $sub-nav-link;
+      outline: 2px solid $highlight;
     }
 
     .nav-item > a.open {
-        position: relative;
-        z-index: 1;
+      position: relative;
+      z-index: 1;
     }
 
     .sub-nav {
-        position: absolute;
-        display: none;
-        top: 34px;
-        padding: ($padding / 2) 10px;
-        background: $sub-nav-background;
+      position: absolute;
+      display: none;
+      top: 34px;
+      padding: ($padding / 2) 10px;
+      background: $sub-nav-background;
     }
 
     .sub-nav ul li {
-        padding: 0 0 0 $padding/2;
+      padding: 0 0 0 $padding/2;
     }
 
     .sub-nav a {
-        display: block;
-        min-width: 200px;
-        color: $sub-nav-link;
-        padding: 5px;
+      display: block;
+      min-width: 200px;
+      color: $sub-nav-link;
+      padding: 5px;
 
-        &:hover {
-            color: $sub-nav-link-hover;
-            text-decoration: underline;
-        }
+      &:hover {
+        color: $sub-nav-link-hover;
+        text-decoration: underline;
+      }
     }
 
     .sub-nav a:focus {
-        outline: 2px solid $highlight;
+      outline: 2px solid $highlight;
     }
 
     .sub-nav.open {
-        display: block;
+      display: block;
     }
 
     .sub-nav ul {
-        display: inline-block;
-        margin: 0 $margin 0 0;
-        padding: 0;
+      display: inline-block;
+      margin: 0 $margin 0 0;
+      padding: 0;
     }
 
     .sub-nav li {
-        display: block;
+      display: block;
     }
-
+  }
 }
 
 @media screen and (max-width: $small-screen) {
 
-    .nav-container,
-    .menu-header {
-        float: none;
+  .nav-container,
+  .menu-header {
+    float: none;
+  }
+
+  .navigation {
+    clear: both;
+    text-align: left;
+    padding: 15px 0 0 0;
+    @include hide;
+
+    &.open {
+      @include show;
     }
 
-    .navigation {
-        clear: both;
-        text-align: left;
-        @include hide;
-
-            &.open {
-                @include show;
-            }
-
-            .active a {
-              background: transparent;
-              color: $nav-link;
-              border-bottom: 1px solid $nav-link;
-            }
-
-            li, .nav-item {
-                display: block;
-                width: 100%;
-
-                > a {
-                    float: none;
-                    display: block;
-                    width: 100%;
-                    padding: $padding/2 $padding;
-                    color: $nav-link;
-                    background: transparent;
-                    border-bottom: 1px solid $nav-link;
-                }
-            }
-
-        .has-sub-menu {
-            display: block;
-            position: static;
-        }
-
-        .sub-nav {
-            width: 100%;
-            position: static;
-            display: block;
-            background: transparent;
-            color: $white;
-            padding: 0;
-        }
-
-        .sub-nav a {
-            min-width: 100%;
-            display: block;
-            color: $white;
-            padding: ($padding/2) ($padding + 15);
-        }
+    .active a {
+      background: transparent;
+      color: $nav-link;
+      display: inline-block;
     }
+
+    li, .nav-item {
+      display: inline-block;;
+      width: auto;
+
+      > a {
+        float: left;
+        display: inline-block;
+        padding: 0;
+        margin: 0 $margin/2 0 0;
+        color: $nav-link;
+        background: transparent;
+
+        &:hover {
+          color: $sub-nav-link-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .has-sub-menu {
+      display: block;
+      position: static;
+    }
+
+    .sub-nav {
+      width: auto;
+      position: static;
+      display: inline;
+      background: transparent;
+      padding: 0 0 0 10px;
+      clear: both;
+
+      li {
+        display: inline-block;
+        width: auto
+      }
+
+      a {
+        min-width: auto;
+        float: left;
+        display: inline-block;
+        padding: 0;
+        margin: 0 $margin/2 0 0;
+        color: $grey-2;
+      }
+    }
+  }
 }
 
 // Nav Toggle
 
 .nav-toggle {
-    @include button($button, $button-text, default);
-    @include hide;
-    padding: 3px 6px;
+  @include button($button, $button-text, default);
+  @include hide;
+  padding: 3px 6px;
 
 
-    @media screen and (max-width: $small-screen) {
-        position: absolute;
-        left: 268px;
-        top: 5px;
-    }
+  @media screen and (max-width: $small-screen) {
+    position: absolute;
+    left: 268px;
+    top: 5px;
+  }
 }

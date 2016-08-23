@@ -15,7 +15,7 @@
 </div>
 
 <header role="banner" id="global-header" class="global-header group">
-    
+
     <div class="header-wrapper group">
         <div class="header-global">
          <div class="header-logo">
@@ -28,11 +28,9 @@
     </div>
 
     <?php if( get_field('header_background_colour', 'option')) : ?>
-    <div class="site-header" style="background-color:<?php the_field('header_background_colour', 'option'); ?>;">
-    <?php elseif ( get_field('header_background_image', 'option')) : ?>
-    <div class="site-header has-background-image">
+    <div class="site-header<?php if( get_field('hide_campaign_header', 'option') == 'yes') { echo ' visually-hidden'; } ?>" style="background-color:<?php the_field('header_background_colour', 'option'); ?>;">
     <?php else : ?>
-    <div class="site-header">
+    <div class="site-header<?php if( get_field('hide_campaign_header', 'option') == 'yes') { echo ' visually-hidden'; } ?>">
     <?php endif ?>
         <div class="row">
             <?php if( get_field('site_logo', 'option') ) : ?>

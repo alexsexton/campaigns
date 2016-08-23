@@ -1,58 +1,149 @@
-// Hold fixes for old versions of IE
+// Fixes for old versions of IE
+
+// Main Navigation here because we've used a min-width media query to serve it to good browsers
+.lt-ie10 {
+
+  .nav-container {
+    float: right;
+  }
+
+  .menu-header {
+    float: left;
+  }
+
+  .navigation {
+
+    .nav-menu {
+      text-align: left;
+      display: block;
+      position: relative;
+      z-index: 1;
+      line-height: 1;
+    }
+
+    .nav-item {
+      display: inline;
+    }
+
+    .nav-item > a {
+      display: inline-block;
+      padding: 8px $padding/2;
+      color: $nav-link;
+    }
+
+    .nav-item > a:hover,
+    .nav-item > a.open {
+      color: $nav-link-hover;
+      text-decoration: underline;
+    }
+
+    .active a {
+      color: $nav-link-hover;
+    }
+
+    .nav-item > a:focus {
+      color: $sub-nav-link;
+      outline: 2px solid $highlight;
+    }
+
+    .nav-item > a.open {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sub-nav {
+      position: absolute;
+      display: none;
+      top: 34px;
+      padding: ($padding / 2) 10px;
+      background: $sub-nav-background;
+    }
+
+    .sub-nav ul li {
+      padding: 0 0 0 $padding/2;
+    }
+
+    .sub-nav a {
+      display: block;
+      min-width: 200px;
+      color: $sub-nav-link;
+      padding: 5px;
+
+      &:hover {
+        color: $sub-nav-link-hover;
+        text-decoration: underline;
+      }
+    }
+
+    .sub-nav a:focus {
+      outline: 2px solid $highlight;
+    }
+
+    .sub-nav.open {
+      display: block;
+    }
+
+    .sub-nav ul {
+      display: inline-block;
+      margin: 0 $margin 0 0;
+      padding: 0;
+    }
+
+    .sub-nav li {
+      display: block;
+    }
+  }
+} // end navigation
+
 
 // IE8 or less
 .lt-ie9 {
 
-    .logo, .header-logo {
-        a, img {
-            border: none;
-        }
+  .logo, .header-logo {
+    a, img {
+      border: none;
     }
+  }
 
-    .navigation li {
-        display: inline;
-    }
+  .footer-navigation {
+    @include col(2/4);
+  }
 
-    .footer-navigation {
-        @include col(2/4);
-    }
+  .follow-us {
+    @include col(2/4);
+  }
 
-    .follow-us {
-        @include col(2/4);
-    }
-
-
-    .overlay {
-        top: 25%;
-    }
+  .overlay {
+    top: 25%;
+  }
 
 }
 
 // SVG Fallback to text
 .no-svg {
 
-    .follow-us li {
-        display: inline;
+  .follow-us li {
+    display: inline;
+  }
+
+  .follow-us a {
+    width: auto;
+    height: auto;
+    line-height: 32px;
+
+    &:hover span {
+      color: $footer-link-hover;
+      text-decoration: underline;
     }
 
-    .follow-us a {
-        width: auto;
-        height: auto;
-        line-height: 32px;
-
-        &:hover span {
-            color: $footer-link-hover;
-            text-decoration: underline;
-        }
-
-        .inline-icon {
-            display: none;
-        }
-
-        span {
-            position: static;
-            left: auto;
-            color: $white;
-        }
+    .inline-icon {
+      display: none;
     }
+
+    span {
+      position: static;
+      left: auto;
+      color: $white;
+    }
+  }
 }

@@ -16,14 +16,8 @@ if( get_row_layout() == 'boxes') : ?>
 
             <?php
             // Some logic to add a relevant class name to the object
-            if (get_sub_field('box_title') && get_sub_field('box_caption') && get_sub_field('box_image')) {
-                $box_class = ' title-content-image';
-            } elseif (get_sub_field('box_title') && get_sub_field('box_caption')) {
-                $box_class = ' title-content';
-            } elseif (get_sub_field('box_title') && get_sub_field('box_image')) {
-                $box_class = ' title-image';
-            } else {
-                $box_class = ' title-only';
+            if (get_sub_field('box_image') == null) {
+                $box_class = ' no-image';
             }
             ?>
 
@@ -31,10 +25,10 @@ if( get_row_layout() == 'boxes') : ?>
                 <div class="box-inner">
 
                     <?php if( get_sub_field('box_image')) : ?>
-                        <?php if( get_sub_field('box_button_url')) : ?>
+                        <?php if( get_sub_field('box_url')) : ?>
                         <div class="box-image">
                             <?php $box_image = get_sub_field('box_image'); ?>
-                            <a href="<?php the_sub_field('box_button_url'); ?>">
+                            <a href="<?php the_sub_field('box_url'); ?>">
                                 <img src="<?php echo $box_image['url']; ?>" alt="<?php echo $box_image['alt']; ?>">
                             </a>
                         </div>
@@ -47,18 +41,22 @@ if( get_row_layout() == 'boxes') : ?>
                     <?php endif; ?>
 
                     <?php if( get_sub_field('box_title')) : ?>
-                        <h2><?php the_sub_field('box_title'); ?></h2>
+                      <?php if( get_sub_field('box_url')) : ?>
+                        <h3><a href="<?php the_sub_field('box_url'); ?>"><?php the_sub_field('box_title'); ?></a></h2>
+                      <?php else : ?>
+                        <h3><?php the_sub_field('box_title'); ?></h3>
+                      <?php endif; ?>
                     <?php endif; ?>
 
                     <div class="rich-text">
                         <?php if( get_sub_field('box_caption')) : ?>
-                            <?php the_sub_field('box_caption'); ?>
+                            <p><?php the_sub_field('box_caption'); ?></p>
                         <?php endif; ?>
                     </div>
 
-                    <?php if( get_sub_field('box_button_url')) : ?>
+                    <?php if( get_sub_field('box_url') && get_sub_field('box_button_text')) : ?>
                         <div class="buttons">
-                            <a href="<?php the_sub_field('box_button_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { the_field('button_style', 'option'); } ?>"><?php the_sub_field('box_button_text'); ?></a>
+                            <a href="<?php the_sub_field('box_url'); ?>" class="button <?php if( get_field('button_style', 'option') != 'default') { the_field('button_style', 'option'); } ?>"><?php the_sub_field('box_button_text'); ?></a>
                         </div>
                     <?php endif; ?>
 

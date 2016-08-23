@@ -63,17 +63,6 @@ p {
     }
 }
 
-// Section Headers
-.section-header {
-  border-bottom:1px solid scale-color($border-colour, $lightness: 50%);
-  border-top:1px solid scale-color($border-colour, $lightness: 50%);
-  margin: $margin 0;
-}
-
-.section-header h1 {
-  margin: $margin 0;
-}
-
 // Rich Text. Anything spat out by WordPress is/should be wrapped in a .rich-text class
 
 .rich-text {

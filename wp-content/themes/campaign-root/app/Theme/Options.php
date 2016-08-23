@@ -31,7 +31,7 @@ class Options implements \Dxw\Iguana\Registerable
                     'default_value' => '',
                     'placeholder' => '',
                     'maxlength' => '',
-                    'rows' => '',
+                    'rows' => '4',
                     'new_lines' => '',
                     'readonly' => 0,
                     'disabled' => 0,
@@ -89,27 +89,6 @@ class Options implements \Dxw\Iguana\Registerable
                     'mime_types' => 'png',
                 ),
                 array(
-                    'key' => 'field_5783ad80c8403',
-                    'label' => 'Header Background Image',
-                    'name' => 'header_background_image',
-                    'type' => 'file',
-                    'instructions' => 'The background image should be bigger than 1400px by 300px.',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'return_format' => 'array',
-                    'library' => 'all',
-                    'min_size' => '',
-                    'max_size' => '512 KB',
-                    'min_width' => '1400 PX',
-                    'min_height' => '300 PX',
-                    'mime_types' => 'png,jpg',
-                ),
-                array(
                     'key' => 'field_5783ada6c8404',
                     'label' => 'Header Background Colour',
                     'name' => 'header_background_colour',
@@ -124,7 +103,30 @@ class Options implements \Dxw\Iguana\Registerable
                     ),
                     'default_value' => '#005ea5',
                 ),
-            ),
+                array(
+                    'key' => 'field_57bb14e3c2205',
+                    'label' => 'Hide campaign header?',
+                    'name' => 'hide_campaign_header',
+                    'type' => 'radio',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'choices' => array(
+                        'no' => 'No',
+                        'yes' => 'Yes',
+                    ),
+                    'default_value' => array(
+                        0 => 'no',
+                    ),
+                    'layout' => 'vertical',
+                    'toggle' => 0,
+                    ),
+                ),
             'location' => array(
                 array(
                     array(

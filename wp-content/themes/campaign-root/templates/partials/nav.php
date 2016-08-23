@@ -1,5 +1,7 @@
 <div class="nav-container group">
+  <?php if (has_nav_menu('header')) : ?>
   <a class="nav-toggle" id="js-navigation-toggle" aria-hidden="true" href="#">Menu</a>
+  <?php endif ?>
   <nav class="navigation" id="js-navigation">
     <?php
       if (has_nav_menu('header')) {

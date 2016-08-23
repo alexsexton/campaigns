@@ -8,7 +8,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
     {
         register_field_group(array(
             'key' => 'group_56e9937e4dc99',
-            'title' => 'Content',
+            'title' => 'Page Sections',
             'fields' => array(
                 array(
                     'key' => 'field_572b3982eabf4',
@@ -34,6 +34,44 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'label' => 'Banner',
                             'display' => 'row',
                             'sub_fields' => array(
+                                array(
+                                    'key' => 'field_571464645edf3',
+                                    'label' => 'Background Image',
+                                    'name' => 'background_image',
+                                    'type' => 'file',
+                                    'instructions' => 'Add a full width image, the image should be no bigger than 1600 PX by 700 PX',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => ''
+                                    ),
+                                    'return_format' => 'array',
+                                    'library' => 'all',
+                                    'min_width' => '1200 PX',
+                                    'min_height' => '',
+                                    'min_size' => '',
+                                    'max_width' => '1600 PX',
+                                    'max_height' => '700 PX',
+                                    'max_size' => '512 KB',
+                                    'mime_types' => 'jpg,png',
+                                ),
+                                array(
+                                    'key' => 'field_577a3a39d27a',
+                                    'label' => 'Background Colour',
+                                    'name' => 'background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => 'If you don\'t want to use a full width image, set a background colour here.',
+                                    'required' => '',
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '#005ea5',
+                                ),
                                 array(
                                     'key' => 'field_572c45dc7bc13',
                                     'label' => 'Title',
@@ -70,7 +108,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     ),
                                     'default_value' => '',
                                     'tabs' => 'all',
-                                    'toolbar' => 'full',
+                                    'toolbar' => 'basic',
                                     'media_upload' => 0,
                                 ),
                                 array(
@@ -108,7 +146,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'default_value' => '',
-                                    'placeholder' => 'http://www.example.com',
+                                    'placeholder' => '',
                                 ),
                                 array(
                                     'key' => 'field_577503ccb2790',
@@ -167,44 +205,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'disabled' => 0,
                                     'readonly' => 0,
                                 ),
-                                array(
-                                    'key' => 'field_571464645edf3',
-                                    'label' => 'Background Image',
-                                    'name' => 'background_image',
-                                    'type' => 'file',
-                                    'instructions' => 'Add a full width image here.',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => ''
-                                    ),
-                                    'return_format' => 'array',
-                                    'library' => 'all',
-                                    'min_width' => '',
-                                    'min_height' => '',
-                                    'min_size' => '',
-                                    'max_width' => '1600 PX',
-                                    'max_height' => '',
-                                    'max_size' => '512 KB',
-                                    'mime_types' => 'jpg,png',
-                                ),
-                                array(
-                                    'key' => 'field_577a3a39d27a',
-                                    'label' => 'Background Colour',
-                                    'name' => 'background_colour',
-                                    'type' => 'color_picker',
-                                    'instructions' => 'If you don\'t want to use a full width image, set a background colour here.',
-                                    'required' => '',
-                                    'conditional_logic' => '',
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'default_value' => '#005ea5',
-                                ),
                             ),
                             'min' => '',
                             'max' => ''
@@ -218,7 +218,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'sub_fields' => array(
                                 array(
                                     'key' => 'field_572b45dc7bc16',
-                                    'label' => 'Title',
+                                    'label' => 'Text',
                                     'name' => 'title',
                                     'type' => 'text',
                                     'instructions' => '',
@@ -311,7 +311,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '#005ea5',
+                                    'default_value' => '#ffffff',
                                 ),
                                 array(
                                     'key' => 'field_59d95a4abf97a',
@@ -371,7 +371,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '#ffffff',
+                                    'default_value' => '#0b0c0c',
                                 ),
                             ),
                             'min' => '',
@@ -453,7 +453,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                             'min' => '',
                             'max' => ''
                         ),
-                        // Text
+                        // Text Only
                         array(
                             'key' => '572c6183a937a',
                             'name' => 'text',
@@ -566,7 +566,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add a caption or some text for the image.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -584,7 +584,51 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'max_height' => '',
                                     'max_size' => '512 KB',
                                     'mime_types' => 'jpg,png'
-                                )
+                                ),
+                                array(
+                                    'key' => 'field_59d95a4abe97d',
+                                    'label' => 'Image Size',
+                                    'name' => 'image_size',
+                                    'type' => 'select',
+                                    'instructions' => 'A big image will take up half of the available area. A small image takes up a third of the available area.',
+                                    'required' => 0,
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'default' => 'Big Image',
+                                        'small-image' => 'Small Image',
+                                    ),
+                                    'default_value' => array(
+                                        0 => 'default',
+                                    ),
+                                    'allow_null' => 0,
+                                    'multiple' => 0,
+                                    'ui' => 0,
+                                    'ajax' => 0,
+                                    'placeholder' => '',
+                                    'disabled' => 0,
+                                    'readonly' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_57724a9fcb438',
+                                    'label' => 'Image URL',
+                                    'name' => 'image_url',
+                                    'type' => 'url',
+                                    'instructions' => 'URL\'s should be written as the full domain including http or https E.G. "http://www.example.com" or "https://www.example.com"',
+                                    'required' => '',
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                ),
                             ),
                             'min' => '',
                             'max' => ''
@@ -601,7 +645,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add a caption or some text for the image.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -619,7 +663,51 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'mime_types' => 'jpg,png',
                                     'return_format' => 'array',
                                     'library' => 'all'
-                                )
+                                ),
+                                array(
+                                    'key' => 'field_51a95a4abe97e',
+                                    'label' => 'Image Size',
+                                    'name' => 'image_size',
+                                    'type' => 'select',
+                                    'instructions' => 'A big image will take up half of the available area. A small image takes up a third of the available area.',
+                                    'required' => 0,
+                                    'conditional_logic' => '',
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'default' => 'Big Image',
+                                        'small-image' => 'Small Image',
+                                    ),
+                                    'default_value' => array(
+                                        0 => 'default',
+                                    ),
+                                    'allow_null' => 0,
+                                    'multiple' => 0,
+                                    'ui' => 0,
+                                    'ajax' => 0,
+                                    'placeholder' => '',
+                                    'disabled' => 0,
+                                    'readonly' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_51724a9feb439',
+                                    'label' => 'Image URL',
+                                    'name' => 'image_url',
+                                    'type' => 'url',
+                                    'instructions' => 'URL\'s should be written as the full domain including http or https E.G. "http://www.example.com" or "https://www.example.com"',
+                                    'required' => '',
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '',
+                                    'placeholder' => '',
+                                ),
                             ),
                             'min' => '',
                             'max' => ''
@@ -636,7 +724,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add a caption or some text for the image.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -722,7 +810,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'default_value' => '',
-                                    'placeholder' => 'http://www.example.com',
+                                    'placeholder' => '',
                                 ),
                                 array(
                                     'key' => 'field_577a39f69a296',
@@ -963,7 +1051,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'default_value' => '',
-                                    'placeholder' => 'http://www.example.com',
+                                    'placeholder' => '',
                                 ),
                                 array(
                                     'key' => 'field_578703aab2790',
@@ -1041,7 +1129,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 'id' => '',
                             ),
                             'collapsed' => '',
-                            'min' => '',
+                            'min' => '3',
                             'max' => '',
                             'layout' => 'row',
                             'button_label' => 'Add Row',
@@ -1060,7 +1148,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'button_label' => 'Add Item',
-                                    'min' => 3,
+                                    'min' => '',
                                     'max' => '',
                                     'layouts' => array(
                                         array(
@@ -1069,7 +1157,31 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                             'label' => 'Add Box',
                                             'display' => 'table',
                                             'sub_fields' => array(
-                                                array(
+                                              array(
+                                                  'key' => 'field_5773c156bbc40',
+                                                  'label' => 'Image',
+                                                  'name' => 'box_image',
+                                                  'type' => 'image',
+                                                  'instructions' => 'You can add images up to 256 KB in file size. Images will be displayed above the title, caption and button',
+                                                  'required' => 0,
+                                                  'conditional_logic' => 0,
+                                                  'wrapper' => array(
+                                                      'width' => '',
+                                                      'class' => '',
+                                                      'id' => '',
+                                                  ),
+                                                  'return_format' => 'array',
+                                                  'preview_size' => 'full',
+                                                  'library' => 'all',
+                                                  'min_width' => '',
+                                                  'min_height' => '',
+                                                  'min_size' => '',
+                                                  'max_width' => '',
+                                                  'max_height' => '',
+                                                  'max_size' => '256 KB',
+                                                  'mime_types' => 'jpg,png'
+                                              ),
+                                              array(
                                                     'key' => 'field_5773c108bbc3e',
                                                     'label' => 'Title',
                                                     'name' => 'box_title',
@@ -1112,30 +1224,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                     'disabled' => 0,
                                                 ),
                                                 array(
-                                                    'key' => 'field_5773c156bbc40',
-                                                    'label' => 'Image',
-                                                    'name' => 'box_image',
-                                                    'type' => 'image',
-                                                    'instructions' => 'You can add images up to 256 KB in file size. Images will be displayed above the title, caption and button',
-                                                    'required' => 0,
-                                                    'conditional_logic' => 0,
-                                                    'wrapper' => array(
-                                                        'width' => '',
-                                                        'class' => '',
-                                                        'id' => '',
-                                                    ),
-                                                    'return_format' => 'array',
-                                                    'preview_size' => 'full',
-                                                    'library' => 'all',
-                                                    'min_width' => '',
-                                                    'min_height' => '',
-                                                    'min_size' => '',
-                                                    'max_width' => '',
-                                                    'max_height' => '',
-                                                    'max_size' => '256 KB',
-                                                    'mime_types' => 'jpg,png'
-                                                ),
-                                                array(
                                                     'key' => 'field_5773c148bbc42',
                                                     'label' => 'Button Text',
                                                     'name' => 'box_button_text',
@@ -1158,10 +1246,10 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                 ),
                                                 array(
                                                     'key' => 'field_5773c12abbc41',
-                                                    'label' => 'Button URL',
-                                                    'name' => 'box_button_url',
+                                                    'label' => 'URL',
+                                                    'name' => 'box_url',
                                                     'type' => 'url',
-                                                    'instructions' => 'URL\'s should be written as the full domain. E.G. "http://www.example.com" or "https://www.example.com"',
+                                                    'instructions' => 'URL\'s should be written as the full domain. E.G. "http://www.example.com" or "https://www.example.com". The URL will link the image, title or button fields',
                                                     'required' => 0,
                                                     'conditional_logic' => 0,
                                                     'wrapper' => array(
@@ -1170,10 +1258,10 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                                         'id' => '',
                                                     ),
                                                     'default_value' => '',
-                                                    'placeholder' => 'http://www.example.com',
+                                                    'placeholder' => '',
                                                 ),
                                             ),
-                                            'min' => '',
+                                            'min' => '3',
                                             'max' => '',
                                         ),
                                     ),
@@ -1296,7 +1384,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'id' => '',
                                     ),
                                     'default_value' => '',
-                                    'placeholder' => 'http://www.example.com',
+                                    'placeholder' => '',
                                 ),
                             ),
                             'min' => '',
