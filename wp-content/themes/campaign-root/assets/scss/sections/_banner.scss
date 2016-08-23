@@ -1,0 +1,75 @@
+.banner {
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        max-width: #{$site-max-width/2};
+        z-index: 1;
+        top: 50%;
+        right: 50%;
+        @include translate(0,-50%);
+        margin-right: -#{$site-max-width/2};
+        @media screen and (max-width: $medium-screen) {
+          right: 66%;
+        }
+        @media screen and (max-width: $small-screen) {
+            position: absolute;
+            top: 15px;
+            margin: 0;
+            left: 15px;
+            width: 100%;
+            @include translate(0,0);
+            padding: $padding/2;
+        }
+
+        &.has-background-colour {
+            @media screen and (max-width: $small-screen) {
+                position: static;
+                top: 15px;
+                margin: auto 0;
+                left: 15px;
+                width: 100%;
+                @include translate(0,0);
+                padding: $padding/2;
+            }
+        }
+
+        h1, p {
+            position: relative;
+            margin-top: 0;
+            line-height: 1.2;
+            display: inline;
+            background: $black;
+            color: $white;
+            white-space: pre-wrap;
+            border: 0 solid $black;
+            border-width: 3px 3px 3px 0;
+        }
+
+        h1:after, p:after {
+            background: $black;
+            content: "";
+            position: absolute;
+            top: -3px;
+            right: 100%;
+            bottom: -3px;
+            width: 3px;
+        }
+    }
+
+    .buttons {
+        padding: $padding/2 0;
+        margin-left: -3px;
+    }
+
+    .content {
+        max-width: 40em;
+    }
+
+    img {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+}
