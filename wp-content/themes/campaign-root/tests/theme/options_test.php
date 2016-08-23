@@ -127,40 +127,39 @@ class Theme_Options_Test extends PHPUnit_Framework_TestCase
                         'instructions' => '',
                         'required' => 0,
                         'conditional_logic' => 0,
-                        'wrapper' => array (
+                        'wrapper' => array(
                             'width' => '',
                             'class' => '',
                             'id' => '',
                         ),
-                        'choices' => array (
+                        'choices' => array(
                             'no' => 'No',
                             'yes' => 'Yes',
                         ),
-                        'default_value' => array (
+                        'default_value' => array(
                             0 => 'no',
                         ),
                         'layout' => 'vertical',
                         'toggle' => 0,
                         ),
                     ),
-                ),
-                'location' => array(
-                    array(
-                        array(
-                            'param' => 'options_page',
-                            'operator' => '==',
-                            'value' => 'acf-options-sitewide-appearance',
-                        ),
-                    ),
-                ),
-                'menu_order' => 1,
-                'position' => 'normal',
-                'style' => 'default',
-                'label_placement' => 'top',
-                'instruction_placement' => 'label',
-                'hide_on_screen' => '',
-                'active' => 1,
-                'description' => '',
+                  'location' => array(
+                      array(
+                          array(
+                              'param' => 'options_page',
+                              'operator' => '==',
+                              'value' => 'acf-options-sitewide-appearance',
+                          ),
+                      ),
+                  ),
+                  'menu_order' => 1,
+                  'position' => 'normal',
+                  'style' => 'default',
+                  'label_placement' => 'top',
+                  'instruction_placement' => 'label',
+                  'hide_on_screen' => '',
+                  'active' => 1,
+                  'description' => '',
                 ],
             ],
             'times' => 1,
