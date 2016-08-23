@@ -38,8 +38,6 @@ jQuery(function ($) {
         })
       },
       unmatch: function () {
-        // undo Megomenu functions
-        $('#js-navigation').next().removeClass('menu-header')
         // Change aria-hidden state
         $('#js-navigation-toggle').attr('aria-hidden', 'false')
         // Un Magic
@@ -53,9 +51,11 @@ jQuery(function ($) {
     enquire.register('screen and (max-width:779px)', {
       match: function () {
         $('#js-navigation-toggle').attr('aria-hidden', 'false')
+        $('.sub-nav').attr('aria-hidden', 'false')
       },
       unmatch: function () {
         $('#js-navigation-toggle').attr('aria-hidden', 'true')
+        $('.sub-nav').attr('aria-hidden', 'true')
       }
     })
   })
