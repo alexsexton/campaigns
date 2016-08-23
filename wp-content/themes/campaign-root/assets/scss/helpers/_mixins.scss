@@ -150,7 +150,7 @@
         font-size: $base-font-size*1.5;
         font-weight: 700;
     } @else {
-        padding: 8px $padding/2;
+        padding: 8px $padding;
         font-size: $base-font-size;
         font-weight: 400;
     }
@@ -171,7 +171,7 @@
         padding: $padding/2 $padding;
         font-size: $base-font-size*1.5;
     } @else {
-        padding: 8px $padding/2;
+        padding: 8px $padding;
         font-size: $base-font-size;
     }
     font-weight: 700;
