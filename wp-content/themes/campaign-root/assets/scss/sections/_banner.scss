@@ -19,7 +19,6 @@
             left: 15px;
             width: 100%;
             @include translate(0,0);
-            padding: $padding/2;
         }
 
         &.has-background-colour {

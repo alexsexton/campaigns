@@ -33,15 +33,13 @@ jQuery(function ($) {
           var padding = '60'
           var heroContainerHeight = overlayHeight + (padding * 2)
           if (overlayHeight !== null) {
-            $('.banner').height(heroContainerHeight)
+            $('.banner-has-background-colour').height(heroContainerHeight)
           }
         })
       },
       unmatch: function () {
-        // Change aria-hidden state
-        $('#js-navigation-toggle').attr('aria-hidden', 'false')
         // Un Magic
-        $('.banner').height('auto')
+        $('.banner-has-background-colour').height('auto')
       }
     })
   })
