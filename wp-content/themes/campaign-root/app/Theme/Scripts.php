@@ -57,7 +57,7 @@ class Scripts implements \Dxw\Iguana\Registerable
     {
         wp_enqueue_script('admin',      $this->getAssetPath('admin.min.js'), array('jquery'), '', true);
 
-        // wp_enqueue_style('admin',      $this->getAssetPath('admin.min.css'));
+        wp_enqueue_style('admin', $this->getAssetPath('admin.min.css'));
     }
 
     public function wpPrintScripts()

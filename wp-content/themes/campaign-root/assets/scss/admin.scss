@@ -1,0 +1,13 @@
+body .-collapsed, body {
+    .acf-icon {
+        &.-plus, &.-minus, &.-collapse {
+            width: auto;
+            padding: 0 10px;
+            border-radius: 10px;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
