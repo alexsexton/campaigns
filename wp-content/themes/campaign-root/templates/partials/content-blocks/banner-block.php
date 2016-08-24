@@ -4,14 +4,13 @@
 //
 if( get_row_layout() == 'banner') : ?>
 
-  <?php
+    <?php
     $banner_background = get_sub_field('background_colour');
     $banner_text_colour = get_sub_field('text_colour');
-
     if( get_sub_field('background_image')) {
-      $banner_image = get_sub_field('background_image');
+        $banner_image = get_sub_field('background_image');
     };
-  ?>
+    ?>
 
     <?php if ($banner_background && !$banner_image) : ?>
     <div id="banner-p-<?php echo get_row_index(); ?>" class="banner banner-has-background-colour"  style="background-color:<?php the_sub_field('background_colour'); ?>;">
@@ -22,7 +21,7 @@ if( get_row_layout() == 'banner') : ?>
     <?php endif; ?>
 
     <?php if($banner_image) : ?>
-      <img src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>">
+        <img src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>">
     <?php endif; ?>
 
         <?php if ($banner_background && !$banner_image) : ?>
@@ -31,10 +30,15 @@ if( get_row_layout() == 'banner') : ?>
             <div class="overlay">
          <?php endif; ?>
 
-        <h1><?php the_sub_field('title'); ?></h1>
+        <?php if( get_sub_field('title')): ?>
+            <h1><?php the_sub_field('title'); ?></h1>
+        <?php endif; ?>
+
+        <?php if( get_sub_field('caption')): ?>
         <div class="content rich-text">
           <?php the_sub_field('caption'); ?>
         </div>
+        <?php endif; ?>
 
         <?php if( get_sub_field('button_url') && get_sub_field('button_text')) : ?>
         <div class="buttons">

@@ -28,12 +28,12 @@ jQuery(function ($) {
         // Change aria-hidden state
         $('#js-navigation-toggle').attr('aria-hidden', 'true')
         // Magic
-        $(function () {
-          var overlayHeight = $('.has-background-colour').height()
-          var padding = '60'
+        $('.banner-has-background-colour').each(function () {
+          var overlayHeight = $(this).find('.overlay').height()
+          var padding = '30'
           var heroContainerHeight = overlayHeight + (padding * 2)
           if (overlayHeight !== null) {
-            $('.banner-has-background-colour').height(heroContainerHeight)
+            $(this).height(heroContainerHeight)
           }
         })
       },
@@ -76,7 +76,7 @@ jQuery(function ($) {
     })
   })
 
-  // Opens adds external class to outbound links for tracking
+  // Adds external class to outbound links for tracking
   $(function () {
     $('a').not('[href*="mailto:"]').each(function () {
       var isInternalLink = new RegExp('/' + window.location.host + '/')
