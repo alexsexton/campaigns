@@ -29,8 +29,7 @@ jQuery(function ($) {
         $('#js-navigation-toggle').attr('aria-hidden', 'true')
         // Magic
         $('.banner-has-background-colour').each(function () {
-          var overlayHeight = $(this).next().height()
-          console.log(overlayHeight)
+          var overlayHeight = $(this).find('.overlay').height()
           var padding = '30'
           var heroContainerHeight = overlayHeight + (padding * 2)
           if (overlayHeight !== null) {
