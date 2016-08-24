@@ -30,15 +30,15 @@
 }
 
 .button-light {
-    @include button($white, $black, default);
+    @include button($grey-3, $black, default);
 
     &:hover, &:focus, &:active  {
-        @include button($grey-3, $black, default);
+        @include button($grey-2, $black, default);
     }
 }
 
 .button-ghost--light {
-    @include ghost-button($white, $white, default);
+    @include ghost-button($grey-3, $grey-3, default);
 
     &:hover, &:focus, &:active  {
         @include ghost-button($purple, $purple, default);
