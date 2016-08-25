@@ -26,8 +26,8 @@ describe(\Dxw\GdsCampaignRoot\Wizard\Page::class, function () {
             \WP_Mock::wpFunction('add_submenu_page', [
                 'args' => [
                     'tools.php',
-                    'Setting up analytics',
-                    'Setting up analytics',
+                    'Set up analytics',
+                    'Set up analytics',
                     'activate_plugins',
                     'wizard',
                     [$this->page, 'callback'],
