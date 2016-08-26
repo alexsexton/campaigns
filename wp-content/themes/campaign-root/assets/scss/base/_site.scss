@@ -9,7 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.js-enabled .js-hidden {
+.js-enabled .js-hidden, [aria-hidden="true"] {
   display: none;
   visibility: hidden;
 }
@@ -24,7 +24,7 @@ body {
 .group:after,
 .row:before,
 .row:after {
-    content: " ";
+    content: "";
     display: table;
 }
 
