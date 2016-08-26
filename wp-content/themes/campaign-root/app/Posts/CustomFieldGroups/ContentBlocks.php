@@ -77,7 +77,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Title',
                                     'name' => 'title',
                                     'type' => 'text',
-                                    'instructions' => '',
+                                    'instructions' => 'Text will appear over the banner background.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -98,7 +98,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Caption',
                                     'name' => 'caption',
                                     'type' => 'wysiwyg',
-                                    'instructions' => '',
+                                    'instructions' => 'Text will appear over the banner background below the title.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
