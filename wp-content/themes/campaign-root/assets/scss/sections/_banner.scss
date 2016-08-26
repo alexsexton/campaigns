@@ -8,7 +8,7 @@
         top: 50%;
         right: 50%;
         @include translate(0,-50%);
-        margin-right: -#{$site-max-width/2};
+        margin-right: #{($padding/2) - $site-max-width/2};
         @media screen and (max-width: $medium-screen) {
           right: 66%;
         }
@@ -33,7 +33,11 @@
             }
         }
 
-        h1, p {
+        h2 {
+          font-size: $base-font-size*2;
+        }
+
+        h2, p {
             position: relative;
             margin-top: 0;
             line-height: 1.2;
@@ -45,7 +49,7 @@
             border-width: 3px 3px 3px 0;
         }
 
-        h1:after, p:after {
+        h2:after, p:after {
             background: $black;
             content: "";
             position: absolute;
@@ -58,7 +62,7 @@
 
     .buttons {
         padding: $padding/2 0;
-        margin-left: -3px;
+        margin: 3px 0 0 -3px;
     }
 
     .content {
