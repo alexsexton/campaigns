@@ -1,9 +1,14 @@
 .quote-block {
+  padding: $padding/2;
+
     blockquote {
         padding: 0 0 0 $padding;
-        margin: 0 0 $margin 0;
         max-width: 40em;
         border-left: 8px solid $grey-2;
+
+        h2 {
+          margin-top: 0;
+        }
 
         cite:before {
             content: "\2014\00a0";
