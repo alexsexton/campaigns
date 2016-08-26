@@ -32,7 +32,7 @@ describe(\Dxw\GdsCampaignRoot\UserGuide\DashboardBox::class, function () {
             ]);
 
             \WP_Mock::wpFunction('add_meta_box', [
-                'args' => ['user-guide', 'User Guide', [$this->dashboardBox, 'callback'], 'current-screen', 'normal', 'high'],
+                'args' => ['get-started', 'Get Started', [$this->dashboardBox, 'callback'], 'current-screen', 'normal', 'high'],
                 'times' => 1,
             ]);
 
@@ -59,9 +59,8 @@ describe(\Dxw\GdsCampaignRoot\UserGuide\DashboardBox::class, function () {
             $this->dashboardBox->callback();
             $output = ob_get_clean();
 
-            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/user-guide/_">User Guide</a>');
-            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/my-site/wp-admin/post-new.php?post_type=page_" class="button button-primary">Create a page</a>');
-            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/my-site/wp-admin/post-new.php_" class="button button-primary">Create a post</a>');
+            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/user-guide/_">GOV.UK Campaigns Platform user guide</a>');
+            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/my-site/wp-admin/post-new.php?post_type=page_" class="button button-primary">Build a homepage</a>');
         });
     });
 
