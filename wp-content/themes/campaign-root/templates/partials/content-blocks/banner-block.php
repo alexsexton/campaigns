@@ -31,7 +31,7 @@ if( get_row_layout() == 'banner') : ?>
          <?php endif; ?>
 
         <?php if( get_sub_field('title')): ?>
-            <h1><?php the_sub_field('title'); ?></h1>
+            <h2><?php the_sub_field('title'); ?></h2>
         <?php endif; ?>
 
         <?php if( get_sub_field('caption')): ?>
