@@ -1,7 +1,7 @@
 .call-to-action-banner {
+    padding: $padding/2 0;
     background-color: $brand-secondary;
     color: $white;
-    padding: $padding 0;
 
     h2 {
         margin-top: 0;
@@ -9,5 +9,5 @@
 }
 
 .call-to-action-button {
-    padding: $padding 0;
+    padding: $padding/2 0 22px;
 }

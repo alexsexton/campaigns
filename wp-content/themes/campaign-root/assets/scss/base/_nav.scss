@@ -19,6 +19,7 @@ $sub-nav-background-hover: $black;
   }
 
   .navigation {
+    font-weight: 700;
 
     .nav-menu {
       text-align: left;
@@ -34,7 +35,7 @@ $sub-nav-background-hover: $black;
 
     .nav-item > a {
       display: inline-block;
-      padding: 8px $padding/2;
+      padding: 10px $padding/2;
       color: $nav-link;
     }
 

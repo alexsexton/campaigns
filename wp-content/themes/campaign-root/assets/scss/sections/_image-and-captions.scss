@@ -1,5 +1,5 @@
 .left-image-caption {
-    padding: $padding 0;
+    padding: $padding/2 0;
 
     figure {
         @include row(true);
@@ -37,7 +37,7 @@
 }
 
 .right-image-caption {
-    padding: $padding 0;
+    padding: $padding/2 0;
 
     figure {
         @include row(true);
@@ -75,7 +75,8 @@
 }
 
 .full-width-image {
-    padding: $padding 0;
+    padding: $padding/2 0;
+    
     img {
         max-width: 100%;
         display: block;
