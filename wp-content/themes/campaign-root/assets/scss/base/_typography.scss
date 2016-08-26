@@ -15,38 +15,24 @@ $small-screen-font-size: 16px;
 
 // Headings
 h1 {
-  font-size: $base-font-size*3;
-  font-weight: 700;
-  line-height: $header-line-height;
-}
-
-h2 {
-  font-size: $base-font-size*2.5;
-  font-weight: 700;
-  line-height: $header-line-height;
-}
-
-h3 {
   font-size: $base-font-size*2;
   font-weight: 700;
   line-height: $header-line-height;
 }
 
-h4 {
+h2 {
   font-size: $base-font-size*1.5;
-  text-transform: uppercase;
   font-weight: 700;
   line-height: $header-line-height;
 }
 
-h5 {
-  font-size: $base-font-size;
-  text-transform: uppercase;
+h3 {
+  font-size: $base-font-size*1.25;
   font-weight: 700;
   line-height: $header-line-height;
 }
 
-h6 {
+h4, h5, h6 {
   font-size: $base-font-size;
   font-weight: 700;
   line-height: $header-line-height;
@@ -59,7 +45,7 @@ p {
 
 @media screen and (max-width: $small-screen) {
     h1, h2, h3 {
-        font-size: $base-font-size*1.5;
+        font-size: $base-font-size*1.25;
     }
 }
 
@@ -145,6 +131,8 @@ p {
 
   hr {
     border: 0;
+    border-top: 4px solid $grey-2;
+    margin-bottom: $margin;
   }
 
   // Article Links
