@@ -8,6 +8,7 @@ require('./common')
 var enquire = require('../../bower_components/enquire/dist/enquire.js')
 require('../../bower_components/jquery-accessibleMegaMenu/js/jquery-accessibleMegaMenu.js')
 require('../../bower_components/fitvids/jquery.fitvids.js')
+require('../../bower_components/jquery-backstretch/jquery.backstretch.min.js')
 
 jQuery(function ($) {
   // Enquire functions

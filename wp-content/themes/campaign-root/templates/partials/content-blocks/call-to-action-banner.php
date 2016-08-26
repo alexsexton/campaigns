@@ -9,13 +9,24 @@ if( get_sub_field('text_align')) {
 }
 ?>
 
-<?php if( get_sub_field('background_colour') && get_sub_field('text_colour')) : ?>
+<?php if( get_sub_field('background_image') && get_sub_field('text_colour')) : ?>
+
+<div id="call-to-action-banner-p-<?php echo get_row_index(); ?>" class="call-to-action-banner has-background-image <?php echo $text_align; ?>" style="color:<?php the_sub_field('text_colour'); ?>">
+
+<?php elseif( get_sub_field('background_colour') && get_sub_field('text_colour')) : ?>
+
 <div id="call-to-action-banner-p-<?php echo get_row_index(); ?>" class="call-to-action-banner <?php echo $text_align; ?>" style="color:<?php the_sub_field('text_colour'); ?>;background-color:<?php the_sub_field('background_colour'); ?>;">
+
 <?php elseif( get_sub_field('background_colour'))  : ?>
+
 <div  id="call-to-action-banner-p-<?php echo get_row_index(); ?>" class="call-to-action-banner <?php echo $text_align; ?>" style="background-color:<?php the_sub_field('background_colour'); ?>;">
+
 <?php else : ?>
+
 <div  id="call-to-action-banner-p-<?php echo get_row_index(); ?>" class="call-to-action-banner <?php echo $text_align; ?>">
+
 <?php endif; ?>
+
     <div class="row">
         <div class="call-to-action">
 
@@ -26,5 +37,18 @@ if( get_sub_field('text_align')) {
             </div>
         </div>
     </div>
+
 </div>
+
+    <?php if( get_sub_field('background_image')) : ?>
+    <?php $banner_background_image = get_sub_field('background_image'); ?>
+    <script>
+    jQuery(function ($) {
+        $(function () {
+          $('.call-to-action-banner').backstretch("<?php echo $banner_background_image['url']; ?>")
+        })
+    })
+    </script>
+    <?php endif; ?>
+
 <?php endif; ?>

@@ -838,7 +838,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Background Image',
                                     'name' => 'background_image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. The image will stretch to fill the available area, so should be in landscape format.',
                                     'required' => '',
                                     'conditional_logic' => array(
                                         array(
