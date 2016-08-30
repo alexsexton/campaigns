@@ -31,7 +31,7 @@ jQuery(function ($) {
         // Magic
         $('.banner-has-background-colour').each(function () {
           var overlayHeight = $(this).find('.overlay').height()
-          var padding = '30'
+          var padding = '38' // should be the same as $padding in scss/settings/_global.scss
           var heroContainerHeight = overlayHeight + (padding * 2)
           if (overlayHeight !== null) {
             $(this).height(heroContainerHeight)
