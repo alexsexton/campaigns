@@ -6,7 +6,7 @@
   &:visited {
     @include button($button, $button-text, default);
   }
-  
+
   &:hover {
     @include button($button-hover, $button-text-hover, default);
   }
@@ -58,13 +58,44 @@
 }
 
 .button-big {
-  padding: $padding/2 $padding;
-  font-size: $base-font-size*1.5;
-  font-weight: 700;
+  @include button($button, $button-text, big);
 
-  &:hover, &:focus, &:active  {
-    padding: $padding/2 $padding;
-    font-size: $base-font-size*1.5;
-    font-weight: 700;
+  &:visited {
+    @include button($button, $button-text, big);
+  }
+
+  &:hover {
+    @include button($button-hover, $button-text-hover, big);
+  }
+
+  &:active, &:focus {
+    @include button($button-hover, $button-text-hover, big);
+    outline: 3px solid $highlight;
+    box-shadow: 0 0 0 #000;
+    top: 3px;
+  }
+}
+
+.button-big.button-dark {
+  @include button($black, $white, big);
+
+  &:visited {
+    @include button($black, $white, big);
+  }
+
+  &:hover, &:focus, &:active {
+    @include button($grey-1, $white, big);
+  }
+}
+
+.button-big.button-light {
+  @include button($grey-3, $black, big);
+
+  &:visited {
+    @include button($grey-3, $black, big);
+  }
+
+  &:hover, &:focus, &:active {
+    @include button($grey-2, $black, big);
   }
 }
