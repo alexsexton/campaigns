@@ -5,7 +5,7 @@
 if( get_row_layout() == 'heading') : ?>
 
   <?php if( get_sub_field('title')) : ?>
-      <?php $align = get_sub_field('text_align') ?>
+      <?php $align = get_sub_field('heading_text_align') ?>
         <?php if( get_sub_field('heading_background_colour')) : ?>
             <header id="heading-p-<?php echo get_row_index(); ?>" class="heading <?php echo $align; ?>" style="background-color:<?php the_sub_field('heading_background_colour'); ?>;">
         <?php else : ?>

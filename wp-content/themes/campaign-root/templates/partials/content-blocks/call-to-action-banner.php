@@ -9,7 +9,7 @@ if( get_sub_field('cta_banner_text_align')) {
 }
 ?>
 
-<?php if( get_sub_field('background_image') && get_sub_field('cta_banner_text_colour')) : ?>
+<?php if( get_sub_field('cta_banner_background_image') && get_sub_field('cta_banner_text_colour')) : ?>
 
 <div id="call-to-action-banner-p-<?php echo get_row_index(); ?>" class="call-to-action-banner has-background-image <?php echo $text_align; ?>" style="color:<?php the_sub_field('cta_banner_text_colour'); ?>">
 
@@ -40,8 +40,8 @@ if( get_sub_field('cta_banner_text_align')) {
 
 </div>
 
-    <?php if( get_sub_field('background_image')) : ?>
-    <?php $banner_background_image = get_sub_field('background_image'); ?>
+    <?php if( get_sub_field('cta_banner_background_image')) : ?>
+    <?php $banner_background_image = get_sub_field('cta_banner_background_image'); ?>
     <script>
     jQuery(function ($) {
         $(function () {

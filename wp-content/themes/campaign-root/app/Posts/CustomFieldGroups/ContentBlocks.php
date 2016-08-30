@@ -259,39 +259,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'toggle' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_8bcfa179764bb',
-                                    'label' => 'Background Image',
-                                    'name' => 'background_image',
-                                    'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size.',
-                                    'required' => '',
-                                    'conditional_logic' => array(
-                                        array(
-                                            array(
-                                                'field' => 'field_577a39f69d299',
-                                                'operator' => '==',
-                                                'value' => 'yes',
-                                            ),
-                                        ),
-                                    ),
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'return_format' => 'array',
-                                    'preview_size' => 'full',
-                                    'library' => 'all',
-                                    'min_width' => '',
-                                    'min_height' => '',
-                                    'min_size' => '512 KB',
-                                    'max_width' => '',
-                                    'max_height' => '',
-                                    'max_size' => '',
-                                    'mime_types' => 'jpg,png',
-                                ),
-                                array(
-                                    'key' => 'field_e801e9b25ecee',
+                                    'key' => 'field_9801e9b25ecee',
                                     'label' => 'Background Colour',
                                     'name' => 'heading_background_colour',
                                     'type' => 'color_picker',
@@ -314,9 +282,9 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'default_value' => '#ffffff',
                                 ),
                                 array(
-                                    'key' => 'field_59d95a4abf97a',
+                                    'key' => 'field_99d95a4abf97a',
                                     'label' => 'Text Align',
-                                    'name' => 'text_align',
+                                    'name' => 'heading_text_align',
                                     'type' => 'select',
                                     'instructions' => '',
                                     'required' => 0,
@@ -351,7 +319,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'readonly' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_7461428f3a030',
+                                    'key' => 'field_9461428f3a030',
                                     'label' => 'Text Colour',
                                     'name' => 'heading_text_colour',
                                     'type' => 'color_picker',
@@ -406,7 +374,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'disabled' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_577a39f69d499',
+                                    'key' => 'field_597a39f69d499',
                                     'label' => 'Customise Background',
                                     'name' => 'customise_background',
                                     'type' => 'checkbox',
@@ -427,7 +395,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'toggle' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_527b3a371d29d',
+                                    'key' => 'field_597b3a371d29d',
                                     'label' => 'Background Colour',
                                     'name' => 'video_background_colour',
                                     'type' => 'color_picker',
@@ -436,7 +404,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'conditional_logic' => array(
                                         array(
                                             array(
-                                                'field' => 'field_577a39f69d499',
+                                                'field' => 'field_597a39f69d499',
                                                 'operator' => '==',
                                                 'value' => 'yes',
                                             ),
@@ -528,7 +496,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'toggle' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_577a3a379d31a',
+                                    'key' => 'field_597a3a379d31a',
                                     'label' => 'Background Colour',
                                     'name' => 'text_only_background_colour',
                                     'type' => 'color_picker',
@@ -834,9 +802,9 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'toggle' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_f219788a0f20a',
+                                    'key' => 'field_f119788a0f20a',
                                     'label' => 'Background Image',
-                                    'name' => 'background_image',
+                                    'name' => 'cta_banner_background_image',
                                     'type' => 'image',
                                     'instructions' => 'You can add images up to 512 KB in file size. The image will stretch to fill the available area, so should be in landscape format.',
                                     'required' => '',
@@ -866,7 +834,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'mime_types' => 'jpg,png'
                                 ),
                                 array(
-                                    'key' => 'field_bfd182e264b5e',
+                                    'key' => 'field_f1d182e264b5e',
                                     'label' => 'Background Colour',
                                     'name' => 'cta_banner_background_colour',
                                     'type' => 'color_picker',
@@ -889,7 +857,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'default_value' => '#005ea5',
                                 ),
                                 array(
-                                    'key' => 'field_b3aac07896e62',
+                                    'key' => 'field_f1aac07896e62',
                                     'label' => 'Text Align',
                                     'name' => 'cta_banner_text_align',
                                     'type' => 'select',
@@ -926,7 +894,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'readonly' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_33cd8ea8dd160',
+                                    'key' => 'field_f1cd8ea8dd160',
                                     'label' => 'Text Colour',
                                     'name' => 'cta_banner_text_colour',
                                     'type' => 'color_picker',
