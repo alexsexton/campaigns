@@ -293,7 +293,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_e801e9b25ecee',
                                     'label' => 'Background Colour',
-                                    'name' => 'background_colour',
+                                    'name' => 'heading_background_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
@@ -353,7 +353,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_7461428f3a030',
                                     'label' => 'Text Colour',
-                                    'name' => 'text_colour',
+                                    'name' => 'heading_text_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
@@ -429,7 +429,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_527b3a371d29d',
                                     'label' => 'Background Colour',
-                                    'name' => 'background_colour',
+                                    'name' => 'video_background_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
@@ -481,7 +481,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_5741697a2fab4',
                                     'label' => 'Text Colour',
-                                    'name' => 'text_colour',
+                                    'name' => 'text_only_text_colour',
                                     'type' => 'select',
                                     'instructions' => '',
                                     'required' => 0,
@@ -530,7 +530,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_577a3a379d31a',
                                     'label' => 'Background Colour',
-                                    'name' => 'background_colour',
+                                    'name' => 'text_only_background_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
@@ -868,7 +868,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_bfd182e264b5e',
                                     'label' => 'Background Colour',
-                                    'name' => 'background_colour',
+                                    'name' => 'cta_banner_background_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
@@ -891,7 +891,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_b3aac07896e62',
                                     'label' => 'Text Align',
-                                    'name' => 'text_align',
+                                    'name' => 'cta_banner_text_align',
                                     'type' => 'select',
                                     'instructions' => '',
                                     'required' => 0,
@@ -928,7 +928,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_33cd8ea8dd160',
                                     'label' => 'Text Colour',
-                                    'name' => 'text_colour',
+                                    'name' => 'cta_banner_text_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
