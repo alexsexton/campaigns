@@ -1,21 +1,20 @@
 .archive {
+  .grid-row {
+    @include row(true);
+  }
 
-    .grid-row {
-        @include row(true);
+  .archive-posts {
+    @include col(3/4);
+    @media screen and (max-width: $small-screen) {
+      @include col(1);
     }
+  }
 
-    .archive-posts {
-        @include col(3/4);
-        @media screen and (max-width: $small-screen) {
-            @include col(1);
-        }
-    }
+  .article-list-item h2 {
+    margin-bottom: 0;
+  }
 
-    .article-list-item h2 {
-        margin-bottom: 0;
-    }
-
-    .article-list-item .byline a {
-        text-transform: capitalize;
-    }
+  .article-list-item .byline a {
+    text-transform: capitalize;
+  }
 }

@@ -1,25 +1,25 @@
 .statistic {
-    padding: $padding/2 0;
+  padding: $padding/2 0;
 
-    .data {
-        border-bottom: 8px solid $grey-2;
+  .data {
+    border-bottom: 8px solid $grey-2;
+  }
+  
+  h2 {
+    font-size: 114px;
+    margin: 0;
+    line-height: 0.8;
+    @media screen and (max-width: $small-screen) {
+      font-size: 38px;
     }
+  }
 
-    h2 {
-        font-size: 114px;
-        margin: 0;
-        line-height: 0.8;
-        @media screen and (max-width: $small-screen) {
-            font-size: 38px;
-        }
+  p {
+    font-weight: 700;
+    font-size: #{$base-font-size*2};
+    margin: 0;
+    @media screen and (max-width: $small-screen) {
+      font-size: $base-font-size;
     }
-
-    p {
-        font-weight: 700;
-        font-size: #{$base-font-size*2};
-        margin: 0;
-        @media screen and (max-width: $small-screen) {
-            font-size: $base-font-size;
-        }
-    }
+  }
 }

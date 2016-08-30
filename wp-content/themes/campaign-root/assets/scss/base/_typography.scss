@@ -148,7 +148,7 @@ p {
   }
 
   a:visited {
-    color: $link-colour;
+    color: $link-visited-colour;
   }
 
   a:active {
@@ -167,4 +167,6 @@ p {
       margin-left: 4px;
   }
 
+  // Importing tables to here incase they are created in the rich text editor
+  @import "../common/tables";
 }

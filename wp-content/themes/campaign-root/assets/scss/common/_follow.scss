@@ -1,50 +1,50 @@
 .follow-us {
-    @include col(1/4);
+  @include col(1/4);
+  padding: 0;
+  float: right;
+
+  @media screen and (max-width: $small-screen) {
+    @include col(1/1);
     padding: 0;
+  }
+
+  ul {
     float: right;
+    @media screen and (max-width: $small-screen) {
+      float: left;
+    }
+  }
+
+  li {
+    margin: 0 0 0 #{$margin/2};
+    display: block;
+    float: left;
 
     @media screen and (max-width: $small-screen) {
-        @include col(1/1);
-        padding: 0;
+      margin: 0 #{$margin/2} 0 0;
+    }
+  }
+
+  a {
+    width: 24px;
+    height: 24px;
+    @include transition (fill, .2s, ease-in-out);
+    display: block;
+
+    .inline-icon {
+      width: 24px;
+      height: 24px;
     }
 
-    ul {
-        float: right;
-        @media screen and (max-width: $small-screen) {
-            float: left;
-        }
+    span {
+      @include hide;
     }
+  }
 
-    li {
-        margin: 0 0 0 #{$margin/2};
-        display: block;
-        float: left;
-
-        @media screen and (max-width: $small-screen) {
-            margin: 0 #{$margin/2} 0 0;
-        }
+  a:hover {
+    .inline-icon {
+      opacity: 0.5;
     }
-
-    a {
-        width: 24px;
-        height: 24px;
-        @include transition (fill, .2s, ease-in-out);
-        display: block;
-
-        .inline-icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        span {
-            @include hide;
-        }
-    }
-
-    a:hover {
-        .inline-icon {
-            opacity: 0.5;
-        }
-    }
+  }
 
 }

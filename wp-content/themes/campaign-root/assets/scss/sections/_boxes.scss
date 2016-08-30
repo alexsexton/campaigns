@@ -1,42 +1,42 @@
 .boxes-block {
 
-    .boxes {
-        @include row(true);
+  .boxes {
+    @include row(true);
+  }
+
+  .box {
+    @include col(1/3);
+    text-align: center;
+    margin: $margin 0;
+
+    img {
+      width: 100%;
+      display: block;
     }
 
-    .box {
-        @include col(1/3);
-        text-align: center;
-        margin: $margin 0;
+    &.no-image {
+      .box-inner {
+        padding: $padding/2;
+        border-top: 8px solid $grey-2;
+      }
 
-        img {
-          width: 100%;
-          display: block;
-        }
-
-        &.no-image {
-          .box-inner {
-            padding: $padding/2;
-            border-top: 8px solid $grey-2;
-          }
-
-          img {
-            width: 100%;
-            display: block;
-          }
-        }
-
-        @media screen and (max-width: $small-screen) {
-            @include col(1/1);
-        }
-
-        h3 {
-            font-size: $base-font-size*1.5;
-            margin: 0.5rem 0;
-        }
-        p {
-          margin: 0 0 0.5rem 0;
-        }
-
+      img {
+        width: 100%;
+        display: block;
+      }
     }
+
+    @media screen and (max-width: $small-screen) {
+      @include col(1/1);
+    }
+
+    h3 {
+      font-size: $base-font-size*1.5;
+      margin: 0.5rem 0;
+    }
+    p {
+      margin: 0 0 0.5rem 0;
+    }
+
+  }
 }

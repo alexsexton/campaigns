@@ -97,13 +97,7 @@
 
 
 // IE8 or less
-.lt-ie9 {
-
-  .logo, .header-logo {
-    a, img {
-      border: none;
-    }
-  }
+.lt-ie19 {
 
   .footer-navigation {
     @include col(2/4);
@@ -118,6 +112,8 @@
   }
 
 }
+
+
 
 // SVG Fallback to text
 .no-svg {
