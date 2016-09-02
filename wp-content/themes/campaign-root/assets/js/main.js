@@ -26,6 +26,10 @@ jQuery(function ($) {
           focusClass: 'focus',
           openClass: 'open'
         })
+        // hack so that the megamenu doesn't show flash of css animation after the page loads.
+        setTimeout(function () {
+          $('body').removeClass('init')
+        }, 500)
         // Change aria-hidden state
         $('#js-navigation-toggle').attr('aria-hidden', 'true')
         // Magic
