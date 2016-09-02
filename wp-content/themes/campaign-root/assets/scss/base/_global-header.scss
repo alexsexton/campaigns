@@ -53,10 +53,12 @@
   }
 
   .header-logo {
-    width: 33.3333%;
+    max-width: 208px;
     float: left;
 
     img {
+      width: 100%;
+      height: auto;
       border: none;
       display: block;
     }
@@ -70,7 +72,4 @@
     position: relative;
   }
 
-  #global-header .header-wrapper .header-global .header-logo {
-    width: 50%;
-  }
 }
