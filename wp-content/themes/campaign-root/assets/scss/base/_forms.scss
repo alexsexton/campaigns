@@ -1,4 +1,4 @@
-// Resets / Global form styles
+// Form input styles
 
 input[type=text],
 input[type=search],
@@ -46,82 +46,8 @@ textarea {
   input[type=phone],
   input[type=password],
   input[type=date],
+  input[type=url],
   textarea {
     width:100%;
   }
-}
-
-// Labels
-
-.data-collection {
-  padding: $padding/2;
-  margin: 0 0 $margin;
-  border: 1px solid scale-color($input-border, $lightness: 75%);
-}
-
-.form-group label, .form-group legend {
-  display: block;
-  padding: 0 0 $padding/4 0;
-  font-size: $base-font-size;
-}
-
-.form-group span {
-  font-style: italic;
-  display: block;
-  color: scale-color($base-font-colour, $lightness: 50%);
-  font-size: ($base-font-size)-4;
-}
-
-.form-group, .form-buttons {
-  margin: 0 0 $margin 0;
-}
-
-.form-group .required {
-  font-size: $base-font-size;
-}
-
-.form-error {
-  padding: $padding/2;
-  background: scale-color($error, $lightness: 50%);
-}
-
-.form-error input[type=text] {
-  border-color: $error;
-}
-
-.form-error span {
-  font-weight: bold;
-}
-
-
-label.radio-group, label.checkbox-group {
-  position: relative;
-  background: scale-color($input-border, $lightness: 75%);
-  border: 2px solid scale-color($input-border, $lightness: 75%);
-  padding: $padding/2 $padding $padding/2 $padding;
-  margin: 0 $margin $margin 0;
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-}
-
-.block-labels {
-
-  label.radio-group, label.checkbox-group {
-    float: left;
-    display: block;
-    clear:left;
-  }
-
-}
-
-label.radio-group:hover, label.radio-group.selected,
-label.checkbox-group:hover, label.checkbox-group.selected {
-  border:2px solid scale-color($input-border-focus, $lightness: 0%);
-}
-
-label.radio-group input[type=radio],
-label.checkbox-group input[type=checkbox] {
-  position: absolute;
-  top: 20px;
-  left: 15px;
 }
