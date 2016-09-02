@@ -30,7 +30,6 @@ module.exports = function (grunt) {
       production: {
         files: {
           'static/main.min.css': 'assets/scss/main.scss',
-          'static/govuk-template.min.css': 'assets/govuk/govuk-template.css',
           'static/fonts.min.css': 'assets/govuk/fonts.css'
         }
       }
