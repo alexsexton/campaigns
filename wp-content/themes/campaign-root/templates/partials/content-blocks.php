@@ -14,8 +14,6 @@
 
         <?php get_template_part('partials/content-blocks/call-to-action-banner'); ?>
 
-        <?php get_template_part('partials/content-blocks/call-to-action-button'); ?>
-
         <?php get_template_part('partials/content-blocks/left-aligned-image-block'); ?>
 
         <?php get_template_part('partials/content-blocks/right-aligned-image-block'); ?>
