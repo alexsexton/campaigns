@@ -15,7 +15,7 @@ if( get_row_layout() == 'heading') : ?>
             <?php if( get_sub_field('heading_text_colour')) : ?>
             <h2 style="color:<?php the_sub_field('heading_text_colour'); ?>;"><?php the_sub_field('title'); ?></h2>
             <?php else : ?>
-            <h2 ><?php the_sub_field('title'); ?></h2>
+            <h2><?php the_sub_field('title'); ?></h2>
             <?php endif; ?>
         </div>
     </header>
