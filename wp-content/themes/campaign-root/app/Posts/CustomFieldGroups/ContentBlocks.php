@@ -23,7 +23,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         'class' => '',
                         'id' => ''
                     ),
-                    'button_label' => 'Add Section',
+                    'button_label' => 'Add New Section',
                     'min' => '',
                     'max' => '',
                     'layouts' => array(
@@ -38,8 +38,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'key' => 'field_571464645edf3',
                                     'label' => 'Background Image',
                                     'name' => 'background_image',
-                                    'type' => 'file',
-                                    'instructions' => 'Add a full width image, the image should be no bigger than 1600 PX by 700 PX',
+                                    'type' => 'image',
+                                    'instructions' => 'Add a full width image, the image should have an aspect ratio of 2.35:1 and be no larger than 1600 PX in width.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -49,7 +49,8 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     ),
                                     'return_format' => 'array',
                                     'library' => 'all',
-                                    'min_width' => '1200 PX',
+                                    'preview_size' => 'large',
+                                    'min_width' => '',
                                     'min_height' => '',
                                     'min_size' => '',
                                     'max_width' => '1600 PX',
@@ -78,7 +79,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'name' => 'title',
                                     'type' => 'text',
                                     'instructions' => 'Text will appear over the banner background.',
-                                    'required' => 0,
+                                    'required' => 1,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
                                         'width' => '',
@@ -99,7 +100,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'name' => 'caption',
                                     'type' => 'wysiwyg',
                                     'instructions' => 'Text will appear over the banner background below the title.',
-                                    'required' => 0,
+                                    'required' => 1,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
                                         'width' => '',
@@ -112,13 +113,65 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'media_upload' => 0,
                                 ),
                                 array(
+                                    'key' => 'field_595503ccb2790',
+                                    'label' => 'Accessibility',
+                                    'name' => 'accessibility',
+                                    'type' => 'radio',
+                                    'instructions' => 'The title and caption are required because...',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'show' => 'Show title and caption',
+                                        'visually-hidden' => 'Hide title and caption',
+                                    ),
+                                    'default_value' => array(
+                                        'show' => 'Show title and caption',
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
+                                    'key' => 'field_599503ccb2790',
+                                    'label' => 'Customise',
+                                    'name' => 'customise',
+                                    'type' => 'checkbox',
+                                    'instructions' => '',
+                                    'required' => 0,
+                                    'conditional_logic' => 0,
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'choices' => array(
+                                        'add a button' => 'Add a button',
+                                    ),
+                                    'default_value' => array(
+                                    ),
+                                    'layout' => 'vertical',
+                                    'toggle' => 0,
+                                ),
+                                array(
                                     'key' => 'field_57724adb499233',
                                     'label' => 'Button Text',
                                     'name' => 'button_text',
                                     'type' => 'text',
                                     'instructions' => '',
                                     'required' => '',
-                                    'conditional_logic' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_599503ccb2790',
+                                                'operator' => '==',
+                                                'value' => 'add a button',
+                                            ),
+                                        ),
+                                    ),
                                     'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
@@ -139,7 +192,15 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'type' => 'url',
                                     'instructions' => 'URL\'s should be written as the full domain. E.G. "http://www.example.com" or "https://www.example.com"',
                                     'required' => '',
-                                    'conditional_logic' => 0,
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_599503ccb2790',
+                                                'operator' => '==',
+                                                'value' => 'add a button',
+                                            ),
+                                        ),
+                                    ),
                                     'wrapper' => array(
                                         'width' => '',
                                         'class' => '',
@@ -150,7 +211,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 ),
                                 array(
                                     'key' => 'field_577503ccb2790',
-                                    'label' => 'GA Event tracking',
+                                    'label' => 'Google analytics event tracking',
                                     'name' => 'ga_event_tracking',
                                     'type' => 'checkbox',
                                     'instructions' => '',
@@ -534,7 +595,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add a caption or some text for the image.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add or edit the caption.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -613,7 +674,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add a caption or some text for the image.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add or edit the caption.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -692,7 +753,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Image',
                                     'name' => 'image',
                                     'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add a caption or some text for the image.',
+                                    'instructions' => 'You can add images up to 512 KB in file size. Click on the pencil icon to add or edit the caption.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -718,17 +779,17 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                         // Call to Action Banner
                         array(
                             'key' => '57724a89fb454',
-                            'name' => 'call_to_action_banner',
-                            'label' => 'Call to Action Banner',
+                            'name' => 'call_to_action',
+                            'label' => 'Call to Action',
                             'display' => 'row',
                             'sub_fields' => array(
                                 array(
                                     'key' => 'field_57724a97fb428',
-                                    'label' => 'Title',
-                                    'name' => 'title',
-                                    'type' => 'text',
+                                    'label' => 'Text',
+                                    'name' => 'text',
+                                    'type' => 'textarea',
                                     'instructions' => '',
-                                    'required' => '1',
+                                    'required' => '',
                                     'conditional_logic' => '',
                                     'wrapper' => array(
                                         'width' => '',
@@ -737,9 +798,9 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     ),
                                     'default_value' => '',
                                     'placeholder' => '',
-                                    'prepend' => '',
-                                    'append' => '',
                                     'maxlength' => '',
+                                    'rows' => '4',
+                                    'new_lines' => '',
                                     'readonly' => 0,
                                     'disabled' => 0,
                                 ),
@@ -802,64 +863,9 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'toggle' => 0,
                                 ),
                                 array(
-                                    'key' => 'field_f119788a0f20a',
-                                    'label' => 'Background Image',
-                                    'name' => 'cta_banner_background_image',
-                                    'type' => 'image',
-                                    'instructions' => 'You can add images up to 512 KB in file size. The image will stretch to fill the available area, so should be in landscape format.',
-                                    'required' => '',
-                                    'conditional_logic' => array(
-                                        array(
-                                            array(
-                                                'field' => 'field_577a39f69a296',
-                                                'operator' => '==',
-                                                'value' => 'yes',
-                                            ),
-                                        ),
-                                    ),
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'return_format' => 'array',
-                                    'preview_size' => 'full',
-                                    'library' => 'all',
-                                    'min_width' => '',
-                                    'min_height' => '',
-                                    'min_size' => '',
-                                    'max_width' => '',
-                                    'max_height' => '',
-                                    'max_size' => '512 KB',
-                                    'mime_types' => 'jpg,png'
-                                ),
-                                array(
-                                    'key' => 'field_f1d182e264b5e',
-                                    'label' => 'Background Colour',
-                                    'name' => 'cta_banner_background_colour',
-                                    'type' => 'color_picker',
-                                    'instructions' => '',
-                                    'required' => '',
-                                    'conditional_logic' => array(
-                                        array(
-                                            array(
-                                                'field' => 'field_577a39f69a296',
-                                                'operator' => '==',
-                                                'value' => 'yes',
-                                            ),
-                                        ),
-                                    ),
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'default_value' => '#005ea5',
-                                ),
-                                array(
                                     'key' => 'field_f1aac07896e62',
-                                    'label' => 'Text Align',
-                                    'name' => 'cta_banner_text_align',
+                                    'label' => 'Align text and button',
+                                    'name' => 'cta_text_align',
                                     'type' => 'select',
                                     'instructions' => '',
                                     'required' => 0,
@@ -896,7 +902,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_f1cd8ea8dd160',
                                     'label' => 'Text Colour',
-                                    'name' => 'cta_banner_text_colour',
+                                    'name' => 'cta_text_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
@@ -917,8 +923,63 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'default_value' => '#ffffff',
                                 ),
                                 array(
+                                    'key' => 'field_f1d182e264b5e',
+                                    'label' => 'Background Colour',
+                                    'name' => 'cta_background_colour',
+                                    'type' => 'color_picker',
+                                    'instructions' => '',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69a296',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'default_value' => '#005ea5',
+                                ),
+                                array(
+                                    'key' => 'field_f119788a0f20a',
+                                    'label' => 'Background Image',
+                                    'name' => 'cta_background_image',
+                                    'type' => 'image',
+                                    'instructions' => 'You can add images up to 512 KB in file size. The image will stretch to fill the available area, so should be in landscape format.',
+                                    'required' => '',
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_577a39f69a296',
+                                                'operator' => '==',
+                                                'value' => 'yes',
+                                            ),
+                                        ),
+                                    ),
+                                    'wrapper' => array(
+                                        'width' => '',
+                                        'class' => '',
+                                        'id' => '',
+                                    ),
+                                    'return_format' => 'array',
+                                    'preview_size' => 'full',
+                                    'library' => 'all',
+                                    'min_width' => '',
+                                    'min_height' => '',
+                                    'min_size' => '',
+                                    'max_width' => '',
+                                    'max_height' => '',
+                                    'max_size' => '512 KB',
+                                    'mime_types' => 'jpg,png'
+                                ),
+                                array(
                                     'key' => 'field_577503aab2790',
-                                    'label' => 'GA Event tracking',
+                                    'label' => 'Google analytics event tracking',
                                     'name' => 'ga_event_tracking',
                                     'type' => 'checkbox',
                                     'instructions' => '',
@@ -948,111 +1009,6 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         array(
                                             array(
                                                 'field' => 'field_577503aab2790',
-                                                'operator' => '==',
-                                                'value' => 'event_tracking',
-                                            ),
-                                        ),
-                                    ),
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'choices' => array(
-                                        'External Link Clicked' => 'External Link Clicked',
-                                        'Button Clicked' => 'Button Clicked',
-                                        'Header Clicked' => 'Header Clicked',
-                                    ),
-                                    'default_value' => array(
-                                    ),
-                                    'allow_null' => 0,
-                                    'multiple' => 0,
-                                    'ui' => 0,
-                                    'ajax' => 0,
-                                    'placeholder' => '',
-                                    'disabled' => 0,
-                                    'readonly' => 0,
-                                ),
-                            ),
-                            'min' => '',
-                            'max' => '',
-                        ),
-                        // Call to Action Button
-                        array(
-                            'key' => '57724a89fb427',
-                            'name' => 'call_to_action_button',
-                            'label' => 'Call to Action Button',
-                            'display' => 'row',
-                            'sub_fields' => array(
-                                array(
-                                    'key' => 'field_57724adb49913',
-                                    'label' => 'Button Text',
-                                    'name' => 'button_text',
-                                    'type' => 'text',
-                                    'instructions' => '',
-                                    'required' => '1',
-                                    'conditional_logic' => '',
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'default_value' => '',
-                                    'placeholder' => '',
-                                    'prepend' => '',
-                                    'append' => '',
-                                    'maxlength' => '',
-                                    'readonly' => 0,
-                                    'disabled' => 0,
-                                ),
-                                array(
-                                    'key' => 'field_57524a9ffb449',
-                                    'label' => 'Button URL',
-                                    'name' => 'button_url',
-                                    'type' => 'url',
-                                    'instructions' => 'URL\'s should be written as the full domain including http or https E.G. "http://www.example.com" or "https://www.example.com"',
-                                    'required' => 1,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'default_value' => '',
-                                    'placeholder' => '',
-                                ),
-                                array(
-                                    'key' => 'field_578703aab2790',
-                                    'label' => 'GA Event tracking',
-                                    'name' => 'ga_event_tracking',
-                                    'type' => 'checkbox',
-                                    'instructions' => '',
-                                    'required' => 0,
-                                    'conditional_logic' => 0,
-                                    'wrapper' => array(
-                                        'width' => '',
-                                        'class' => '',
-                                        'id' => '',
-                                    ),
-                                    'choices' => array(
-                                        'event_tracking' => 'Add Event Tracking',
-                                    ),
-                                    'default_value' => array(
-                                    ),
-                                    'layout' => 'vertical',
-                                    'toggle' => 0,
-                                ),
-                                array(
-                                    'key' => 'field_598501e141a44',
-                                    'label' => 'Event Category',
-                                    'name' => 'event_category',
-                                    'type' => 'select',
-                                    'instructions' => '',
-                                    'required' => 1,
-                                    'conditional_logic' => array(
-                                        array(
-                                            array(
-                                                'field' => 'field_578703aab2790',
                                                 'operator' => '==',
                                                 'value' => 'event_tracking',
                                             ),
