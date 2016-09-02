@@ -11,10 +11,9 @@
     @include button($button-hover, $button-text-hover, default);
   }
 
-  &:active, &:focus {
+  &:active {
     @include button($button-hover, $button-text-hover, default);
     outline: 3px solid $highlight;
-    box-shadow: 0 0 0 #000;
     top: 3px;
   }
 }
@@ -28,23 +27,43 @@
 .button-dark {
   @include button($black, $white, default);
 
-  &:hover, &:focus, &:active  {
+  &:visited {
+    @include button($black, $white, default);
+  }
+
+  &:hover {
     @include button($grey-1, $white, default);
+  }
+
+  &:active {
+    @include button($grey-1, $white, default);
+    outline: 3px solid $highlight;
+    top: 3px;
   }
 }
 
 .button-light {
   @include button($grey-3, $black, default);
 
-  &:hover, &:focus, &:active  {
+  &:visited {
+    @include button($grey-3, $black, default);
+  }
+
+  &:hover {
     @include button($grey-2, $black, default);
+  }
+
+  &:active {
+    @include button($grey-2, $black, default);
+    outline: 3px solid $highlight;
+    top: 3px;
   }
 }
 
 .button-ghost--light {
   @include ghost-button($grey-3, $grey-3, default);
 
-  &:hover, &:focus, &:active  {
+  &:hover, &:active, &:visited  {
     @include ghost-button($purple, $purple, default);
   }
 }
@@ -52,7 +71,7 @@
 .button-ghost--dark {
   @include ghost-button($black, $black, default);
 
-  &:hover, &:focus, &:active  {
+  &:hover, &:active, &:visited  {
     @include ghost-button($purple, $purple, default);
   }
 }
@@ -68,10 +87,9 @@
     @include button($button-hover, $button-text-hover, big);
   }
 
-  &:active, &:focus {
+  &:active, {
     @include button($button-hover, $button-text-hover, big);
     outline: 3px solid $highlight;
-    box-shadow: 0 0 0 #000;
     top: 3px;
   }
 }
@@ -83,8 +101,14 @@
     @include button($black, $white, big);
   }
 
-  &:hover, &:focus, &:active {
+  &:hover {
     @include button($grey-1, $white, big);
+  }
+
+  &:active {
+    @include button($grey-1, $white, big);
+    outline: 3px solid $highlight;
+    top: 3px;
   }
 }
 
@@ -95,7 +119,13 @@
     @include button($grey-3, $black, big);
   }
 
-  &:hover, &:focus, &:active {
+  &:hover {
     @include button($grey-2, $black, big);
+  }
+
+  &:active {
+    @include button($grey-2, $black, big);
+    outline: 3px solid $highlight;
+    top: 3px;
   }
 }
