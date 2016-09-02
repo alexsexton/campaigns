@@ -7,6 +7,7 @@ if( get_row_layout() == 'banner') : ?>
     <?php
     $banner_background = get_sub_field('background_colour');
     $banner_text_colour = get_sub_field('text_colour');
+    $visibility = get_sub_field('accessibility');
     if( get_sub_field('background_image')) {
         $banner_image = get_sub_field('background_image');
     };
@@ -25,7 +26,7 @@ if( get_row_layout() == 'banner') : ?>
     <?php endif; ?>
 
         <?php if ($banner_background && !$banner_image) : ?>
-            <div class="overlay has-background-colour">
+            <div class="overlay has-background-colour <?php echo $visibility; ?>">
         <?php else : ?>
             <div class="overlay">
          <?php endif; ?>
