@@ -3,15 +3,22 @@
   padding-top: 125px;
   @media screen and (max-width: $small-screen) {
     @include col(1);
-    padding-top: 0;
+    padding: 0;
+    float: none;
   }
 
-  
+
   li {
     font-size: $base-font-size;
   }
 
   .current-cat {
     font-weight: 700;
+
+
+    a, a:visited {
+      color: $grey-1;
+    }
+
   }
 }
