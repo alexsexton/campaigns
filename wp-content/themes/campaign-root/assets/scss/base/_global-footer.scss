@@ -14,9 +14,14 @@ $footer-link-hover: $link-hover-colour;
   .footer-navigation {
     @include col(3/4);
     margin: 0 -15px;
+
+    @media screen and (max-width: $medium-screen) {
+      @include col(1/2);
+    }
+
     @media screen and (max-width: $small-screen) {
       @include col(1/1);
-      padding-bottom: $padding;
+      padding-bottom: $padding/2;
     }
 
     li {
