@@ -5,8 +5,8 @@ $fontPath: "fonts/";
 // Use like this : #{$fontPath} or #{$imagePath}
 
 // Site Width
-$site-max-width: 960px;
-$site-gutters: 30px;
+$site-max-width: 968px;
+$site-gutters: 38px;
 
 // Breakpoints
 $big-screen: $site-max-width;
@@ -20,9 +20,9 @@ $tiny-screen: 480px;
 // @media screen and (max-width: $small-screen) {}
 // @media screen and (max-width: $tiny-screen) {}
 
-// Margins & Padding
-$margin: 30px;
-$padding: 30px;
+// Margins & Padding (base font size * 2)
+$margin: 38px;
+$padding: 38px;
 
 // Colours - see settings/_colours.scss for a complete list
 
@@ -54,3 +54,9 @@ $border-colour: $grey-1;
 $border-radius: 0px;
 $input-border: $grey-1;
 $input-border-focus: $highlight;
+
+// Links
+$link-colour: $govuk-blue;
+$link-active-colour: #2e8aca;
+$link-hover-colour: #2b8cc4;
+$link-visited-colour: #4c2c92;

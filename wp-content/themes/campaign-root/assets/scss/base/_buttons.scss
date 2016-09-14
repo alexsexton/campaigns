@@ -1,18 +1,21 @@
 // Buttons
 
-.button {
+.button,  {
+  @include button($button, $button-text, default);
+
+  &:visited {
     @include button($button, $button-text, default);
+  }
 
-    &:hover {
-        @include button($button-hover, $button-text-hover, default);
-    }
+  &:hover {
+    @include button($button-hover, $button-text-hover, default);
+  }
 
-    &:active, &:focus {
-      @include button($button-hover, $button-text-hover, default);
-      outline: 3px solid $highlight;
-      box-shadow: 0 0 0 #000;
-      top: 3px;
-    }
+  &:active {
+    @include button($button-hover, $button-text-hover, default);
+    outline: 3px solid $highlight;
+    top: 3px;
+  }
 }
 
 .button[disabled="disabled"], .button:hover[disabled="disabled"] {
@@ -22,45 +25,107 @@
 }
 
 .button-dark {
-    @include button($black, $white, default);
+  @include button($black, $white, default);
 
-    &:hover, &:focus, &:active  {
-        @include button($grey-1, $white, default);
-    }
+  &:visited {
+    @include button($black, $white, default);
+  }
+
+  &:hover {
+    @include button($grey-1, $white, default);
+  }
+
+  &:active {
+    @include button($grey-1, $white, default);
+    outline: 3px solid $highlight;
+    top: 3px;
+  }
 }
 
 .button-light {
-    @include button($grey-3, $black, default);
+  @include button($grey-3, $black, default);
 
-    &:hover, &:focus, &:active  {
-        @include button($grey-2, $black, default);
-    }
+  &:visited {
+    @include button($grey-3, $black, default);
+  }
+
+  &:hover {
+    @include button($grey-2, $black, default);
+  }
+
+  &:active {
+    @include button($grey-2, $black, default);
+    outline: 3px solid $highlight;
+    top: 3px;
+  }
 }
 
 .button-ghost--light {
-    @include ghost-button($grey-3, $grey-3, default);
+  @include ghost-button($grey-3, $grey-3, default);
 
-    &:hover, &:focus, &:active  {
-        @include ghost-button($purple, $purple, default);
-    }
+  &:hover, &:active, &:visited  {
+    @include ghost-button($purple, $purple, default);
+  }
 }
 
 .button-ghost--dark {
-    @include ghost-button($black, $black, default);
+  @include ghost-button($black, $black, default);
 
-    &:hover, &:focus, &:active  {
-        @include ghost-button($purple, $purple, default);
-    }
+  &:hover, &:active, &:visited  {
+    @include ghost-button($purple, $purple, default);
+  }
 }
 
 .button-big {
-    padding: $padding/2 $padding;
-    font-size: $base-font-size*1.5;
-    font-weight: 700;
+  @include button($button, $button-text, big);
 
-    &:hover, &:focus, &:active  {
-        padding: $padding/2 $padding;
-        font-size: $base-font-size*1.5;
-        font-weight: 700;
-    }
+  &:visited {
+    @include button($button, $button-text, big);
+  }
+
+  &:hover {
+    @include button($button-hover, $button-text-hover, big);
+  }
+
+  &:active, {
+    @include button($button-hover, $button-text-hover, big);
+    outline: 3px solid $highlight;
+    top: 3px;
+  }
+}
+
+.button-big.button-dark {
+  @include button($black, $white, big);
+
+  &:visited {
+    @include button($black, $white, big);
+  }
+
+  &:hover {
+    @include button($grey-1, $white, big);
+  }
+
+  &:active {
+    @include button($grey-1, $white, big);
+    outline: 3px solid $highlight;
+    top: 3px;
+  }
+}
+
+.button-big.button-light {
+  @include button($grey-3, $black, big);
+
+  &:visited {
+    @include button($grey-3, $black, big);
+  }
+
+  &:hover {
+    @include button($grey-2, $black, big);
+  }
+
+  &:active {
+    @include button($grey-2, $black, big);
+    outline: 3px solid $highlight;
+    top: 3px;
+  }
 }

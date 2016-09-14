@@ -8,6 +8,7 @@ require('./common')
 var enquire = require('../../bower_components/enquire/dist/enquire.js')
 require('../../bower_components/jquery-accessibleMegaMenu/js/jquery-accessibleMegaMenu.js')
 require('../../bower_components/fitvids/jquery.fitvids.js')
+require('../../bower_components/jquery-backstretch/jquery.backstretch.min.js')
 
 jQuery(function ($) {
   // Enquire functions
@@ -25,12 +26,16 @@ jQuery(function ($) {
           focusClass: 'focus',
           openClass: 'open'
         })
+        // hack so that the megamenu doesn't show flash of css animation after the page loads.
+        setTimeout(function () {
+          $('body').removeClass('init')
+        }, 500)
         // Change aria-hidden state
         $('#js-navigation-toggle').attr('aria-hidden', 'true')
         // Magic
         $('.banner-has-background-colour').each(function () {
           var overlayHeight = $(this).find('.overlay').height()
-          var padding = '30'
+          var padding = '38' // should be the same as $padding in scss/settings/_global.scss
           var heroContainerHeight = overlayHeight + (padding * 2)
           if (overlayHeight !== null) {
             $(this).height(heroContainerHeight)

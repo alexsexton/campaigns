@@ -25,7 +25,7 @@
     </div>
 
     <div class="global-footer group" id="global-footer">
-      <div class="row">
+      <div class="footer-wrapper">
 
         <div class="footer-meta">
           <div class="footer-meta-inner">

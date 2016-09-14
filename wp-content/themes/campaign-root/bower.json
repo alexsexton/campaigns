@@ -5,6 +5,7 @@
     "jquery-accessibleMegaMenu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu.git",
     "enquire": "~2.1.2",
     "fitvids": "~1.1.0",
-    "media-match": "~2.0.2"
+    "media-match": "~2.0.2",
+    "jquery-backstretch": "~2.0.4"
   }
 }

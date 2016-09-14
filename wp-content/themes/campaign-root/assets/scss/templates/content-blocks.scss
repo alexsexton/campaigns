@@ -12,23 +12,23 @@
 @import "../sections/textonly";
 @import "../sections/videoblock";
 
-// Content Section Blocks Modifier Classes
+// Modifier Classes
 .light-text {
-    color: $white
+  color: $white
 }
 
 .dark-text {
-    color: $black;
+  color: $black;
 }
 
 .align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .align-centered {
-    text-align: center;
+  text-align: center;
 }
 
 .align-right {
-    text-align: right;
+  text-align: right;
 }

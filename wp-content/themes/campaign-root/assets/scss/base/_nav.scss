@@ -19,6 +19,7 @@ $sub-nav-background-hover: $black;
   }
 
   .navigation {
+    font-weight: 700;
 
     .nav-menu {
       text-align: left;
@@ -28,18 +29,18 @@ $sub-nav-background-hover: $black;
       line-height: 1;
     }
 
-    .nav-item {
+    li {
       display: inline-block;
     }
 
-    .nav-item > a {
+    li > a {
       display: inline-block;
-      padding: 8px $padding/2;
+      padding: 10px $padding/2;
       color: $nav-link;
     }
 
-    .nav-item > a:hover,
-    .nav-item > a.open {
+    li > a:hover,
+    li > a.open {
       color: $nav-link-hover;
       text-decoration: underline;
     }
@@ -48,12 +49,12 @@ $sub-nav-background-hover: $black;
       color: $nav-link-hover;
     }
 
-    .nav-item > a:focus {
+    li > a:focus {
       color: $sub-nav-link;
       outline: 2px solid $highlight;
     }
 
-    .nav-item > a.open {
+    li > a.open {
       position: relative;
       z-index: 1;
     }
@@ -107,6 +108,7 @@ $sub-nav-background-hover: $black;
   .nav-container,
   .menu-header {
     float: none;
+    position: relative;
   }
 
   .navigation {
@@ -125,7 +127,7 @@ $sub-nav-background-hover: $black;
       display: inline-block;
     }
 
-    li, .nav-item {
+    li {
       display: inline-block;;
       width: auto;
 
@@ -144,7 +146,7 @@ $sub-nav-background-hover: $black;
       }
     }
 
-    .has-sub-menu {
+    .has-sub-nav {
       display: block;
       position: static;
     }
@@ -153,13 +155,14 @@ $sub-nav-background-hover: $black;
       width: auto;
       position: static;
       display: inline;
+      visibility: visible;
       background: transparent;
       padding: 0 0 0 10px;
       clear: both;
 
       li {
         display: inline-block;
-        width: auto
+        width: auto;
       }
 
       a {
@@ -177,14 +180,16 @@ $sub-nav-background-hover: $black;
 // Nav Toggle
 
 .nav-toggle {
-  @include button($button, $button-text, default);
+  @include button($button, $button-text, small);
   @include hide;
-  padding: 3px 6px;
 
+  &:visited {
+    @include button($button, $button-text, small);
+  }
 
   @media screen and (max-width: $small-screen) {
     position: absolute;
-    left: 268px;
-    top: 5px;
+    left: 227px;
+    top: 0px;
   }
 }

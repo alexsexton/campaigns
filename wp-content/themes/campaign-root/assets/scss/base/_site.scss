@@ -1,15 +1,15 @@
 // Site - general site set up rules and some ultility classes
 
 body {
-    background: $body-background-colour;
-    color: $base-font-colour;
-    font-family: $font-family-sans;
-    font-weight: normal;
-    -webkit-font-variant-ligatures: discretionary-ligatures;
-    -webkit-font-smoothing: antialiased;
+  background: $body-background-colour;
+  color: $base-font-colour;
+  font-family: $font-family-sans;
+  font-weight: normal;
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  -webkit-font-smoothing: antialiased;
 }
 
-.js-enabled .js-hidden {
+.js-enabled .js-hidden, [aria-hidden="true"] {
   display: none;
   visibility: hidden;
 }
@@ -24,18 +24,18 @@ body {
 .group:after,
 .row:before,
 .row:after {
-    content: " ";
-    display: table;
+  content: "";
+  display: table;
 }
 
 .group:after,
 .row:after {
-    clear: both;
+  clear: both;
 }
 
 // For IE 6/7 only Include this rule to trigger hasLayout and contain floats.
 .group, .row {
-    *zoom: 1;
+  *zoom: 1;
 }
 
 // Row

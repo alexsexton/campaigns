@@ -1,28 +1,34 @@
 // Resets
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 html, body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 ul, ol, p, blockquote, figure, figcaption {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: $link-colour;
+  text-decoration: none;
+  color: $link-colour;
+}
+
+a:hover {
+  color: $link-hover-colour;
+}
+
+a:visited {
+  color: $link-visited-colour;
 }

@@ -16,16 +16,12 @@
 @import "base/nav";
 @import "base/sidebar";
 
-@import "common/icons";
-@import "common/tables";
-@import "common/tabs";
-@import "common/share";
 @import "common/follow";
 @import "common/pagination";
+@import "common/comments";
 
 @import "templates/content-blocks";
 @import "templates/page";
-@import "templates/front-page";
 @import "templates/archive";
 @import "templates/single";
 @import "templates/error404";

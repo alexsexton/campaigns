@@ -12,9 +12,7 @@
 
         <?php get_template_part('partials/content-blocks/text-only-block'); ?>
 
-        <?php get_template_part('partials/content-blocks/call-to-action-banner'); ?>
-
-        <?php get_template_part('partials/content-blocks/call-to-action-button'); ?>
+        <?php get_template_part('partials/content-blocks/call-to-action'); ?>
 
         <?php get_template_part('partials/content-blocks/left-aligned-image-block'); ?>
 

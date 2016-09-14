@@ -7,11 +7,11 @@
         while (have_posts()) {
             the_post();
             get_template_part('partials/article');
+            get_template_part('partials/sidebar');
             comments_template('/comments.php');
         }
         ?>
         </div>
 
-        <?php get_template_part('partials/sidebar') ?>
     </div>
 </section>
