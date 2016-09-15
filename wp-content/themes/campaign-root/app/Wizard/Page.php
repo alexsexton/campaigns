@@ -17,7 +17,7 @@ class Page implements \Dxw\Iguana\Registerable
 
     public function adminMenu()
     {
-        add_submenu_page('tools.php', 'Setting up analytics', 'Setting up analytics', 'activate_plugins', 'wizard', [$this, 'callback']);
+        add_submenu_page('tools.php', 'Set up analytics', 'Set up analytics', 'activate_plugins', 'wizard', [$this, 'callback']);
     }
 
     public function callback()
