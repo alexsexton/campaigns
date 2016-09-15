@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <?php wp_head(); ?>
     <?php get_template_part('partials/open-graph-tags'); ?>
+    <?php do_action('campaigns_before_body_gds_analytics') ?>
+    <?php do_action('campaigns_before_body') ?>
 </head>
 <body <?php body_class(); ?>>
     <?php do_action('campaigns_after_body') ?>

@@ -1,37 +1,40 @@
 <div class="wrap">
     <h2>Set up analytics</h2>
 
-    <div ng-app="wizard" ng-controller="Wizard" data-nonce="<?php echo esc_attr(wp_create_nonce('campaigns_wizard')) ?>">
-
+    <div ng-app="wizard" ng-controller="Wizard" ng-init="gaid = '<?php echo esc_attr(get_option('campaigns_ga_id', '')) ?>'; gtmid = '<?php echo esc_attr(get_option('campaigns_gtm_id', '')) ?>'; " data-nonce="<?php echo esc_attr(wp_create_nonce('campaigns_wizard')) ?>">
         <p>To set up analytics for your campaign site, you need to follow the steps outlined below. You can visit this page at any time but you only need to set up analytics once to get it working.</p>
 
         <p>The GOV.UK Campaigns Platform gives you the option to use a Google Analytics (GA) account alone or use it in combination with a Google Tag Manager (GTM) account. WordPress will publish the necessary code to your site but you will need to configure the accounts.</p>
 
         <p>If you don’t have a Google account already click here to set one up. If you need a Google Analytics account you can visit this page to create one.</p>
 
-        <h3>To set up Google Analytics only</h3>
+        <form name="form">
 
-        <p><label for="wizard_gaid">Enter your GA Tracking ID below (it looks something like UA-12345678-1)</label></p>
+            <h3>To set up Google Analytics only</h3>
 
-        <p>
-            <input id="wizard_gaid" type="text" ng-model="gaid">
-            <button class="button button-primary" ng-click="set('ga', gaid)">Activate GA</button>
-        </p>
+            <p><label for="wizard_gaid">Enter your GA Tracking ID below (it looks something like UA-12345678-1)</label></p>
 
-        <p>WordPress will then publish the full tracking code into every page of your site.</p>
+            <p>
+                <input id="wizard_gaid" name="wizard_gaid" type="text" ng-model="gaid">
+                <button class="button button-primary" ng-click="set('ga', gaid)" ng-disabled="form.wizard_gaid.$pristine">Activate GA</button>
+            </p>
 
-        <h3>To set up Google Tag Manager</h3>
+            <p>WordPress will then publish the full tracking code into every page of your site.</p>
 
-        <p><label for="wizard_gtmid">Enter your GTM ID below (it looks something like GTM-ABC123)</label></p>
+            <h3>To set up Google Tag Manager</h3>
 
-        <p>
-            <input id="wizard_gtmid" type="text" ng-model="gtmid">
-            <button class="button button-primary" ng-click="set('gtm', gtmid)">Activate GTM</button>
-        </p>
+            <p><label for="wizard_gtmid">Enter your GTM ID below (it looks something like GTM-ABC123)</label></p>
 
-        <p>WordPress will publish the GTM code into every page on the site.</p>
+            <p>
+                <input id="wizard_gtmid" name="wizard_gtmid" type="text" ng-model="gtmid">
+                <button class="button button-primary" ng-click="set('gtm', gtmid)" ng-disabled="form.wizard_gtmid.$pristine">Activate GTM</button>
+            </p>
 
-        <p>Following this, you will need to go through some more steps to configure your GA account, and your GTM account if you have one.</p>
+            <p>WordPress will publish the GTM code into every page on the site.</p>
+
+            <p>Following this, you will need to go through some more steps to configure your GA account, and your GTM account if you have one.</p>
+
+        </form>
 
         <p>More information can be found in the guidance</p>
 
