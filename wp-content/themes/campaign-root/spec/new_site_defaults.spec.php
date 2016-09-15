@@ -72,6 +72,22 @@ describe(\Dxw\GdsCampaignRoot\NewSiteDefaults::class, function () {
                 'times' => 1,
             ]);
 
+            \WP_Mock::wpFunction('update_option', [
+                'args' => ['template', \Dxw\GdsCampaignRoot\NewSiteDefaults::DEFAULT_THEME],
+                'return' => function () {
+                    expect($GLOBALS['test_switch_to_blog'])->to->equal(5);
+                },
+                'times' => 1,
+            ]);
+
+            \WP_Mock::wpFunction('update_option', [
+                'args' => ['stylesheet', \Dxw\GdsCampaignRoot\NewSiteDefaults::DEFAULT_THEME],
+                'return' => function () {
+                    expect($GLOBALS['test_switch_to_blog'])->to->equal(5);
+                },
+                'times' => 1,
+            ]);
+
             $this->newSiteDefaults->wpmuNewBlog(5);
         });
     });
