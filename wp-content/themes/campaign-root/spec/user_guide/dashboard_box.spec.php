@@ -42,8 +42,13 @@ describe(\Dxw\GdsCampaignRoot\UserGuide\DashboardBox::class, function () {
 
     describe('->callback()', function () {
         it('displays content', function () {
+            $homepage_id = 4;
             \WP_Mock::wpFunction('esc_attr', [
                 'return' => function ($a) { return '_'.$a.'_'; },
+            ]);
+
+            \WP_Mock::wpFunction('get_option', [
+                'return' => $homepage_id,
             ]);
 
             \WP_Mock::wpFunction('network_site_url', [
@@ -64,8 +69,8 @@ describe(\Dxw\GdsCampaignRoot\UserGuide\DashboardBox::class, function () {
             $this->dashboardBox->callback();
             $output = ob_get_clean();
 
-            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/user-guide/_" class="button button-primary">GOV.UK Campaigns Platform user guide</a>');
-            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/my-site/wp-admin/post-new.php?post_type=page_" class="button button-primary">Build a homepage</a>');
+            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/user-guide/_" class="button button-primary">Campaigns platform user guide</a>');
+            expect($output)->to->contain('<a href="_https://campaigns.gov.uk/my-site/wp-admin/post.php?post='.$homepage_id.'&action=edit_" class="button button-primary">Build a homepage</a>');
         });
     });
 

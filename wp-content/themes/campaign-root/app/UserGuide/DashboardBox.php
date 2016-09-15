@@ -17,6 +17,8 @@ class DashboardBox implements \Dxw\Iguana\Registerable
 
     public function callback()
     {
+        $homepage_id = get_option('page_on_front');
+        $homepage_url = (!$homepage_id) ? 'post-new.php?post_type=page' : 'post.php?post='.$homepage_id.'&action=edit';
         ?>
 
         <p>GDS provides this WordPress platform for building and managing your new campaign website.</p>
@@ -25,7 +27,7 @@ class DashboardBox implements \Dxw\Iguana\Registerable
 
         <h3>Help and guidance</h3>
 
-        <p><a href="<?php echo esc_attr(network_site_url('/user-guide/')) ?>" class="button button-primary">GOV.UK Campaigns Platform user guide</a></p>
+        <p><a href="<?php echo esc_attr(network_site_url('/user-guide/')) ?>" class="button button-primary">Campaigns platform user guide</a></p>
 
         <p><a href="<?php echo esc_attr(network_site_url('/style-guide/')) ?>" class="button button-primary">See a sample campaign site</a></p>
 
@@ -33,13 +35,13 @@ class DashboardBox implements \Dxw\Iguana\Registerable
 
         <h3>First steps to get you started</h3>
 
-        <p><a href="<?php echo esc_attr(admin_url('post-new.php?post_type=page')) ?>" class="button button-primary">Build a homepage</a></p>
+        <p><a href="<?php echo esc_attr(admin_url($homepage_url)) ?>" class="button button-primary">Build a homepage</a></p>
 
         <p><a href="<?php echo esc_attr(admin_url('themes.php?page=acf-options-sitewide-appearance')) ?>" class="button button-primary">Set the site appearance</a></p>
 
         <p><a href="<?php echo esc_attr(admin_url('nav-menus.php')) ?>" class="button button-primary">Build a navigation menu</a></p>
 
-        <p><a href="#" class="button button-primary">Set up Google Analytics</a></p>
+        <p><a href="<?php echo esc_attr(admin_url('tools.php?page=wizard')) ?>" class="button button-primary">Set up Google Analytics</a></p>
 
         <?php
 
