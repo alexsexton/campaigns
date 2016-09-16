@@ -1,5 +1,5 @@
-<section class="page row">
-    <article>
+<section class="row">
+    <article class="page-article">
         <header>
             <h1><?php the_title(); ?></h1>
         </header>
