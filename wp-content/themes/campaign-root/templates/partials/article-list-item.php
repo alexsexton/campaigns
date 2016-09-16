@@ -1,10 +1,10 @@
-<article <?php post_class('article-list-item'); ?>>
+<article <?php post_class('article-list-item rich-text'); ?>>
     <header>
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php get_template_part('partials/entry-meta'); ?>
     </header>
 
-    <div class="entry excerpt rich-text">
+    <div class="excerpt">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('large'); ?>
         <?php endif; ?>
