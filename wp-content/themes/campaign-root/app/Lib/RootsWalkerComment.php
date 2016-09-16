@@ -56,8 +56,8 @@ class RootsWalkerComment extends \Walker_Comment implements \Dxw\Iguana\Register
 
             return;
         }
-        // Close ".media-body" <div> located in templates/comment.php, and then the comment's <li>
-        echo "</div></li>\n";
+        // Close the comment's <li>
+        echo "</li>\n";
     }
 
     public function rootsGetAvatar($avatar, $type)

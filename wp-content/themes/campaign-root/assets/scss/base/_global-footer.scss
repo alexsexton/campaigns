@@ -5,6 +5,10 @@ $footer-link-hover: $link-hover-colour;
 
 .footer {
   background: $grey-3;
+
+  a:focus {
+    @include focus;
+  }
 }
 
 .site-footer {
