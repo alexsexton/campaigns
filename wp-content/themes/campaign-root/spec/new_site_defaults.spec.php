@@ -88,6 +88,22 @@ describe(\Dxw\GdsCampaignRoot\NewSiteDefaults::class, function () {
                 'times' => 1,
             ]);
 
+            \WP_Mock::wpFunction('update_option', [
+                'args' => ['default_ping_status', 'closed'],
+                'return' => function () {
+                    expect($GLOBALS['test_switch_to_blog'])->to->equal(5);
+                },
+                'times' => 1,
+            ]);
+
+            \WP_Mock::wpFunction('update_option', [
+                'args' => ['default_comment_status', 'closed'],
+                'return' => function () {
+                    expect($GLOBALS['test_switch_to_blog'])->to->equal(5);
+                },
+                'times' => 1,
+            ]);
+
             $this->newSiteDefaults->wpmuNewBlog(5);
         });
     });
