@@ -1,11 +1,11 @@
-<section class="archive row">
+<section class="row">
     <div class="grid-row">
 
         <div class="archive-posts">
             <header>
                 <h1><?php single_cat_title(); ?></h1>
                 <?php if (category_description()) :?>
-                    <h2><?php echo category_description(); ?></h2>
+                    <?php echo category_description(); ?>
                 <?php endif; ?>
             </header>
 
