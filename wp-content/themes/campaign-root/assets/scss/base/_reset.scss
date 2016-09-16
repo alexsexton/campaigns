@@ -4,12 +4,8 @@
   @include box-sizing(border-box);
 }
 
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
-ul, ol, p, blockquote, figure, figcaption {
+html, body, ul, ol, dl, dt, dd, p, blockquote, figure, figcaption, table, tr, td,
+h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
@@ -27,8 +23,4 @@ a {
 
 a:hover {
   color: $link-hover-colour;
-}
-
-a:visited {
-  color: $link-visited-colour;
 }

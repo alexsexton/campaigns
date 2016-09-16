@@ -1,10 +1,16 @@
 .single {
+
+  .single-article {
+    padding-top: $padding;
+  }
+
   .grid-row {
     @include row(true);
   }
 
   .article-comments {
     @include col(3/4);
+
     @media screen and (max-width: $small-screen) {
       @include col(1);
     }
@@ -16,5 +22,15 @@
 
   .byline a {
     text-transform: capitalize;
+  }
+}
+
+.comments {
+  .comment {
+    font-size: $base-font-size;
+    margin: 0 0 $margin/2;
+    padding: 0 0 0 $padding/2;
+    max-width: 40em;
+    border-left: 8px solid $grey-2;
   }
 }

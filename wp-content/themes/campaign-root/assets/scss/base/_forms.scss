@@ -23,6 +23,7 @@ textarea {
 
   &:focus {
     border: 2px solid $input-border-focus;
+    background: transparent;
   }
 }
 
@@ -50,4 +51,40 @@ textarea {
   textarea {
     width:100%;
   }
+}
+
+// Form Labels
+
+.form-group label, .form-group legend {
+  display: block;
+  padding: 0 0 $padding/4 0;
+  font-size: $base-font-size;
+}
+
+.form-group span {
+  font-style: italic;
+  display: block;
+  color: scale-color($base-font-colour, $lightness: 50%);
+  font-size: ($base-font-size)-4;
+}
+
+.form-group, .form-buttons {
+  margin: 0 0 $margin 0;
+}
+
+.form-group .required {
+  font-size: $base-font-size;
+}
+
+.form-error {
+  padding: $padding/2;
+  background: scale-color($error, $lightness: 50%);
+}
+
+.form-error input[type=text] {
+  border-color: $error;
+}
+
+.form-error span {
+  font-weight: bold;
 }

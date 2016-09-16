@@ -51,7 +51,7 @@ $sub-nav-background-hover: $black;
 
     li > a:focus {
       color: $sub-nav-link;
-      outline: 2px solid $highlight;
+      @include nav-focus;
     }
 
     li > a.open {

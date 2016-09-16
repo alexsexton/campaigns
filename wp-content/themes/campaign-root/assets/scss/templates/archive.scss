@@ -1,20 +1,32 @@
-.archive {
+.home-archive, .archive {
   .grid-row {
     @include row(true);
   }
 
   .archive-posts {
     @include col(3/4);
+    padding-top: $padding;
     @media screen and (max-width: $small-screen) {
       @include col(1);
     }
+
+    header p {
+      font-weight: 700;
+      font-size: $base-font-size; 
+      margin-bottom: $margin/2;
+    }
   }
 
-  .article-list-item h2 {
-    margin-bottom: 0;
-  }
+  .article-list-item {
+    margin-bottom: $margin/2;
 
-  .article-list-item .byline a {
-    text-transform: capitalize;
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .byline a {
+      text-transform: capitalize;
+    }
+
   }
 }

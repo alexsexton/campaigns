@@ -6,6 +6,16 @@
   @return #{($wanted / $parent) * 100 + '%'};
 }
 
+@mixin nav-focus {
+  outline: 2px solid $highlight;
+  background-color: transparent;
+}
+
+@mixin focus {
+  outline: 2px solid $highlight;
+  background-color: $highlight;
+}
+
 @mixin arrow-up ($size, $colour) {
   content: "";
   width: 0;
