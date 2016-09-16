@@ -1,4 +1,4 @@
-<section class="row">
+<section class="home-archive row">
 
     <header>
         <h1><?php echo bloginfo('name'); ?></h1>
