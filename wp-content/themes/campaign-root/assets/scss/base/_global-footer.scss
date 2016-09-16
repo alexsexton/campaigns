@@ -7,7 +7,7 @@ $footer-link-hover: $link-hover-colour;
   background: $grey-3;
 
   a:focus {
-    @include nav-focus;
+    @include focus;
   }
 }
 

@@ -3,8 +3,8 @@
 'use strict'
 // Cookie function
 jQuery(function ($) {
-  var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)cookieMessage\s*\=\s*([^;]*).*$)|^.*$/, '$1')
-  var cookieBanner = $('global-cookie-message')
+  var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)cookieMessage\s*=\s*([^;]*).*$)|^.*$/, '$1')
+  var cookieBanner = $('#global-cookie-message')
 
   cookieBanner.click(function (e) {
     e.preventDefault
