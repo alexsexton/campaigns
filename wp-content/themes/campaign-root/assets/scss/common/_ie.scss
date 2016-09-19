@@ -1,7 +1,7 @@
 // Fixes for old versions of IE
 
 // Main Navigation here because we've used a min-width media query to serve it to good browsers
-.lt-ie10 {
+.lt-ie9, .lt-ie10 {
 
   .nav-container {
     float: right;
