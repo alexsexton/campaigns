@@ -10,9 +10,9 @@
       @include col(1);
     }
 
-    header p {
+    .blog-description p {
       font-weight: 700;
-      font-size: $base-font-size; 
+      font-size: $base-font-size;
       margin-bottom: $margin/2;
     }
   }

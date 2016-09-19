@@ -48,11 +48,6 @@ h4, h5, h6 {
     }
 }
 
-.byline {
-  font-size: $base-font-size;
-  margin: 0 0 $margin/2 0;
-}
-
 .main a:focus {
   @include focus;
 }
