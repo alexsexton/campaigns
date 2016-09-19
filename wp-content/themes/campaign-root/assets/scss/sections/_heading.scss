@@ -4,6 +4,7 @@
   h2 {
     line-height: 1;
     color: $white;
-    font-size: 57px;
+    font-size: 53px; // base font * 3
+    margin: $margin/2 0;
   }
 }
