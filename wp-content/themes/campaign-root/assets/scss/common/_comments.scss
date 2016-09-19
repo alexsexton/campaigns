@@ -1,3 +1,7 @@
 .comment-form {
   margin: 0 0 $margin;
+
+  .cancel-comment-reply, .note {
+    font-size: $base-font-size;
+  }
 }
