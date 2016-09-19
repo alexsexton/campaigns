@@ -2,6 +2,7 @@
 /config/server-local.php
 /wp-content/uploads
 /wp-content/whippet-wp-config.php
-/wp-content/plugins/advanced-custom-fields-pro
 /wp-content/plugins/google-tag-manager
 /wp-content/plugins/members
+/wp-content/plugins/advanced-custom-fields-pro
+/wp-content/plugins/dxw-private-by-default

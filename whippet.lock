@@ -1,10 +1,20 @@
 {
-    "hash": "44c07dc333bacc656361f92449e52ff52611370f",
+    "hash": "557caab7afcf305f84366ed43902b8d196be2a0f",
     "plugins": [
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
             "revision": "4c61ecd39e80eb295897b5cd7b3a05aa3ce15c70"
+        },
+        {
+            "name": "advanced-custom-fields-pro",
+            "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "3cc5d02b5bd71705bc40a83bef0518c7dfff6b97"
+        },
+        {
+            "name": "dxw-private-by-default",
+            "src": "git@git.dxw.net:dxw-wp-plugins/dxw-private-by-default",
+            "revision": "6a6bce8942b9ba347d9599c02f1c596da844a906"
         }
     ]
 }

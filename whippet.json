@@ -3,6 +3,12 @@
         "plugins": "git@git.dxw.net:wordpress-plugins/"
     },
     "plugins": [
-        {"name": "advanced-custom-fields-pro"}
+        {
+          "name": "advanced-custom-fields-pro"
+        },
+        {
+          "name": "dxw-private-by-default",
+          "src": "git@git.dxw.net:dxw-wp-plugins/dxw-private-by-default"
+        }
     ]
 }
