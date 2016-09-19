@@ -7,7 +7,7 @@
 </div>
 
 <div id="global-cookie-message" class="visually-hidden">
-    <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+    <p>HM Government uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
 </div>
 
 <header role="banner" id="global-header" class="global-header">
