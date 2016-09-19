@@ -25,6 +25,8 @@ class NewSiteDefaults implements \Dxw\Iguana\Registerable
         update_option('page_on_front', $home_id);
         update_option('template', self::DEFAULT_THEME);
         update_option('stylesheet', self::DEFAULT_THEME);
+        update_option('default_comment_status', 'closed');
+        update_option('default_ping_status', 'closed');
 
         restore_current_blog();
     }
