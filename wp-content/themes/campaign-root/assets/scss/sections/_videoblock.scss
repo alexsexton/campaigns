@@ -1,6 +1,11 @@
 .video-block {
   padding: $padding/2 0;
 
+  .fitvids {
+    border: 1px solid $grey-3;
+    background: $grey-4;
+  }
+
   .rich-text {
     padding: $padding/2 0 0;
   }
