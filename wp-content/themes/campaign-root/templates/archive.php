@@ -2,7 +2,7 @@
     <div class="grid-row">
 
         <div class="archive-posts">
-            <header>
+            <header class="blog-description">
                 <h1><?php single_cat_title(); ?></h1>
                 <?php if (category_description()) :?>
                     <?php echo category_description(); ?>
