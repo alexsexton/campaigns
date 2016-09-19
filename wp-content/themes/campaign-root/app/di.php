@@ -43,3 +43,5 @@ $registrar->addInstance(new \Dxw\GdsCampaignRoot\UserGuide\AdminBar());
 $registrar->addInstance(new \Dxw\GdsCampaignRoot\UserGuide\DashboardBox());
 
 $registrar->addInstance(new \Dxw\GdsCampaignRoot\NewSiteDefaults());
+
+$registrar->addInstance(new \Dxw\GdsCampaignRoot\RolesAndCapabilities());
