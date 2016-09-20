@@ -1,6 +1,28 @@
 .hidden-help-text {
   padding: $padding/2 0;
   font-size: $base-font-size;
-  .summary {}
-  .panel {}
+
+  .details {
+    position: relative;
+    padding-left: 19px;
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .details:before {
+    @include arrow-right(7px, $black);
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+
+  .details.open:before {
+    @include arrow-down(7px, $black);
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
 }
