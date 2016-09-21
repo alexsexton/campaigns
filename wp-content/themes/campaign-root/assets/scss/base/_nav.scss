@@ -1,10 +1,10 @@
 // Nav
 $nav-link: $white;
-$nav-link-hover: $link-hover-colour;
-$nav-link-active: $link-hover-colour;
+$nav-link-hover: #d5e8f3;
+$nav-link-active: $white;
 
 $sub-nav-link: $white;
-$sub-nav-link-hover: $link-hover-colour;
+$sub-nav-link-hover: #d5e8f3;
 $sub-nav-background: $black;
 $sub-nav-background-hover: $black;
 
@@ -48,6 +48,7 @@ $sub-nav-background-hover: $black;
 
     .active a {
       color: $nav-link-hover;
+      text-decoration: underline;
     }
 
     li > a:focus {
