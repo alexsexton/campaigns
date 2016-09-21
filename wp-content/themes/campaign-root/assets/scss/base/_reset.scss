@@ -5,9 +5,15 @@
 }
 
 html, body, ul, ol, dl, dt, dd, p, blockquote, figure, figcaption, table, tr, td,
+article, aside, details, figcaption, figure, footer, header, nav, section, summary, details,
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
+  outline: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section {
+	display: block;
 }
 
 li {

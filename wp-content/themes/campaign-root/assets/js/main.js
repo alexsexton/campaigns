@@ -81,6 +81,17 @@ jQuery(function ($) {
     })
   })
 
+  // Hidden help text
+  $(function () {
+    $('.details').each(function () {
+      $(this).find('.panel').addClass('visually-hidden')
+      $(this).click(function () {
+        $(this).toggleClass('open')
+        $(this).find('.panel').toggleClass('visually-hidden')
+      })
+    })
+  })
+
   // Adds external class to outbound links for tracking
   $(function () {
     $('a').not('[href*="mailto:"]').each(function () {

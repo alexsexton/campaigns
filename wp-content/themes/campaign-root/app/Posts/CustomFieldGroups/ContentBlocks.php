@@ -71,7 +71,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                         'class' => '',
                                         'id' => '',
                                     ),
-                                    'default_value' => '#005ea5',
+                                    'default_value' => '#f8f8f8',
                                 ),
                                 array(
                                     'key' => 'field_572c45dc7bc13',
@@ -117,7 +117,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                     'label' => 'Accessibility',
                                     'name' => 'accessibility',
                                     'type' => 'radio',
-                                    'instructions' => 'The title and caption are required because...',
+                                    'instructions' => 'The title and caption are required because they add context to an image and enable less able vistors to understand what information the image conveys.',
                                     'required' => 0,
                                     'conditional_logic' => 0,
                                     'wrapper' => array(
@@ -1423,7 +1423,7 @@ class ContentBlocks implements \Dxw\Iguana\Registerable
                                 array(
                                     'key' => 'field_577a3a379d291',
                                     'label' => 'Background Colour',
-                                    'name' => 'background_colour',
+                                    'name' => 'hidden_help_text_background_colour',
                                     'type' => 'color_picker',
                                     'instructions' => '',
                                     'required' => '',
